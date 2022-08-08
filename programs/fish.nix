@@ -8,6 +8,7 @@
       vim = "nvim";
       cat = "bat";
       top = "btm";
+      ta = "tmux attach";
     };
     shellAliases = {
       ".." = "cd ..";
@@ -23,6 +24,9 @@
       set-proxy-lan = "set -gx https_proxy 10.0.1.6:1102; set -gx http_proxy 10.0.1.6:1102; set -gx ALL_PROXY http://10.0.1.6:1102";
       set-proxy-desktop = "set -gx https_proxy 10.0.1.9:1102; set -gx http_proxy 10.0.1.9:1102; set -gx ALL_PROXY http://10.0.1.9:1102";
     };
+    interactiveShellInit = ''
+      . ~/.nix/_legacy/fish/fishmarks.fish
+    '';
     functions = {
       clear_buffer = ''
         echo -e -n "\\0033c"
