@@ -25,7 +25,6 @@
       set-proxy-desktop = "set -gx https_proxy 10.0.1.9:1102; set -gx http_proxy 10.0.1.9:1102; set -gx ALL_PROXY http://10.0.1.9:1102";
     };
     interactiveShellInit = ''
-      . ~/.nix/_legacy/fish/fishmarks.fish
     '';
     functions = {
       clear_buffer = ''
@@ -54,6 +53,15 @@
           repo = "z";
           rev = "85f863f20f24faf675827fb00f3a4e15c7838d76";
           sha256 = "sha256-+FUBM7CodtZrYKqU542fQD+ZDGrd2438trKM0tIESs0=";
+        };
+      }
+      {
+        name = "fishmarks";
+        src = pkgs.fetchFromGitHub {
+          owner = "yjpark";
+          repo = "fishmarks";
+          rev = "c40c83bfe9394f4c51f95f0fec7a3d801ac670f4";
+          sha256 = "sha256-Czis1UrjS60sIq4CG1RHWoyqKqc7d1aaerGD1iFugpE=";
         };
       }
     ];
