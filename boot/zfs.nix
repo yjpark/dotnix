@@ -4,7 +4,6 @@
 
 {
   boot.supportedFilesystems = [ "zfs" ];
-  networking.hostId = "80b98880";
   # networking.hostId = "$(head -c 8 /etc/machine-id)";
   boot.kernelPackages = config.boot.zfs.package.latestCompatibleLinuxPackages;
 }
