@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+cd `dirname $0`
+
+export NIX_CURL_FLAGS="-x http://127.0.0.1:1102"
+export NIX_REMOTE=""
+
+./_install-nix.sh
+
+nix-channel --add https://channels.nixos.org/nixpkgs-22.05-darwin nixpkgs
+nix-channel --update
+nix-env -iA nixpkgs.nix

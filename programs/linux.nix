@@ -1,5 +1,6 @@
 { config, pkgs, ... }: {
   imports = [
-    ../../programs
+    ./common.nix
+    ./terminator.nix
   ];
 }

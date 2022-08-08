@@ -5,10 +5,10 @@
     ./exa.nix
     ./bat.nix
     ./bottom.nix
+    ./direnv.nix
     ./git.nix
     ./fzf.nix
     ./tmux.nix
-    ./terminator.nix
     ./alacritty.nix
   ];
 }
