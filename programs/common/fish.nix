@@ -4,6 +4,7 @@
     shellAbbrs = {
       g = "git";
       e = "nvim";
+      a = "rg";
       vi = "nvim";
       vim = "nvim";
       cat = "bat";
@@ -15,7 +16,6 @@
       "..." = "cd ../..";
       "...." = "cd ../../..";
       cb = "clear_buffer";
-      a = "ag --smart-case --line-number";
       set-proxy-off = "set -ge https_proxy; set -ge http_proxy; set -ge ALL_PROXY";
       gf = ''find . -path "*/.git/*" -prune -o -path "*/.svn/*" -prune -o -path "*/.hg/*" -prune -o -path "*/.silp_backup/*" -prune -o -path "*/.silp_test/*" -prune -o -print | grep -i'';
       set-proxy-trojan = "set -gx https_proxy 127.0.0.1:1102; set -gx http_proxy 127.0.0.1:1102; set -gx ALL_PROXY http://127.0.0.1:1102; set -gx NIX_CURL_FLAGS http://127.0.0.1:1102";

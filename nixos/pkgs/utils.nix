@@ -24,6 +24,8 @@
     unzip
     lm_sensors
     lsof
+    ripgrep
+    silver-searcher
   ];
 }
 
