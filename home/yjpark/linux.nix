@@ -1,6 +1,6 @@
 { config, pkgs, ... }: {
   imports = [
-    ../../packages
+    ../../packages/linux
     ../../programs/linux
   ];
   home.username = "yjpark";
