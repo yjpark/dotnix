@@ -6,7 +6,6 @@
     ripgrep
     silver-searcher
     hexyl
-    ncdu_2
     fd
   ];
 }
