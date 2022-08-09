@@ -2,10 +2,10 @@
   imports = [
     ./hardware-configuration.nix
     ./host.nix
-    ../../boot
-    ../../settings
-    ../../services
-    ../../pkgs
-    ../../users
+    ../../nixos/boot
+    ../../nixos/settings
+    ../../nixos/services
+    ../../nixos/pkgs
+    ../../nixos/users
   ];
 }
