@@ -1,6 +1,6 @@
 { config, pkgs, ... }: {
   imports = [
-    ../../programs/darwin.nix
+    ../../programs/darwin
   ];
   home.username = "yjpark";
   home.homeDirectory = "/Users/yjpark";
