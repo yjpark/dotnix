@@ -2,7 +2,7 @@
   imports = [
     ./abbrs.nix
     ./aliases.nix
-    ./functions.nix
+    ./functions
     ./plugins.nix
   ]
 
