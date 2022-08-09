@@ -4,7 +4,7 @@
     ./aliases.nix
     ./functions
     ./plugins.nix
-  ]
+  ];
 
   programs.fish = {
     enable = true;
