@@ -3,4 +3,4 @@
 cd `dirname $0`
 cd ..
 
-darwin-rebuild --flake .#darwinConfiguration.mbp $@
+darwin-rebuild --flake .#mbp $@

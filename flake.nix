@@ -7,14 +7,14 @@
       url = "github:nix-community/home-manager/release-22.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nix-darwin = {
+    darwin = {
       url = "github:lnl7/nix-darwin/master";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     rust-overlay.url = "github:oxalica/rust-overlay/master";
   };
 
-  outputs = { self, nixpkgs, nixos-hardware, home-manager, nix-darwin, rust-overlay }: {
+  outputs = { self, nixpkgs, nixos-hardware, home-manager, darwin, rust-overlay }: {
     nixosConfigurations.alienware-13 = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
@@ -32,7 +32,7 @@
         })
       ];
     };
-    darwinConfigurations.mbp = nix-darwin.lib.darwinSystem {
+    darwinConfigurations.mbp = darwin.lib.darwinSystem {
       system = "x86_64-darwin";
       modules = [
         ./hosts/mbp
