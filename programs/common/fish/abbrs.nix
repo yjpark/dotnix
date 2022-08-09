@@ -3,6 +3,8 @@
     g = "git";
     e = "nvim";
     a = "rg";
+    f = "fd";
+    du = "ncdu";
     vi = "nvim";
     vim = "nvim";
     cat = "bat";

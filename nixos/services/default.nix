@@ -2,5 +2,6 @@
   imports = [
     ./openssh.nix
     ./xserver.nix
+    ./zerotierone.nix
   ];
 }

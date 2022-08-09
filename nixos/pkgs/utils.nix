@@ -4,14 +4,7 @@
   environment.systemPackages = with pkgs; [
     neovim
     git
-    tig
-    git-extras
-    direnv
-    tmux
     binutils
-    bat
-    exa
-    bottom
     htop
     iftop
     iotop
@@ -28,8 +21,6 @@
     unzip
     lm_sensors
     lsof
-    ripgrep
-    silver-searcher
   ];
 }
 
