@@ -10,6 +10,7 @@
     ./git.nix
     ./fzf.nix
     ./tmux.nix
+    ./nushell.nix
     ./alacritty.nix
   ];
 }
