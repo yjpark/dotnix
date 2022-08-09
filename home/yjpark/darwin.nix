@@ -1,6 +1,6 @@
 { config, pkgs, ... }: {
   imports = [
-    ../../packages
+    ../../packages/darwin
     ../../programs/darwin
   ];
   home.username = "yjpark";
