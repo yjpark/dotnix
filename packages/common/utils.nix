@@ -7,5 +7,6 @@
     silver-searcher
     hexyl
     fd
+    dua
   ];
 }
