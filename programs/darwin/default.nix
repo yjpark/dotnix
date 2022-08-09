@@ -1,6 +1,6 @@
 { config, pkgs, ... }: {
   imports = [
-    ./common.nix
+    ../common
     ./home-manager.nix
   ];
 }

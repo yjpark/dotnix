@@ -6,6 +6,8 @@
     extraConfig = {
       init.defaultBranch = "main";
       # url."git@github.com:".insteadOf = "https://github.com/";
+      push.default = "current";
+      pull.rebase = "false";
     };
     aliases = {
       st = "status";

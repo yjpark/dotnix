@@ -1,6 +1,6 @@
 { config, pkgs, ... }: {
   imports = [
-    ../../programs/linux.nix
+    ../../programs/linux
   ];
   home.username = "yjpark";
   home.homeDirectory = "/home/yjpark";
