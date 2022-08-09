@@ -2,7 +2,9 @@
   imports = [
     ./nerdtree.nix
     ./airline.nix
+    ./barbar.nix
     ./startify.nix
+    ./theme.nix
     ./vimproc.nix
     ./unite.nix
   ];
@@ -15,7 +17,6 @@
         (builtins.readFile ./config/map-buffer.vim)
         (builtins.readFile ./config/map-fav.vim)
         (builtins.readFile ./config/map-insert.vim)
-        (builtins.readFile ./config/map-tab.vim)
       ];
   };
 
