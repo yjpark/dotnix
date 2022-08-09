@@ -1,7 +1,7 @@
 { config, pkgs, ... }: {
   imports = [
     ../common
-    ./tcdu_2.nix
+    ./ncdu_2.nix
   ];
 }
 
