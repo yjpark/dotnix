@@ -11,13 +11,12 @@
 
   programs.neovim = {
     enable = true;
-    extraConfig = 
-      builtins.concatStringsSep "\n\n\n" [
-        (builtins.readFile ./config/settings.vim)
-        (builtins.readFile ./config/map-buffer.vim)
-        (builtins.readFile ./config/map-fav.vim)
-        (builtins.readFile ./config/map-insert.vim)
-      ];
+    extraConfig = builtins.concatStringsSep "\n\n\n" [
+      (builtins.readFile ./config/settings.vim)
+      (builtins.readFile ./config/map-buffer.vim)
+      (builtins.readFile ./config/map-fav.vim)
+      (builtins.readFile ./config/map-insert.vim)
+    ];
   };
 
   home = {

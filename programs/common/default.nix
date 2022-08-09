@@ -1,8 +1,8 @@
 { config, pkgs, ... }: {
   imports = [
-    ./fish.nix
-    ./starship.nix
+    ./fish
     ./neovim
+    ./starship.nix
     ./exa.nix
     ./bat.nix
     ./bottom.nix
