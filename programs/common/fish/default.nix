@@ -9,6 +9,7 @@
   programs.fish = {
     enable = true;
     interactiveShellInit = builtins.concatStringsSep "\n\n\n" [
+      (builtins.readFile ./init/ssh-agent.fish)
       (builtins.readFile ./init/path.fish)
     ];
   };

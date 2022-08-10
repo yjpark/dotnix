@@ -12,7 +12,7 @@
     cat = "bat";
     top = "btm";
     ta = "tmux attach";
-    cb = "clear_buffer";
-    sp = "sync_pass";
+    cb = "clear-buffer";
+    sp = "sync-pass";
   };
 }

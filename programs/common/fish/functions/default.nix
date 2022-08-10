@@ -1,6 +1,7 @@
 { pkgs, ... }: {
   programs.fish.functions = {
-    clear_buffer = builtins.readFile ./clear_buffer.fish;
-    sync_pass = builtins.readFile ./sync_pass.fish;
+    clear-buffer = builtins.readFile ./clear-buffer.fish;
+    setup-ssh-agent = builtins.readFile ./setup-ssh-agent.fish;
+    sync-pass = builtins.readFile ./sync-pass.fish;
   };
 }
