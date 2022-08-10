@@ -2,6 +2,7 @@
   imports = [
     ../common
     ./ncdu_2.nix
+    ./vscode-server.nix
   ];
 }
 

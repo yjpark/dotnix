@@ -4,6 +4,8 @@
     e = "nvim";
     a = "rg";
     f = "fd";
+    n = "nix";
+    d = "docker";
     du = "ncdu";
     vi = "nvim";
     vim = "nvim";

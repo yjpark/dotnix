@@ -3,6 +3,9 @@
     tig
     git-extras
     inetutils
+    wget
+    axel
+    curl
     mosh              # ssh over UDP
     ripgrep           # rg
     silver-searcher   # ag
