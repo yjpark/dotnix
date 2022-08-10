@@ -2,7 +2,7 @@
   home.packages = with pkgs; [
     tig
     git-extras
-    telnet
+    inetutils
     mosh              # ssh over UDP
     ripgrep           # rg
     silver-searcher   # ag
