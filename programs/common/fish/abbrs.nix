@@ -15,5 +15,7 @@
     tf = "tmux-fix-ssh-agent";
     cb = "clear-buffer";
     sp = "sync-pass";
+    gwp = "git-commit-wip-and-push";
+    gsp = "git-commit-sync-and-push";
   };
 }
