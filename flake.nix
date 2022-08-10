@@ -11,16 +11,35 @@
       url = "github:lnl7/nix-darwin/master";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nixos-wsl = {
+      url = "github:nix-community/NixOS-WSL/main";
+    };
     rust-overlay.url = "github:oxalica/rust-overlay/master";
   };
 
-  outputs = { self, nixpkgs, nixos-hardware, home-manager, nix-darwin, rust-overlay }: {
+  outputs = { self, nixpkgs, nixos-hardware, home-manager, nix-darwin, nixos-wsl, rust-overlay }: {
     nixosConfigurations.alienware-13 = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
         nixos-hardware.nixosModules.common-cpu-intel
         nixos-hardware.nixosModules.common-pc-laptop-ssd
         ./hosts/alienware-13
+        home-manager.nixosModules.home-manager {
+          home-manager.useGlobalPkgs = true;
+          home-manager.useUserPackages = true;
+          home-manager.users.yjpark = import ./home/yjpark/linux.nix;
+        }
+        ({ pkgs, ... }: {
+            nixpkgs.overlays = [ rust-overlay.overlays.default ];
+            environment.systemPackages = [ pkgs.rust-bin.stable.latest.default ];
+        })
+      ];
+    };
+    nixosConfigurations.wsl = nixpkgs.lib.nixosSystem {
+      system = "x86_64-linux";
+      modules = [
+        nixos-wsl.nixosModules.wsl
+        ./hosts/wsl
         home-manager.nixosModules.home-manager {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;

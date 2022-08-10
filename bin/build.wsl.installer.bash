@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+cd `dirname $0`
+cd ..
+
+nix build .#nixosConfigurations.wsl.config.system.build.installer
