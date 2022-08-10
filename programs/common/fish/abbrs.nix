@@ -12,6 +12,7 @@
     cat = "bat";
     top = "btm";
     ta = "tmux attach";
+    tf = "tmux-fix-ssh-agent";
     cb = "clear-buffer";
     sp = "sync-pass";
   };
