@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+
+cd `dirname $0`
+source _console_utils.bash
+
+cd ../..
+
+HOST=`hostname`
+
+if [[ $HOST = "alienware-13" || $HOST = "gpd-p2" || $HOST = "wsl" ]] ; then
+    confirm "Rebuild NixOS Host: ${GREEN}${HOST}${NO_COLOR}"
+    if [ "$#" -eq 0 ] ; then
+        sudo nixos-rebuild --flake .#${HOST} switch
+    else
+        sudo nixos-rebuild --flake .#${HOST} $@
+    fi
+elif [[ $HOST = "mbp" ]] ; then
+    confirm "Rebuild Nix Darwin Host: ${GREEN}${HOST}${NO_COLOR}"
+    if [ "$#" -eq 0 ] ; then
+        darwin-rebuild --flake .#${HOST} switch
+    else
+        darwin-rebuild --flake .#${HOST} $@
+    fi
+else
+    echo "Unsupported Host: ${RED}$HOST${NO_COLOR}"
+    exit 2
+fi
