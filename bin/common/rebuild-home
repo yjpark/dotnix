@@ -6,7 +6,6 @@ source _console_utils.bash
 cd ../..
 
 HOST=`hostname`
-HOST=mbp
 
 if [[ $HOST = "mbp" ]] ; then
     if [[ $USER = "yjpark" ]] ; then
