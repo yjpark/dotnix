@@ -6,6 +6,7 @@
     f = "fd";
     n = "nix";
     d = "docker";
+    p = "podman";
     du = "ncdu";
     vi = "nvim";
     vim = "nvim";
@@ -17,5 +18,6 @@
     sp = "sync-pass";
     gwp = "git-commit-wip-and-push";
     gsp = "git-commit-sync-and-push";
+    gps = "ps -ef | grep -i";
   };
 }
