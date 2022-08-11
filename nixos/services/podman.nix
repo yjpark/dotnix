@@ -5,6 +5,7 @@
     enable = true;
     dockerSocket.enable = true;
     defaultNetwork.dnsname.enable = true; 
+    extraPackages = [ pkgs.zfs ];
   };
 
   environment.systemPackages = with pkgs; [
