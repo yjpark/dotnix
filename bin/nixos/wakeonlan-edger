@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+wakeonlan 70:85:c2:83:65:fe
