@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+if [ -z $1 ] ; then
+    echo "Need to provide remote host address"
+    echo "e.g. sync-gpg-keys yjpark.org"
+    exit 1
+fi
+
+cd ~/.gnupg
+
+DATETIME=$(date -u +%Y%m%d)_$(date -u +%H%M)
+mkdir -p backup/$DATETIME
+cp -v pubring.kbx backup/$DATETIME/
+cp -vr private-keys-v1.d backup/$DATETIME/
+
+scp $1:.gnupg/pubring.kbx .
+scp -r $1:.gnupg/private-keys-v1.d .
