@@ -1,6 +1,6 @@
 { config, pkgs, ... }: {
   imports = [
-    ./utils.nix
-    ./gnome.nix
+    ./kary-pro.nix
+    ./ayu.nix
   ];
 }

@@ -1,6 +1,6 @@
 { config, pkgs, ... }: {
   imports = [
-    ./utils.nix
-    ./gnome.nix
+    ./editor.nix
+    ./minimap.nix
   ];
 }

@@ -2,6 +2,7 @@
   imports = [
     ./openssh.nix
     ./xserver.nix
+    ./gnome.nix
     ./zerotierone.nix
   ];
 }

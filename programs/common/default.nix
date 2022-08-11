@@ -17,5 +17,6 @@
     ./alacritty.nix
     ./just.nix
     ./nix-index.nix
+    ./vscode
   ];
 }
