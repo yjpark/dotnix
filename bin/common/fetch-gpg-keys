@@ -2,7 +2,7 @@
 
 if [ -z $1 ] ; then
     echo "Need to provide remote host address"
-    echo "e.g. sync-gpg-keys yjpark.org"
+    echo "e.g. $0 yjpark.org"
     exit 1
 fi
 
