@@ -1,8 +1,7 @@
 { config, pkgs, ... }:
 {
-  nix.settings.substituters = [
+  nix.settings.substituters = pkgs.lib.mkBefore [
     "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store"
-    "https://cache.nixos.org"
   ];
 }
 

@@ -18,6 +18,23 @@
   };
 
   outputs = { self, nixpkgs, nixos-hardware, home-manager, nix-darwin, nixos-wsl, rust-overlay }: {
+    nixosConfigurations.edger = nixpkgs.lib.nixosSystem {
+      system = "x86_64-linux";
+      modules = [
+        nixos-hardware.nixosModules.common-cpu-amd
+        nixos-hardware.nixosModules.common-pc-ssd
+        ./hosts/edger
+        home-manager.nixosModules.home-manager {
+          home-manager.useGlobalPkgs = true;
+          home-manager.useUserPackages = true;
+          home-manager.users.yjpark = import ./home/yjpark/linux.nix;
+        }
+        ({ pkgs, ... }: {
+            nixpkgs.overlays = [ rust-overlay.overlays.default ];
+            environment.systemPackages = [ pkgs.rust-bin.stable.latest.default ];
+        })
+      ];
+    };
     nixosConfigurations.alienware-13 = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
