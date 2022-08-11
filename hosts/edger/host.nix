@@ -2,5 +2,5 @@
 
 {
   networking.hostId = "f4769ef1";
-  networking.hostName = "edegr";
+  networking.hostName = "edger";
 }
