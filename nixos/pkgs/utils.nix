@@ -19,6 +19,8 @@
     unzip
     lm_sensors
     lsof
+    wakeonlan
+    ethtool
   ];
 }
 
