@@ -12,6 +12,7 @@
     vim = "nvim";
     cat = "bat";
     top = "btm";
+    tree = "exa -T";
     ta = "tmux attach";
     tf = "tmux-fix-ssh-agent";
     cb = "clear-buffer";
