@@ -16,6 +16,11 @@
       fsType = "zfs";
     };
 
+  fileSystems."/home" =
+    { device = "rpool/state/home";
+      fsType = "zfs";
+    };
+
   fileSystems."/nix" =
     { device = "rpool/cache/nix";
       fsType = "zfs";
