@@ -1,7 +1,5 @@
 { config, pkgs, ... }: {
   imports = [
-    ./common
-    ./normal
+    ./openssh.nix
   ];
 }
-
