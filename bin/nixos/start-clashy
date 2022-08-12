@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
 cd /tmp
-nohup ~/Applications/clashy.appimage &
+nohup appimage-run ~/Applications/clashy.appimage &
