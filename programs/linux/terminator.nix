@@ -8,7 +8,7 @@
       keybindings.zoom_in = "<Primary>equal";
       keybindings.zoom_out = "<Primary>minus";
       keybindings.new_tab = "<Primary>t";
-      keybindings.close_term = "<Primary>w";
+      keybindings.close_term = "<Alt>w";
       keybindings.copy = "<Primary>c";
       keybindings.paste = "<Primary>v";
       keybindings.switch_to_tab_1 = "<Primary>1";
