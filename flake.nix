@@ -14,13 +14,20 @@
     nixos-wsl = {
       url = "github:nix-community/NixOS-WSL/main";
     };
+    nix-alien = {
+      url = "github:thiagokokada/nix-alien/master";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     rust-overlay.url = "github:oxalica/rust-overlay/master";
   };
 
-  outputs = { self, nixpkgs, nixos-hardware, home-manager, nix-darwin, nixos-wsl, rust-overlay }: {
+  outputs = { self, nixpkgs, nixos-hardware, home-manager, nix-darwin, nixos-wsl, nix-alien, rust-overlay }: {
     nixosConfigurations.edger = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
+        ({ pkgs, ... }: {
+            nixpkgs.overlays = [ nix-alien.overlay ];
+        }) 
         nixos-hardware.nixosModules.common-cpu-amd
         nixos-hardware.nixosModules.common-pc-ssd
         ./hosts/edger
@@ -38,6 +45,9 @@
     nixosConfigurations.alienware-13 = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
+        ({ pkgs, ... }: {
+            nixpkgs.overlays = [ nix-alien.overlay ];
+        }) 
         nixos-hardware.nixosModules.common-cpu-intel
         nixos-hardware.nixosModules.common-pc-laptop-ssd
         ./hosts/alienware-13
@@ -55,6 +65,9 @@
     nixosConfigurations.gpd-p2 = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
+        ({ pkgs, ... }: {
+            nixpkgs.overlays = [ nix-alien.overlay ];
+        }) 
         nixos-hardware.nixosModules.common-cpu-intel
         nixos-hardware.nixosModules.common-pc-laptop-ssd
         ./hosts/gpd-p2
@@ -72,6 +85,9 @@
     nixosConfigurations.wsl = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
+        ({ pkgs, ... }: {
+            nixpkgs.overlays = [ nix-alien.overlay ];
+        }) 
         nixos-wsl.nixosModules.wsl
         ./hosts/wsl
         home-manager.nixosModules.home-manager {
@@ -88,6 +104,9 @@
     darwinConfigurations.mbp = nix-darwin.lib.darwinSystem {
       system = "x86_64-darwin";
       modules = [
+        ({ pkgs, ... }: {
+            nixpkgs.overlays = [ nix-alien.overlay ];
+        }) 
         ./hosts/mbp
         home-manager.nixosModules.home-manager {
           home-manager.useGlobalPkgs = true;
