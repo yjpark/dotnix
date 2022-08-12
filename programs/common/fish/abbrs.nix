@@ -7,7 +7,7 @@
     n = "nix";
     d = "docker";
     p = "podman";
-    du = "ncdu";
+    du = "dua";
     vi = "nvim";
     vim = "nvim";
     cat = "bat";
