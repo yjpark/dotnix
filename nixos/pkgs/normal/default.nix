@@ -1,7 +1,6 @@
 { config, pkgs, ... }: {
   imports = [
-    ./common
-    ./normal
+    ./gnome.nix
+    ./rustdesk.nix
   ];
 }
-

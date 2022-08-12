@@ -3,7 +3,7 @@
     ./host.nix
     ../../nixos/settings/wsl
     ../../nixos/services/wsl
-    ../../nixos/pkgs
+    ../../nixos/pkgs/wsl
     ../../nixos/users
   ];
   wsl = {
