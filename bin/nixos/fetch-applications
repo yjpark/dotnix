@@ -8,4 +8,4 @@ fi
 
 cd ~/.gnupg
 
-rsync --progress $1:Applications ~/
+rsync --progress -r $1:Applications ~/
