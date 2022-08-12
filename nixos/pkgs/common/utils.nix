@@ -21,6 +21,7 @@
     lsof
     wakeonlan
     ethtool
+    file
   ];
 }
 
