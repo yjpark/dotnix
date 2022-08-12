@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-
-cd /tmp
-nohup appimage-run ~/Applications/clashy.appimage &
