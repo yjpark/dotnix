@@ -4,5 +4,6 @@
     ./gnome.nix
     ./zerotierone.nix
     ./privoxy.nix
+    ./dev.nix
   ];
 }
