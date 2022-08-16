@@ -15,3 +15,9 @@ if [ $status -eq 0 ]
         set -x PATH $PATH ~/.nix.private/bin/nixos
     end
 end
+
+if test -d ~/.cargo/bin
+    set -x PATH $PATH ~/.cargo/bin
+end
+
+
