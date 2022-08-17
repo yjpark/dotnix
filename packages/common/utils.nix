@@ -17,5 +17,6 @@
     sd                  # sed alternative
     tokei               # source line calculater
     bandwhich           # show network usage by process
+    dogdns              # dig alternative
   ];
 }

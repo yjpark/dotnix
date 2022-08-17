@@ -1,5 +1,5 @@
 { pkgs, ... }: {
-  programs.just = {
+  programs.skim = {
     enable = true;
- };
+  };
 }
