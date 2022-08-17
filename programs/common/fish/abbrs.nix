@@ -11,6 +11,7 @@
     du = "dua";
     vi = "nvim";
     vim = "nvim";
+    ps = "procs";
     cat = "bat";
     top = "btm";
     tree = "exa -T";
