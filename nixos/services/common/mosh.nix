@@ -1,3 +1,3 @@
 { config, pkgs, ... }: {
-  services.mosh.enable = true;
+  programs.mosh.enable = true;
 }
