@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+cd `dirname $0`
+source _console_utils.bash
+
+if [ ! $1 ] ; then 
+    printf "%s " "${MAGENTA}Please specify a name${NO_COLOR}"
+    exit -1
+fi
+
+cmd=`which $1`
+
+if [ $cmd ] ; then
+    printf '%s\n' "${GREEN}${cmd}${NO_COLOR}"
+    echo ""
+    cat $cmd
+else
+    error "This cmd does not exist: $1"
+fi
