@@ -6,6 +6,7 @@
     f = "fd";
     n = "nix";
     d = "docker";
+    k = "kubectl";
     p = "podman";
     s = "mosh";
     du = "dua";
