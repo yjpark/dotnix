@@ -3,5 +3,6 @@
     kubectl
     k0sctl
     tanka
+    jsonnet-bundler
   ];
 }
