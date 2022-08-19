@@ -1,8 +1,6 @@
 { config, pkgs, ... }: {
   imports = [
-    ./common
-    ./normal
-    ./dev
+    ./ports.nix
+    ./k3s.nix
   ];
 }
-
