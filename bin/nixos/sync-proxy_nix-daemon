@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+cd `dirname $0`
+
 sudo mkdir -p /run/systemd/system/nix-daemon.service.d/
 cat << EOF >/tmp/nix-daemon.service.d.override.conf
 [Service]
@@ -14,5 +16,4 @@ sudo cp /tmp/nix-daemon.service.d.override.conf /run/systemd/system/nix-daemon.s
 sudo systemctl daemon-reload
 sudo systemctl restart nix-daemon
 
-sudo systemctl cat nix-daemon | grep _proxy
-sudo systemctl cat nix-daemon | grep NIX_CURL_FLAGS
+./show-proxy_nix-daemon
