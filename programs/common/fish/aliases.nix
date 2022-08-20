@@ -4,6 +4,7 @@
     "..." = "cd ../..";
     "...." = "cd ../../..";
     reset-proxy = "set -ge https_proxy; set -ge http_proxy; set -ge all_proxy";
+    show-proxy = "env | grep _proxy";
     set-proxy-trojan = "set -gx https_proxy 127.0.0.1:1102; set -gx http_proxy 127.0.0.1:1102; set -gx all_proxy http://127.0.0.1:1102; set -gx NIX_CURL_FLAGS http://127.0.0.1:1102";
     set-proxy-panda = "set -gx https_proxy 127.0.0.1:1104; set -gx http_proxy 127.0.0.1:1104; set -gx all_proxy http://127.0.0.1:1104; set -gx NIX_CURL_FLAGS http://127.0.0.1:1104";
     set-proxy-cow = "set -gx https_proxy 127.0.0.1:1100; set -gx http_proxy 127.0.0.1:1100; set -gx all_proxy http://127.0.0.1:1100; set -gx NIX_CURL_FLAGS http://127.0.0.1:1100";
