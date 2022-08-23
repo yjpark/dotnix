@@ -4,7 +4,6 @@
     role = "server";
     extraFlags = toString [
       "--container-runtime-endpoint unix:///run/containerd/containerd.sock"
-      "--no-deploy metrics-server"
     ];
   };
   # Note: need to create the zfs mount manually
