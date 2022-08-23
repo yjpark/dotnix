@@ -25,6 +25,16 @@
           bin_dir = "${fullCNIPlugins}/bin";
           conf_dir = "/var/lib/rancher/k3s/agent/etc/cni/net.d/";
         };
+        plugins."io.containerd.grpc.v1.cri".registry.mirrors."host.lan" = {
+          endpoint = [
+            "http://10.0.1.6:5000"
+          ];
+        };
+        plugins."io.containerd.grpc.v1.cri".registry.mirrors."test.lan" = {
+          endpoint = [
+            "http://10.0.1.6:29003"
+          ];
+        };
       };
   }; 
   networking.firewall.allowedTCPPorts = [
