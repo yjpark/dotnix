@@ -5,7 +5,7 @@
     a = "rg";
     f = "fd";
     n = "nix";
-    d = "docker";
+    d = "dotnet";
     k = "kubectl";
     p = "podman";
     s = "mosh";
