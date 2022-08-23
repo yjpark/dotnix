@@ -8,6 +8,15 @@
     extraPackages = [ pkgs.zfs ];
   };
 
+  virtualisation.containers.registries.search = [
+    "docker.io"
+  ];
+
+  virtualisation.containers.registries.insecure = [
+    "localhost:5000"
+    "localhost:29003"
+  ];
+
   environment.systemPackages = with pkgs; [
     arion
     podman-compose
