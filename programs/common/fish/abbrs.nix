@@ -13,6 +13,7 @@
     vi = "nvim";
     vim = "nvim";
     ps = "procs";
+    bw = "sudo bandwhich";
     cat = "bat";
     top = "btm";
     tree = "exa -T";
