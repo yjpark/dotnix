@@ -1,9 +1,10 @@
 #!/usr/bin/env bash
 
+cd `dirname $0`
+
 sudo rm /run/systemd/system/nix-daemon.service.d/override.conf
 
 sudo systemctl daemon-reload
 sudo systemctl restart nix-daemon
 
-sudo systemctl cat nix-daemon | grep _proxy
-sudo systemctl cat nix-daemon | grep NIX_CURL_FLAGS
+./show-proxy_nix-daemon
