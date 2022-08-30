@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # run `xprop WM_CLASS` then click the window to get WM_CLASS
 
