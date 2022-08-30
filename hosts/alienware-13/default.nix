@@ -7,5 +7,6 @@
     ../../nixos/services
     ../../nixos/pkgs
     ../../nixos/users
+    ../../nixos/services/normal/nosleep.nix
   ];
 }
