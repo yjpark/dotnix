@@ -3,6 +3,5 @@
     ./openssh.nix
     ./mosh.nix
     ./podman.nix
-    ./flatpak.nix
   ];
 }
