@@ -34,7 +34,7 @@
         home-manager.nixosModules.home-manager {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
-          home-manager.users.yjpark = import ./home/yjpark/linux.nix;
+          home-manager.users.yjpark = import ./home/yjpark/linux;
         }
         ({ pkgs, ... }: {
             nixpkgs.overlays = [ rust-overlay.overlays.default ];
@@ -54,7 +54,7 @@
         home-manager.nixosModules.home-manager {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
-          home-manager.users.yjpark = import ./home/yjpark/linux.nix;
+          home-manager.users.yjpark = import ./home/yjpark/linux;
         }
         ({ pkgs, ... }: {
             nixpkgs.overlays = [ rust-overlay.overlays.default ];
@@ -74,7 +74,7 @@
         home-manager.nixosModules.home-manager {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
-          home-manager.users.yjpark = import ./home/yjpark/linux.nix;
+          home-manager.users.yjpark = import ./home/yjpark/linux;
         }
         ({ pkgs, ... }: {
             nixpkgs.overlays = [ rust-overlay.overlays.default ];
@@ -93,7 +93,7 @@
         home-manager.nixosModules.home-manager {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
-          home-manager.users.yjpark = import ./home/yjpark/linux.nix;
+          home-manager.users.yjpark = import ./home/yjpark/linux;
         }
         ({ pkgs, ... }: {
             nixpkgs.overlays = [ rust-overlay.overlays.default ];

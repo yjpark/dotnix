@@ -3,7 +3,9 @@
     enable = true;
     config = {
       globla_config.borderless = true;
-      globla_config.close_button_on_tab = false;
+      global_config.close_button_on_tab = false;
+      global_config.focus = "sloppy";
+      global_config.window_state = "fullscreen";
 
       keybindings.zoom_in = "<Primary>equal";
       keybindings.zoom_out = "<Primary>minus";
@@ -21,6 +23,9 @@
       keybindings.switch_to_tab_8 = "<Primary>8";
       keybindings.switch_to_tab_9 = "<Primary>9";
       keybindings.switch_to_tab_10 = "<Primary>0";
+
+      profiles.default.show_titlebar = false;
+      profiles.default.scrollbar_position = "disabled";
     };
   };
 }
