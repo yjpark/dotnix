@@ -2,6 +2,7 @@
   home.packages = with pkgs; [
     microsoft-edge
     google-chrome
+    qimgv
   ];
 }
 
