@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+cd /tmp
+nohup flatpak run md.obsidian.Obsidian > /tmp/obsidian.log &
+

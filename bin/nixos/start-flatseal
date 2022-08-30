@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+cd /tmp
+nohup flatpak run com.github.tchx84.Flatseal > /tmp/flatseal.log &
+
