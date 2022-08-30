@@ -11,9 +11,9 @@ if [[ $HOST = "mbp" ]] ; then
     if [[ $USER = "yjpark" ]] ; then
         confirm "Rebuild Nix Home: ${GREEN}${USER}@${HOST}${NO_COLOR}"
         if [ "$#" -eq 0 ] ; then
-            echo home-manager --extra-experimental-features "nix-command flakes" --flake .#${USER}@${HOST} switch
+            home-manager --extra-experimental-features "nix-command flakes" --flake .#${USER}@${HOST} switch
         else
-            echo home-manager --extra-experimental-features "nix-command flakes" --flake .#${USER}@${HOST} $@
+            home-manager --extra-experimental-features "nix-command flakes" --flake .#${USER}@${HOST} $@
         fi
     else
         echo "Unsupported USER: ${RED}${USER}${NO_COLOR}"
