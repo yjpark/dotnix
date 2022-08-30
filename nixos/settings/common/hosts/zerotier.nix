@@ -11,5 +11,6 @@
         172.22.1.11   mbp.yjpark.zerotier
         172.22.1.12   p2_wifi.yjpark.zerotier gpd-p2_wifi.yjpark.zerotier
         172.22.1.13   a13_wifi.yjpark.zerotier alienware-13_wifi.yjpark.zerotier
+        172.22.1.14   edger_wifi.yjpark.zerotier
     '';
 }

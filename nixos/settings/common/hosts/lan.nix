@@ -12,5 +12,6 @@
         10.0.1.11   mbp
         10.0.1.12   p2_wifi gpd-p2_wifi
         10.0.1.13   a13_wifi alienware-13_wifi
+        10.0.1.14   edger_wifi
     '';
 }
