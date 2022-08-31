@@ -79,7 +79,7 @@
                     }
                 ];
             } {
-                "before" = [">"];
+                "before" = ["<"];
                 "commands" = [
                     {
                         "command" = "editor.action.outdentLines";

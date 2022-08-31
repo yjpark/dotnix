@@ -5,6 +5,7 @@
     a = "rg";
     f = "fd";
     n = "nix";
+    c = "cargo";
     d = "dotnet";
     k = "kubectl";
     p = "podman";
