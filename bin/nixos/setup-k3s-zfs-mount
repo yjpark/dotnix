@@ -1,3 +1,5 @@
-  #!/usr/bin/env bash
-  
-  sudo zfs create -o mountpoint=/var/lib/containerd/io.containerd.snapshotter.v1.zfs rpool/state/containerd
+#!/usr/bin/env bash
+
+# using k3s with zfs need to create the mount manually
+
+sudo zfs create -o mountpoint=/var/lib/containerd/io.containerd.snapshotter.v1.zfs rpool/state/containerd

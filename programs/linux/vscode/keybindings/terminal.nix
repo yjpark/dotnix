@@ -8,7 +8,7 @@
         {
             key = "ctrl+f";
             command = "-workbench.action.terminal.focusFind";
-            when = "terminalFindFocused && terminalProcessSupported || terminalFocus && terminalProcessSupported";
+            when = "terminalFindFocused && terminalHasBeenCreated || terminalFindFocused && terminalProcessSupported || terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported";
         }
     ];
 }
