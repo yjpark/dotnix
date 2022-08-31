@@ -5,7 +5,7 @@
       globla_config.borderless = true;
       global_config.close_button_on_tab = false;
       global_config.focus = "sloppy";
-      global_config.window_state = "fullscreen";
+      global_config.window_state = "maximised";
 
       keybindings.zoom_in = "<Primary>equal";
       keybindings.zoom_out = "<Primary>minus";

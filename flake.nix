@@ -18,16 +18,19 @@
       url = "github:thiagokokada/nix-alien/master";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    rust-overlay.url = "github:oxalica/rust-overlay/master";
+    fenix = {
+      url = "github:nix-community/fenix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, nixos-hardware, home-manager, nix-darwin, nixos-wsl, nix-alien, rust-overlay }: {
+  outputs = { self, nixpkgs, nixos-hardware, home-manager, nix-darwin, nixos-wsl, nix-alien, fenix }: {
     nixosConfigurations.edger = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
         ({ pkgs, ... }: {
-            nixpkgs.overlays = [ nix-alien.overlay ];
-        }) 
+          nixpkgs.overlays = [ nix-alien.overlay fenix.overlay ];
+        })
         nixos-hardware.nixosModules.common-cpu-amd
         nixos-hardware.nixosModules.common-pc-ssd
         ./hosts/edger
@@ -36,18 +39,14 @@
           home-manager.useUserPackages = true;
           home-manager.users.yjpark = import ./home/yjpark/linux;
         }
-        ({ pkgs, ... }: {
-            nixpkgs.overlays = [ rust-overlay.overlays.default ];
-            environment.systemPackages = [ pkgs.rust-bin.stable.latest.default ];
-        })
       ];
     };
     nixosConfigurations.alienware-13 = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
         ({ pkgs, ... }: {
-            nixpkgs.overlays = [ nix-alien.overlay ];
-        }) 
+          nixpkgs.overlays = [ nix-alien.overlay fenix.overlay ];
+        })
         nixos-hardware.nixosModules.common-cpu-intel
         nixos-hardware.nixosModules.common-pc-laptop-ssd
         ./hosts/alienware-13
@@ -56,18 +55,14 @@
           home-manager.useUserPackages = true;
           home-manager.users.yjpark = import ./home/yjpark/linux;
         }
-        ({ pkgs, ... }: {
-            nixpkgs.overlays = [ rust-overlay.overlays.default ];
-            environment.systemPackages = [ pkgs.rust-bin.stable.latest.default ];
-        })
       ];
     };
     nixosConfigurations.gpd-p2 = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
         ({ pkgs, ... }: {
-            nixpkgs.overlays = [ nix-alien.overlay ];
-        }) 
+          nixpkgs.overlays = [ nix-alien.overlay fenix.overlay ];
+        })
         nixos-hardware.nixosModules.common-cpu-intel
         nixos-hardware.nixosModules.common-pc-laptop-ssd
         ./hosts/gpd-p2
@@ -76,18 +71,14 @@
           home-manager.useUserPackages = true;
           home-manager.users.yjpark = import ./home/yjpark/linux;
         }
-        ({ pkgs, ... }: {
-            nixpkgs.overlays = [ rust-overlay.overlays.default ];
-            environment.systemPackages = [ pkgs.rust-bin.stable.latest.default ];
-        })
       ];
     };
     nixosConfigurations.wsl = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
         ({ pkgs, ... }: {
-            nixpkgs.overlays = [ nix-alien.overlay ];
-        }) 
+          nixpkgs.overlays = [ nix-alien.overlay fenix.overlay ];
+        })
         nixos-wsl.nixosModules.wsl
         ./hosts/wsl
         home-manager.nixosModules.home-manager {
@@ -95,18 +86,14 @@
           home-manager.useUserPackages = true;
           home-manager.users.yjpark = import ./home/yjpark/linux;
         }
-        ({ pkgs, ... }: {
-            nixpkgs.overlays = [ rust-overlay.overlays.default ];
-            environment.systemPackages = [ pkgs.rust-bin.stable.latest.default ];
-        })
       ];
     };
     darwinConfigurations.mbp = nix-darwin.lib.darwinSystem {
       system = "x86_64-darwin";
       modules = [
         ({ pkgs, ... }: {
-            nixpkgs.overlays = [ nix-alien.overlay ];
-        }) 
+          nixpkgs.overlays = [ nix-alien.overlay fenix.overlay ];
+        })
         ./hosts/mbp
         home-manager.nixosModules.home-manager {
           home-manager.useGlobalPkgs = true;
