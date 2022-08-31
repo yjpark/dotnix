@@ -21,7 +21,12 @@
 
   security.sudo.extraConfig = ''
     yjpark	ALL=(ALL) NOPASSWD: ALL
+
+    Defaults:root,%wheel env_keep+=http_proxy
+    Defaults:root,%wheel env_keep+=https_proxy
+    Defaults:root,%wheel env_keep+=all_proxy
+    Defaults:root,%wheel env_keep+=NIX_CURL_FLAGS
   '';
 
-  nix.trustedUsers = [ "root" "yjpark" ];
+  nix.settings.trusted-users = [ "root" "yjpark" ];
 }
