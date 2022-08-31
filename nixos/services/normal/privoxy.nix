@@ -9,7 +9,7 @@
   environment.etc = {
     "privoxy/direct.action".source = ./privoxy.direct.action;
   };
-  services.privoxy.settings.actionsFiles = [
+  services.privoxy.settings.actionsfile = [
     "/etc/privoxy/direct.action"
   ];
   networking.firewall.allowedTCPPorts = [

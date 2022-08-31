@@ -1,2 +1,5 @@
+{{alias}}
+direct = +forward-override{forward .}
+
 {direct}
 .cn
