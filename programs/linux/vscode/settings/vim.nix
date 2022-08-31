@@ -1,95 +1,91 @@
-{ config; pkgs, ... }: {
+{ config, pkgs, ... }: {
     programs.vscode.userSettings = {
-        "vim.neovimPath = "/etc/profiles/per-user/yjpark/bin/nvim";
-        "vim.enableNeovim = true;
-        "vim.disableAnnoyingNeovimMessage = true;
-        "vim.useSystemClipboard = true;
-        "vim.sneak = true;
-        "vim.easymotion = true;
-        "vim.easymotionKeys = "aoeuidhtnspyfgcrlqjkxbmwvz;",
-        "vim.normalModeKeyBindings = [
+        "vim.neovimPath" = "/etc/profiles/per-user/yjpark/bin/nvim";
+        "vim.enableNeovim" = true;
+        "vim.disableAnnoyingNeovimMessage" = true;
+        "vim.useSystemClipboard" = true;
+        "vim.sneak" = true;
+        "vim.easymotion" = true;
+        "vim.easymotionKeys" = "aoeuidhtnspyfgcrlqjkxbmwvz;";
+        "vim.normalModeKeyBindings" = [
             {
                 "before" = [";"];
-                "after" = [":"]
-            }; {
+                "after" = [":"];
+            } {
                 "before" = ["<Enter>"];
-                "after" = ["i"]
-            }; {
+                "after" = ["i"];
+            } {
                 "before" = ["<Backspace>"];
-                "after" = ["i"; "<Backspace>"]
-            }; {
+                "after" = ["i" "<Backspace>"];
+            } {
                 "before" = ["<C-w>"];
                 "after" = [];
-                "commands = [
+                "commands" = [
                     {
-                        "command = "workbench.action.closeActiveEditor";
-                        "args = []
+                        "command" = "workbench.action.closeActiveEditor";
+                        "args" = [];
                     }
-                ]
-            }; {
+                ];
+            } {
                 "before" = ["<C-n>"];
                 "after" = [];
-                "commands = [
+                "commands" = [
                     {
-                        "command = ":tabnext";
-                        "args = []
+                        "command" = ":tabnext";
+                        "args" = [];
                     }
-                ]
-            }; {
+                ];
+            } {
                 "before" = ["<C-p>"];
                 "after" = [];
-                "commands = [
+                "commands" = [
                     {
-                        "command = ":tabprevious";
-                        "args = []
+                        "command" = ":tabprevious";
+                        "args" = [];
                     }
-                ]
-            }; {
+                ];
+            } {
                 "before" = ["<C-s>"];
                 "after" = [];
-                "commands = [
+                "commands" = [
                     {
-                        "command = "workbench.action.files.save";
-                        "args = []
+                        "command" = "workbench.action.files.save";
+                        "args" = [];
                     }
-                ]
+                ];
             }
         ];
-        "vim.insertModeKeyBindings = [
+        "vim.insertModeKeyBindings" = [
             {
                 "before" = ["<C-s>"];
                 "after" = [];
-                "commands = [
+                "commands" = [
                     {
-                        "command = "workbench.action.files.save";
-                        "args = []
+                        "command" = "workbench.action.files.save";
+                        "args" = [];
                     }
-                ]
+                ];
             }
         ];
-        "vim.visualModeKeyBindingsNonRecursive = [
+        "vim.visualModeKeyBindingsNonRecursive" = [
             {
                 "before" = [";"];
-                "after" = [":"]
-            }; {
-                "before = [
-                    ">"
-                ];
-                "commands = [
+                "after" = [":"];
+            } {
+                "before" = [">"];
+                "commands" = [
                     {
-                        "command = "editor.action.indentLines"
+                        "command" = "editor.action.indentLines";
                     }
-                ]
-            }; {
-                "before = [
-                    "<"
                 ];
-                "commands = [
+            } {
+                "before" = [">"];
+                "commands" = [
                     {
-                        "command = "editor.action.outdentLines"
+                        "command" = "editor.action.outdentLines";
                     }
-                ]
+                ];
             }
         ];
-    ];
+    };
 }

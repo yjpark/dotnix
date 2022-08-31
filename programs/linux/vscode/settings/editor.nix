@@ -4,7 +4,7 @@
         "workbench.editor.showTabs" = true;
         "workbench.editor.enablePreview" = false;
         "workbench.editor.enablePreviewFromQuickOpen" = false;
-        "editor.fontFamily" = "FiraCode Nerd";
+        "editor.fontFamily" = "FiraCode Nerd Font Mono";
         "editor.fontLigatures" = true;
         "editor.scrollbar.vertical" = false;
         "editor.overviewRulerBorder" = false;

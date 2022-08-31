@@ -2,7 +2,7 @@ local wezterm = require 'wezterm'
 local act = wezterm.action
 
 return {
-  font = wezterm.font 'FiraCode Nerd Font',
+  font = wezterm.font 'FiraCode Nerd Font Mono',
   font_dirs = { '/run/current-system/sw/share/X11/fonts' },
   color_scheme = "Molokai",
   hide_tab_bar_if_only_one_tab = false,
