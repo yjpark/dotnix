@@ -1,7 +1,6 @@
 { config, pkgs, ... }: {
   imports = [
     ./xserver.nix
-    ./gnome.nix
     ./zerotierone.nix
     ./privoxy.nix
     ./flatpak.nix
