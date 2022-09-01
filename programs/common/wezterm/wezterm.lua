@@ -41,7 +41,7 @@ return {
     },
     { key = 't', mods = 'CTRL', action = act.SpawnTab 'CurrentPaneDomain', },
     { key = 'n', mods = 'CTRL', action = act.SpawnWindow, },
-    { key = 'w', mods = 'CTRL', action = act.CloseCurrentTab { confirm = false }, },
+    { key = 'w', mods = 'CTRL|SHIFT', action = act.CloseCurrentTab { confirm = false }, },
     { key = '1', mods = 'CTRL', action = act.ActivateTab(0), },
     { key = '2', mods = 'CTRL', action = act.ActivateTab(1), },
     { key = '3', mods = 'CTRL', action = act.ActivateTab(2), },
