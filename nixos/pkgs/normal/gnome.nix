@@ -5,7 +5,7 @@
     gnomeExtensions.appindicator
     gnomeExtensions.clipboard-indicator
     gnomeExtensions.hibernate-status-button
-    gnomeExtensions.system-monitor-next
+    gnomeExtensions.vitals
   ];
 }
 
