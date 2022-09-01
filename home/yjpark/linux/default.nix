@@ -8,4 +8,5 @@
   home.username = "yjpark";
   home.homeDirectory = "/home/yjpark";
   home.stateVersion = "22.05";
+  systemd.user.startServices = "sd-switch";
 }
