@@ -6,5 +6,6 @@
     ./terminator.nix
     ./vscode
     ./firefox.nix
+    ./devilspie2.nix
   ];
 }
