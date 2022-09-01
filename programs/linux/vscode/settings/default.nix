@@ -5,4 +5,7 @@
     ./terminal.nix
     ./vim.nix
   ];
+    programs.vscode.userSettings = {
+        "window.titleBarStyle" = "custom";
+    };
 }
