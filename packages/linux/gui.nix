@@ -3,6 +3,7 @@
     microsoft-edge
     google-chrome
     qimgv
+    synergy
   ];
 }
 

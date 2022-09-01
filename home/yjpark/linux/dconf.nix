@@ -4,10 +4,7 @@
       num-workspace = 10;
     };
     "org/gnome/desktop/wm/keybindings" = {
-      switch-to-workspace-left = "['<Primary><Super>Left']";
-      switch-to-workspace-right = "['<Primary><Super>Right']";
-      switch-to-workspace-up = "['<Primary><Super>Up']";
-      switch-to-workspace-down = "['<Primary><Super>Down']";
+      toggle-overview = "['<Primary>Tab']";
       switch-to-workspace-1 = "['<Super>1']";
       switch-to-workspace-2 = "['<Super>2']";
       switch-to-workspace-3 = "['<Super>3']";

@@ -4,11 +4,6 @@ dconf write /org/gnome/desktop/wm/preferences/num-workspaces 10
 
 dconf write /org/gnome/desktop/wm/keybindings/toggle-overview "['<Primary>Tab']"
 
-dconf write /org/gnome/desktop/wm/keybindings/switch-to-workspace-left "['<Primary><Super>Left']"
-dconf write /org/gnome/desktop/wm/keybindings/switch-to-workspace-right "['<Primary><Super>Right']"
-dconf write /org/gnome/desktop/wm/keybindings/switch-to-workspace-up "['<Primary><Super>Up']"
-dconf write /org/gnome/desktop/wm/keybindings/switch-to-workspace-down "['<Primary><Super>Down']"
-
 dconf write /org/gnome/desktop/wm/keybindings/switch-to-workspace-1 "['<Super>1']"
 dconf write /org/gnome/desktop/wm/keybindings/switch-to-workspace-2 "['<Super>2']"
 dconf write /org/gnome/desktop/wm/keybindings/switch-to-workspace-3 "['<Super>3']"
