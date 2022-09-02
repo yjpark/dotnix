@@ -1,6 +1,6 @@
 { config, pkgs, ... }: {
   sops.secrets.hosts = {
     sopsFile = ../../../secrets/settings.yaml;
+    mode = "0444";
   };
-    networking.extraHosts = builtins.readFile config.sops.secrets.hosts.path;
 }

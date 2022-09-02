@@ -9,14 +9,11 @@ HOST=`hostname`
 
 if [[ $HOST = "edger" || $HOST = "alienware-13" || $HOST = "gpd-p2" || $HOST = "wsl" ]] ; then
     confirm "Rebuild NixOS Host: ${GREEN}${HOST}${NO_COLOR}"
-    # the impure here is used to use values in secrets
-    # currently it's only been used for adding extra hosts to /etc/hosts, consider setup DNS server
-    # for this, then can remove the impure here
     if [ "$#" -eq 0 ] ; then
         # sudo -E nixos-rebuild --option binary-caches https://cache.nixos.org/ --flake .#${HOST} switch
-        sudo nixos-rebuild --impure --flake .#${HOST} switch
+        sudo nixos-rebuild --flake .#${HOST} switch
     else
-        sudo nixos-rebuild --impure --flake .#${HOST} $@
+        sudo nixos-rebuild --flake .#${HOST} $@
     fi
     # the dconf settings been written, but seems not effective for some reason, apply them manually for now
     bin/linux/dconf-write-custom-values

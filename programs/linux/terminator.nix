@@ -6,6 +6,8 @@
       global_config.close_button_on_tab = false;
       global_config.focus = "sloppy";
       global_config.window_state = "maximise";
+      global_config.smart_copy = true;
+      global_config.clear_select_on_copy = true;
 
       keybindings.zoom_in = "<Primary>equal";
       keybindings.zoom_out = "<Primary>minus";

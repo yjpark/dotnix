@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+sudo lsof -i -P -n > /tmp/lsof.txt
+grep -i LISTEN /tmp/lsof.txt
