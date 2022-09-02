@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+
+if [ -z $1 ] ; then
+    echo "Need to provide namespace"
+    echo "e.g. $0 test"
+    exit 1
+fi
+
+# https://computingforgeeks.com/how-to-force-delete-a-kubernetes-namespace/
+
+# need to run a k8s proxy via `kubectl proxy`
+
+#define the template.
+cat << EOF > /tmp/k8s-delete-terminating-namespace.json
+{
+    "kind": "Namespace",
+    "apiVersion": "v1",
+    "metadata": {
+        "name": "$1"
+    },
+    "spec": {
+        "finalizers": []
+    }
+}
+EOF
+
+cat /tmp/k8s-delete-terminating-namespace.json
+
+curl -k -H "Content-Type: application/json" -X PUT --data-binary \
+ @/tmp/k8s-delete-terminating-namespace.json http://127.0.0.1:8001/api/v1/namespaces/$1/finalize

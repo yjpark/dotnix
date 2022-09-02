@@ -2,4 +2,4 @@
 
 cd `dirname $0`
 
-./switch-or-run "obsidian" "/home/yjpark/bin/start-obsidian"
+./switch-or-run "obsidian" "/home/yjpark/.nix/bin/linux/start-obsidian"

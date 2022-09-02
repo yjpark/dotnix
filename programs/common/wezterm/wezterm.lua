@@ -40,7 +40,7 @@ return {
        action=wezterm.action{SendKey={key="v", mods="CTRL"}},
     },
     { key = 't', mods = 'CTRL', action = act.SpawnTab 'CurrentPaneDomain', },
-    { key = 'n', mods = 'CTRL', action = act.SpawnWindow, },
+    { key = 'n', mods = 'CTRL|SHIFT', action = act.SpawnWindow, },
     { key = 'w', mods = 'CTRL|SHIFT', action = act.CloseCurrentTab { confirm = false }, },
     { key = '1', mods = 'CTRL', action = act.ActivateTab(0), },
     { key = '2', mods = 'CTRL', action = act.ActivateTab(1), },

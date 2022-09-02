@@ -23,6 +23,7 @@
         plugins."io.containerd.grpc.v1.cri".cni = {
           bin_dir = "${fullCNIPlugins}/bin";
           conf_dir = "/var/lib/rancher/k3s/agent/etc/cni/net.d/";
+          snapshotter = "zfs";
         };
         plugins."io.containerd.grpc.v1.cri".registry.mirrors."localhost:5000" = {
           endpoint = [

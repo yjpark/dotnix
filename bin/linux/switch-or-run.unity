@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+cd `dirname $0`
+
+./switch-or-run "unity" "/home/yjpark/.nix/bin/linux/start-obsidian"
