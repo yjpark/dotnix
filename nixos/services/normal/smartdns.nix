@@ -4,6 +4,9 @@
     settings = {
       bind = ":1053";
       bind-tcp = ":1053";
+      log-level = "info";
+      log-size = "1M";
+      log-num = "32";
       server-tls = [
         "8.8.8.8:853" "8.8.4.4:853" "1.1.1.1:853"
       ];
