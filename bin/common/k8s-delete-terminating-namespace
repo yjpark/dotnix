@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
 if [ -z $1 ] ; then
+    kubectl get ns
+    echo ""
     echo "Need to provide namespace"
     echo "e.g. $0 test"
     exit 1
@@ -28,3 +30,9 @@ cat /tmp/k8s-delete-terminating-namespace.json
 
 curl -k -H "Content-Type: application/json" -X PUT --data-binary \
  @/tmp/k8s-delete-terminating-namespace.json http://127.0.0.1:8001/api/v1/namespaces/$1/finalize
+
+echo ""
+echo ""
+
+kubectl get ns
+
