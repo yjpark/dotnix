@@ -2,7 +2,7 @@
   programs.fish.shellAbbrs = {
     g = "git";
     e = "nvim";
-    a = "rg";
+    a = "rg --smart-case";
     f = "fd";
     n = "nix";
     c = "cargo";
