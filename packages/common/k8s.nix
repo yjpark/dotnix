@@ -3,5 +3,6 @@
     kubectl
     kubectx
     linkerd
+    kubernetes-helm
   ];
 }

@@ -5,7 +5,7 @@ cd `dirname $0`
 sudo systemctl stop k3s
 sudo systemctl stop containerd
 
-sudo zfs destroy rpool/state/containerd
+sudo zfs destroy -r rpool/state/containerd
 ./k3s-setup-zfs-mount
 
 sudo rm -rf /var/lib/containerd/io.containerd.snapshotter.v1.zfs/*
@@ -14,9 +14,11 @@ sudo rm -rf /var/lib/rancher/k3s
 sudo systemctl start containerd
 sudo systemctl start k3s
 
-# causing "missing parent" and "bucket not found" issues when creating container
-sudo k3s crictl rmi --prune
-
 echo /etc/rancher/k3s/k3s.yaml
 echo ""
-cat /etc/rancher/k3s/k3s.yaml
+sudo cat /etc/rancher/k3s/k3s.yaml
+
+# causing "missing parent" and "bucket not found" issues when creating container
+# may need to run this after restart container
+sudo k3s crictl rmi --prune
+

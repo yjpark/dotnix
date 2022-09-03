@@ -8,6 +8,7 @@
     c = "cargo";
     d = "dotnet";
     k = "kubectl";
+    kn = "kubens";
     p = "podman";
     s = "mosh";
     du = "dua";
