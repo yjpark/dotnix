@@ -8,6 +8,7 @@
       "rustfmt"
     ])
     rust-analyzer-nightly
+    clang
   ];
 }
 

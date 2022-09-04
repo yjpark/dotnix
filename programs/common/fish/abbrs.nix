@@ -11,6 +11,7 @@
     kn = "kubens";
     p = "podman";
     s = "mosh";
+    z = "zi";
     du = "dua";
     vi = "nvim";
     vim = "nvim";
