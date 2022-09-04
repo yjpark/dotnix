@@ -1,12 +1,15 @@
-{ config, pkgs, ... }: {
+{ config, pkgs, lib,... }: {
   imports = [
     ../../../packages/linux
     ../../../programs/linux
     ./dconf.nix
     ./flatpak.nix
   ];
-  home.username = "yjpark";
-  home.homeDirectory = "/home/yjpark";
-  home.stateVersion = "22.05";
   systemd.user.startServices = "sd-switch";
+  home = {
+    username = "yjpark";
+    homeDirectory = "/home/yjpark";
+    stateVersion = "22.05";
+  };
+
 }

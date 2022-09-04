@@ -1,8 +1,8 @@
 { config, pkgs, ... }: {
   imports = [
+    ./dev
     ./utils.nix
     ./gnome.nix
-    ./dev
     ./rustdesk.nix
     ./appimage.nix
   ];

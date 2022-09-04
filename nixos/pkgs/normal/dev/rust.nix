@@ -1,14 +1,19 @@
-{ config, pkgs, ... }: {
-  environment.systemPackages = with pkgs; [
-    pkg-config
-    # for bevy apps
-    gtk3
-    xorg.libX11
-    xorg.libxcb
-    xorg.libXcursor
-    xorg.libXrandr
-    xorg.libXi
-    vulkan-loader
-  ];
-}
+{ config, pkgs, lib, ... }:
+  let
+    rustLibs = with pkgs; [
+      pkg-config
+      # for bevy apps
+      gtk3
+      xorg.libX11
+      xorg.libxcb
+      xorg.libXcursor
+      xorg.libXrandr
+      xorg.libXi
+      vulkan-loader
+    ];
+  in {
+    environment.systemPackages = rustLibs;
+
+    environment.sessionVariables.LD_LIBRARY_PATH = "${lib.makeLibraryPath rustLibs}";
+  }
 
