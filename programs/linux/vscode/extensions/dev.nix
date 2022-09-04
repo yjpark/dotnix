@@ -7,5 +7,6 @@
     ms-dotnettools.csharp
     github.vscode-pull-request-github
     github.copilot
+    skellock.just
   ];
 }

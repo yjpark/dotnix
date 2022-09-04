@@ -5,6 +5,7 @@
     a = "rg --smart-case";
     f = "fd";
     n = "nix";
+    nd = "nix develop .";
     c = "cargo";
     d = "dotnet";
     k = "kubectl";
