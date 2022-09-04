@@ -7,6 +7,7 @@
     ./theme.nix
     ./vimproc.nix
     ./unite.nix
+    ./ansiesc.nix
   ];
 
   programs.neovim = {
