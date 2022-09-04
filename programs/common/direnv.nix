@@ -1,8 +1,6 @@
 { pkgs, ... }: {
   programs.direnv = {
     enable = true;
-  };
-  programs.nix-direnv = {
-    enable = true;
+    nix-direnv.enable = true;
   };
 }
