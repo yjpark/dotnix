@@ -12,7 +12,8 @@
     p = "podman";
     s = "mosh";
     z = "zi";
-    j = "joshuto-ueberzug";
+    j = "just";
+    b = "joshuto-ueberzug";
     du = "dua";
     vi = "nvim";
     vim = "nvim";
