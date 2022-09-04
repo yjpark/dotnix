@@ -3,6 +3,7 @@
     kubectl
     kubectx
     linkerd
+    pulumi-bin
     kubernetes-helm
   ];
 }
