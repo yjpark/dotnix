@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+
+echo "In case of seeing empty window, try this command"
+echo ""
+echo "    flatpak repair com.unity.UnityHub"
+
 cd /tmp
 nohup flatpak run com.unity.UnityHub > /tmp/obsidian.log &
 

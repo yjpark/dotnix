@@ -22,6 +22,7 @@
     wakeonlan
     ethtool
     file
+    openssl
   ];
 }
 
