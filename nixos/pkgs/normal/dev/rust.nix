@@ -9,6 +9,7 @@
       xorg.libXcursor
       xorg.libXrandr
       xorg.libXi
+      alsa-lib
       vulkan-loader
     ];
   in {

@@ -14,6 +14,7 @@
     s = "mosh";
     z = "zi";
     j = "just";
+    jl = "just -l";
     b = "joshuto-ueberzug";
     du = "dua";
     vi = "nvim";
