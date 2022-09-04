@@ -5,7 +5,7 @@
     a = "rg --smart-case";
     f = "fd";
     n = "nix";
-    nd = "nix develop --command fish .";
+    nd = "nix develop --command fish";
     c = "cargo";
     d = "dotnet";
     k = "kubectl";
