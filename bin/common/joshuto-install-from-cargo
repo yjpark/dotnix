@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+# the one in nixpkgs is having issue with preview with colors
+# before create a patch or folk, can install from cargo instead
+
+cargo install joshuto --features syntax_highlight

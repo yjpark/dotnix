@@ -27,7 +27,7 @@ if [ $status -eq 0 ]
 end
 
 if test -d ~/.cargo/bin
-    set -x PATH $PATH ~/.cargo/bin
+    set -x PATH ~/.cargo/bin $PATH
 end
 
 
