@@ -5,5 +5,5 @@
   ];
   nix.settings.trusted-public-keys = [
     "edger:TCLFJAq2OeCXAZ5kr548+cuW3k4VpBVHjpslrARzpeg="
-  ]
+  ];
 }
