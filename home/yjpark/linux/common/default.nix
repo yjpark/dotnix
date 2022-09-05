@@ -1,9 +1,7 @@
 { config, pkgs, lib,... }: {
   imports = [
-    ../../../packages/linux
-    ../../../programs/linux
-    ./dconf.nix
-    ./flatpak.nix
+    ../../../../packages/linux
+    ../../../../programs/linux
   ];
   systemd.user.startServices = "sd-switch";
   home = {
@@ -11,5 +9,4 @@
     homeDirectory = "/home/yjpark";
     stateVersion = "22.05";
   };
-
 }

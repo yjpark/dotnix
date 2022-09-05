@@ -40,7 +40,7 @@
         home-manager.nixosModules.home-manager {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
-          home-manager.users.yjpark = import ./home/yjpark/linux;
+          home-manager.users.yjpark = import ./home/yjpark/linux/normal;
         }
         sops-nix.nixosModules.sops
       ];
@@ -57,7 +57,7 @@
         home-manager.nixosModules.home-manager {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
-          home-manager.users.yjpark = import ./home/yjpark/linux;
+          home-manager.users.yjpark = import ./home/yjpark/linux/normal;
         }
         sops-nix.nixosModules.sops
       ];
@@ -74,7 +74,7 @@
         home-manager.nixosModules.home-manager {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
-          home-manager.users.yjpark = import ./home/yjpark/linux;
+          home-manager.users.yjpark = import ./home/yjpark/linux/normal;
         }
         sops-nix.nixosModules.sops
       ];
@@ -90,7 +90,7 @@
         home-manager.nixosModules.home-manager {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
-          home-manager.users.yjpark = import ./home/yjpark/linux;
+          home-manager.users.yjpark = import ./home/yjpark/linux/wsl;
         }
         sops-nix.nixosModules.sops
       ];

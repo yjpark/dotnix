@@ -4,8 +4,5 @@
     ./gpg.nix
     ./xcape.nix
     ./terminator.nix
-    ./vscode
-    ./firefox.nix
-    ./devilspie2.nix
   ];
 }
