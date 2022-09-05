@@ -1,6 +1,7 @@
 { config, pkgs, ... }: {
   imports = [
     ./host.nix
+    ./mirrors.nix
     ../../nixos/settings/wsl
     ../../nixos/services/wsl
     ../../nixos/pkgs/wsl
