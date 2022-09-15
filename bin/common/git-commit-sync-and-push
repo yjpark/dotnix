@@ -17,4 +17,3 @@ if [[ "$BRANCH" =~ ^sync$ ]] ; then
 else
     echo "Not sync Branch: $BRANCH"
 fi
-

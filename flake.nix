@@ -27,96 +27,74 @@
     };
   };
 
-  outputs = { self, nixpkgs, nixos-hardware, home-manager, nix-darwin, nixos-wsl, nix-alien, fenix, sops-nix }: {
-    nixosConfigurations.edger = nixpkgs.lib.nixosSystem {
-      system = "x86_64-linux";
-      modules = [
-        ({ pkgs, ... }: {
-          nixpkgs.overlays = [ nix-alien.overlay fenix.overlay sops-nix.overlay ];
-        })
-        nixos-hardware.nixosModules.common-cpu-amd
-        nixos-hardware.nixosModules.common-pc-ssd
-        ./hosts/edger
-        home-manager.nixosModules.home-manager {
-          home-manager.useGlobalPkgs = true;
-          home-manager.useUserPackages = true;
-          home-manager.users.yjpark = import ./home/yjpark/linux/normal;
-        }
-        sops-nix.nixosModules.sops
-      ];
+  outputs = inputs:
+    let mkHost =
+      { system
+      , host
+      , home
+      , extra
+      }: inputs.nixpkgs.lib.nixosSystem {
+        inherit system;
+        modules = [
+          ({ pkgs, ... }: {
+            nixpkgs.overlays = [
+              inputs.nix-alien.overlay
+              inputs.fenix.overlay
+              inputs.sops-nix.overlay
+            ];
+          })
+          ./hosts/${host}
+          inputs.home-manager.nixosModules.home-manager {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.users.yjpark = import ./home/${home};
+          }
+          inputs.sops-nix.nixosModules.sops
+        ] ++ extra;
+      };
+    in {
+      nixosConfigurations.edger = mkHost {
+        system = "x86_64-linux";
+        host = "edger";
+        home = "yjpark/linux/normal";
+        extra = [
+          inputs.nixos-hardware.nixosModules.common-cpu-amd
+          inputs.nixos-hardware.nixosModules.common-pc-ssd
+        ];
+      };
+      nixosConfigurations.alienware-13 = mkHost {
+        system = "x86_64-linux";
+        host = "alienware-13";
+        home = "yjpark/linux/normal";
+        extra = [
+          inputs.nixos-hardware.nixosModules.common-cpu-intel
+          inputs.nixos-hardware.nixosModules.common-pc-laptop-ssd
+        ];
+      };
+      nixosConfigurations.gpd-p2 = mkHost {
+        system = "x86_64-linux";
+        host = "gpd-p2";
+        home = "yjpark/linux/normal";
+        extra = [
+          inputs.nixos-hardware.nixosModules.common-cpu-intel
+          inputs.nixos-hardware.nixosModules.common-pc-laptop-ssd
+        ];
+      };
+      nixosConfigurations.wsl = mkHost {
+        system = "x86_64-linux";
+        host = "wsl";
+        home = "yjpark/linux/wsl";
+        extra = [
+          inputs.nixos-wsl.nixosModules.wsl
+        ];
+      };
+      homeConfigurations."yjpark@mbp" = inputs.home-manager.lib.homeManagerConfiguration {
+        username = "yjpark";
+        homeDirectory = "/Users/yjpark";
+        system = "x86_64-darwin";
+        configuration.imports = [
+          ./home/yjpark/darwin.nix
+        ];
+      };
     };
-    nixosConfigurations.alienware-13 = nixpkgs.lib.nixosSystem {
-      system = "x86_64-linux";
-      modules = [
-        ({ pkgs, ... }: {
-          nixpkgs.overlays = [ nix-alien.overlay fenix.overlay sops-nix.overlay ];
-        })
-        nixos-hardware.nixosModules.common-cpu-intel
-        nixos-hardware.nixosModules.common-pc-laptop-ssd
-        ./hosts/alienware-13
-        home-manager.nixosModules.home-manager {
-          home-manager.useGlobalPkgs = true;
-          home-manager.useUserPackages = true;
-          home-manager.users.yjpark = import ./home/yjpark/linux/normal;
-        }
-        sops-nix.nixosModules.sops
-      ];
-    };
-    nixosConfigurations.gpd-p2 = nixpkgs.lib.nixosSystem {
-      system = "x86_64-linux";
-      modules = [
-        ({ pkgs, ... }: {
-          nixpkgs.overlays = [ nix-alien.overlay fenix.overlay sops-nix.overlay ];
-        })
-        nixos-hardware.nixosModules.common-cpu-intel
-        nixos-hardware.nixosModules.common-pc-laptop-ssd
-        ./hosts/gpd-p2
-        home-manager.nixosModules.home-manager {
-          home-manager.useGlobalPkgs = true;
-          home-manager.useUserPackages = true;
-          home-manager.users.yjpark = import ./home/yjpark/linux/normal;
-        }
-        sops-nix.nixosModules.sops
-      ];
-    };
-    nixosConfigurations.wsl = nixpkgs.lib.nixosSystem {
-      system = "x86_64-linux";
-      modules = [
-        ({ pkgs, ... }: {
-          nixpkgs.overlays = [ nix-alien.overlay fenix.overlay sops-nix.overlay ];
-        })
-        nixos-wsl.nixosModules.wsl
-        ./hosts/wsl
-        home-manager.nixosModules.home-manager {
-          home-manager.useGlobalPkgs = true;
-          home-manager.useUserPackages = true;
-          home-manager.users.yjpark = import ./home/yjpark/linux/wsl;
-        }
-        sops-nix.nixosModules.sops
-      ];
-    };
-    darwinConfigurations.mbp = nix-darwin.lib.darwinSystem {
-      system = "x86_64-darwin";
-      modules = [
-        ({ pkgs, ... }: {
-          nixpkgs.overlays = [ nix-alien.overlay fenix.overlay sops-nix.overlay ];
-        })
-        ./hosts/mbp
-        home-manager.nixosModules.home-manager {
-          home-manager.useGlobalPkgs = true;
-          home-manager.useUserPackages = true;
-          home-manager.users.yjpark = import ./home/yjpark/darwin.nix;
-        }
-        sops-nix.nixosModules.sops
-      ];
-    };
-    homeConfigurations."yjpark@mbp" = home-manager.lib.homeManagerConfiguration {
-      username = "yjpark";
-      homeDirectory = "/Users/yjpark";
-      system = "x86_64-darwin";
-      configuration.imports = [
-        ./home/yjpark/darwin.nix
-      ];
-    };
-  };
 }
