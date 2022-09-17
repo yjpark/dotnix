@@ -1,9 +1,11 @@
 " Move to previous/next
-nnoremap <silent>    <C-n> <Cmd>BufferPrevious<CR>
-nnoremap <silent>    <C-p> <Cmd>BufferNext<CR>
+nnoremap <silent>    <C-n> <Cmd>BufferNext<CR>
+nnoremap <silent>    <C-p> <Cmd>BufferPrevious<CR>
+
 " Re-order to previous/next
 nnoremap <silent>    <A-<> <Cmd>BufferMovePrevious<CR>
 nnoremap <silent>    <A->> <Cmd>BufferMoveNext<CR>
+
 " Goto buffer in position
 nnoremap <silent>    <A-1> <Cmd>BufferGoto 1<CR>
 nnoremap <silent>    <A-2> <Cmd>BufferGoto 2<CR>
