@@ -2,7 +2,7 @@
 
 I'm using NixOS as the main Linux distribution right now, this repo contains all the configurations for my linux machines (including under Windows 10 and 11 via WSL2).
 
-Using Home Manager to setup user configurations too, which is not complete at the moment, this is way better than more traditional ways IMO.
+Using Home Manager to setup user configurations too (also support macOS), which is not complete at the moment, this is way better than more traditional ways IMO.
 
 Since I barely understand anything about the Nix language, I am using it mainly as a configuration declaration language, which is quite nice.
 
