@@ -26,5 +26,7 @@
     tokei               # source line calculater
     bandwhich           # show network usage by process
     dogdns              # dig alternative
+    git-annex           # manage large files in git easily
+    bup                 # dedup backup tool
   ];
 }

@@ -5,6 +5,7 @@
     vlc
     qimgv
     synergy
+    darktable
   ];
 }
 
