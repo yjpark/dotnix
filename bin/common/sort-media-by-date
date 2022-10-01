@@ -1,14 +1,34 @@
 #!/usr/bin/env bash
 
+move() {
+  if [ $1 ] ; then
+    d=$(date -r "$1" +%Y-%m-%d)
+    mkdir -p "$d"
+    mv -v -- "$1" "$d/"
+  fi
+}
+
 for x in *.JPG; do
-  d=$(date -r "$x" +%Y-%m-%d)
-  mkdir -p "$d"
-  mv -v -- "$x" "$d/"
+  move $x
 done
 
 for x in *.MOV; do
-  d=$(date -r "$x" +%Y-%m-%d)
-  mkdir -p "$d"
-  mv -v -- "$x" "$d/"
+  move $x
+done
+
+for x in *.jpg; do
+  move $x
+done
+
+for x in *.mov; do
+  move $x
+done
+
+for x in *.mp4; do
+  move $x
+done
+
+for x in *.heic; do
+  move $x
 done
 
