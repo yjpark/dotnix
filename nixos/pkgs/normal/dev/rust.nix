@@ -11,6 +11,7 @@
       xorg.libXi
       alsa-lib
       vulkan-loader
+      udev
     ];
   in {
     environment.systemPackages = rustLibs;
