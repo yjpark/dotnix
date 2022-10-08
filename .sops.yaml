@@ -1,6 +1,7 @@
 keys:
   - &edger_2022-09-01 age1rzrhkd478y0txalg85lpey7pmn0x3cm5ufalxslsvfrw92dl3e8qcmywvc
   - &edger_host age16hkj94767mumelqr7qwa0c589mq9fenqj0z9g0n948aprrul7evseffxk4
+  - &a13_host age1acawzy46wfd98qrx93yrafyeqn3etg6s7k4z5t59mm7vjh5eyf9ssr7sh9
   - &x1_wsl_host age1zmywzjh8j4h6macx7nh3csxjja3umm07wjq92v7g3dgfs6jhmefqeahpdr
   - &desktop_wsl_host age1ygyut4r4gs2gdt4hjnpmpggmz8xmv5ypqmjcfrqy98wd4hm53emsycsazq
 creation_rules:
@@ -9,5 +10,6 @@ creation_rules:
       - age:
         - *edger_2022-09-01
         - *edger_host
+        - *a13_host
         - *x1_wsl_host
         - *desktop_wsl_host
