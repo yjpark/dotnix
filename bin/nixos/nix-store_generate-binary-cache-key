@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+if [ -z $1 ] ; then
+    echo "Need to provide host address"
+    echo "e.g. $0 edger"
+    exit 1
+fi
+
+cd /tmp
+nix-store --generate-binary-cache-key $1 ./$1.secret.txt ./$1.public.txt
+echo "Secret key:"
+cat $1.secret.txt
+echo ""
+echo "Public key:"
+cat $1.public.txt
+
