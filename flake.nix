@@ -80,6 +80,15 @@
           inputs.nixos-hardware.nixosModules.common-pc-laptop-ssd
         ];
       };
+      nixosConfigurations.hp-g1 = mkHost {
+        system = "x86_64-linux";
+        host = "hp-g1";
+        home = "yjpark/linux/normal";
+        extra = [
+          inputs.nixos-hardware.nixosModules.common-cpu-intel
+          inputs.nixos-hardware.nixosModules.common-pc-laptop-ssd
+        ];
+      };
       nixosConfigurations.wsl = mkHost {
         system = "x86_64-linux";
         host = "wsl";

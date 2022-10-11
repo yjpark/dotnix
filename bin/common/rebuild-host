@@ -7,7 +7,7 @@ cd ../..
 
 HOST=`hostname`
 
-if [[ $HOST = "edger" || $HOST = "alienware-13" || $HOST = "gpd-p2" || $HOST = "wsl" ]] ; then
+if [[ $HOST = "edger" || $HOST = "alienware-13" || $HOST = "gpd-p2"  || $HOST = "hp-g1" || $HOST = "wsl" ]] ; then
     confirm "Rebuild NixOS Host: ${GREEN}${HOST}${NO_COLOR}"
     if [ "$#" -eq 0 ] ; then
         # sudo -E nixos-rebuild --option binary-caches https://cache.nixos.org/ --flake .#${HOST} switch
