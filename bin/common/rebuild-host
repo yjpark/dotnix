@@ -12,7 +12,7 @@ if [[ $HOST = "edger" || $HOST = "alienware-13" || $HOST = "gpd-p2"  || $HOST = 
     if [ "$#" -eq 0 ] ; then
         # sudo -E nixos-rebuild --option binary-caches https://cache.nixos.org/ --flake .#${HOST} switch
         # sudo -E nixos-rebuild --flake .#${HOST} switch
-        sudo -E nixos-rebuild --flake .#${HOST} switch
+        sudo nixos-rebuild --flake .#${HOST} switch
     else
         sudo nixos-rebuild --flake .#${HOST} $@
     fi
