@@ -1,5 +1,6 @@
 { config, pkgs, ... }: {
   imports = [
+    ../common
     ./zerotierone.nix
     ./privoxy.nix
     ./smartdns.nix

@@ -4,7 +4,7 @@
     ./host.nix
     ../../nixos/boot
     ../../nixos/settings
-    ../../nixos/services
+    ../../nixos/services/normal
     ../../nixos/pkgs
     ../../nixos/users
     ../../nixos/services/normal/nosleep.nix
