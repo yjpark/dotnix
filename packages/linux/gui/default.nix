@@ -7,6 +7,7 @@
     synergy
     darktable
     gthumb
+    obsidian
   ];
 }
 
