@@ -25,7 +25,7 @@
       };
       cargoSha256 = "";
        */
-      patches = (prev.patches or [ ]) ++ [ ../../patches/starship/v1.6.3.patch ];
+      patches = (prev.patches or [ ]) ++ [ ../../patches/starship/v1.11.0.patch ];
     });
   };
 }
