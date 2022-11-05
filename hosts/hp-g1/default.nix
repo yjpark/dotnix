@@ -8,7 +8,6 @@
     ../../nixos/services/normal
     ../../nixos/pkgs
     ../../nixos/users
-    ../../nixos/services/normal/nosleep.nix
     ../../nixos/services/normal/synergy/server.nix
   ];
 }
