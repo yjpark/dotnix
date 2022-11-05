@@ -1,5 +1,5 @@
 { config, pkgs, ... }: {
-  networking.firewall.allowedTCPPortRanges = [
+  networking.firewall.allowedTCPPorts = [
     2342    # photoprism
   ];
 }
