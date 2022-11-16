@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+env | grep _proxy
+
+xcodebuild -resolvePackageDependencies -scmProvider system
