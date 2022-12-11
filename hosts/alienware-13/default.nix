@@ -4,6 +4,7 @@
     ./host.nix
     ./secrets.nix
     ./ports.nix
+    ./samba.nix
     ../../nixos/boot
     ../../nixos/settings
     ../../nixos/services/normal
