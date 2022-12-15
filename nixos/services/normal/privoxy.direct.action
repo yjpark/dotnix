@@ -6,4 +6,4 @@ direct = +forward-override{forward .}
 127.0.0.1
 localhost
 *.local
-
+*.zerotier
