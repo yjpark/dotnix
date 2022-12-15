@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+cachix use nix-community

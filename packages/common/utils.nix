@@ -28,5 +28,6 @@
     dogdns              # dig alternative
     git-annex           # manage large files in git easily
     bup                 # dedup backup tool
+    cachix              # nix binary cache
   ];
 }
