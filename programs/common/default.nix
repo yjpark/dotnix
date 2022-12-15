@@ -15,7 +15,6 @@
     ./password-store.nix
     ./nushell.nix
     ./alacritty.nix
-    ./just.nix
     ./zoxide.nix
   ];
 }

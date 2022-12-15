@@ -39,7 +39,7 @@
           ({ pkgs, ... }: {
             nixpkgs.overlays = [
               inputs.nix-alien.overlay
-              inputs.fenix.overlay
+              inputs.fenix.overlays.default
               inputs.sops-nix.overlay
             ];
           })
