@@ -23,6 +23,7 @@
     ethtool
     file
     openssl
+    corkscrew   # tunnel ssh through http proxy
   ];
 }
 
