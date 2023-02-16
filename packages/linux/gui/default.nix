@@ -6,7 +6,6 @@
     qimgv
     synergy
     darktable
-    gthumb
     obsidian
   ];
 }
