@@ -8,5 +8,6 @@
     ./nix-serve.nix
     ./xserver.nix
     ./flatpak.nix
+    ./expressvpn.nix
   ];
 }
