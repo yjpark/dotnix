@@ -7,6 +7,7 @@
     gnomeExtensions.clipboard-indicator
     gnomeExtensions.hibernate-status-button
     gnomeExtensions.vitals
+    gnomeExtensions.evpn-shell-assistant
   ];
 }
 
