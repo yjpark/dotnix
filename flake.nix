@@ -120,5 +120,10 @@
         home = "yjpark/linux/server";
         extra = [];
       };
+      homeConfigurations."yjpark@linux.server.arm64" = mkHome {
+        system = "aarch64-linux";
+        home = "yjpark/linux/server";
+        extra = [];
+      };
     };
 }
