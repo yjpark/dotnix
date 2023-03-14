@@ -16,6 +16,17 @@ if [ $status -eq 0 ]
     end
 end
 
+uname -v | grep Ubuntu > /dev/null
+if [ $status -eq 0 ]
+    set -x PATH $PATH ~/.nix-profile/bin
+    if test -d ~/.nix/bin/ubuntu
+        set -x PATH $PATH ~/.nix/bin/ubuntu
+    end
+    if test -d ~/.nix.private/bin/ubuntu
+        set -x PATH $PATH ~/.nix.private/bin/ubuntu
+    end
+end
+
 uname | grep Linux > /dev/null
 if [ $status -eq 0 ]
     if test -d ~/.nix/bin/linux

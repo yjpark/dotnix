@@ -7,13 +7,21 @@ cd ../..
 
 HOST=`hostname`
 
-if [[ $HOST = "mbp" ]] ; then
+if [[ -f "$HOME/.config/dotnix.hostname" ]] ; then
+    HOST=`cat $HOME/.config/dotnix.hostname`
+    confirm "Rebuild Nix Home: ${GREEN}${USER}@${HOST}${NO_COLOR}"
+    if [[ $# -ge 1 ]] ; then
+        home-manager --extra-experimental-features "nix-command flakes" --flake .#${USER}@${HOST} $@
+    else
+        home-manager --extra-experimental-features "nix-command flakes" --flake .#${USER}@${HOST} switch
+    fi
+elif [[ $HOST = "mbp" ]] ; then
     if [[ $USER = "yjpark" ]] ; then
         confirm "Rebuild Nix Home: ${GREEN}${USER}@${HOST}${NO_COLOR}"
-        if [ "$#" -eq 0 ] ; then
-            home-manager --extra-experimental-features "nix-command flakes" --flake .#${USER}@${HOST} switch
-        else
+        if [[ $# -ge 1 ]] ; then
             home-manager --extra-experimental-features "nix-command flakes" --flake .#${USER}@${HOST} $@
+        else
+            home-manager --extra-experimental-features "nix-command flakes" --flake .#${USER}@${HOST} switch
         fi
     else
         echo "Unsupported USER: ${RED}${USER}${NO_COLOR}"

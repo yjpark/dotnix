@@ -52,6 +52,16 @@
           inputs.sops-nix.nixosModules.sops
         ] ++ extra;
       };
+      mkHome =
+      { system
+      , home
+      , extra
+      }: inputs.home-manager.lib.homeManagerConfiguration {
+        pkgs = inputs.nixpkgs.legacyPackages.${system};
+        modules = [
+          ./home/${home}
+        ] ++ extra;
+      };
     in {
       nixosConfigurations.edger = mkHost {
         system = "x86_64-linux";
@@ -104,6 +114,11 @@
         configuration.imports = [
           ./home/yjpark/darwin.nix
         ];
+      };
+      homeConfigurations."yjpark@linux.server" = mkHome {
+        system = "x86_64-linux";
+        home = "yjpark/linux/server";
+        extra = [];
       };
     };
 }

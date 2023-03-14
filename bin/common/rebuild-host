@@ -9,12 +9,12 @@ HOST=`hostname`
 
 if [[ $HOST = "edger" || $HOST = "alienware-13" || $HOST = "gpd-p2"  || $HOST = "hp-g1" || $HOST = "wsl" ]] ; then
     confirm "Rebuild NixOS Host: ${GREEN}${HOST}${NO_COLOR}"
-    if [ "$#" -eq 0 ] ; then
+    if [[ $# -ge 1 ]] ; then
+        sudo nixos-rebuild --flake .#${HOST} $@
+    else
         # sudo -E nixos-rebuild --option binary-caches https://cache.nixos.org/ --flake .#${HOST} switch
         # sudo -E nixos-rebuild --flake .#${HOST} switch
         sudo nixos-rebuild --flake .#${HOST} switch
-    else
-        sudo nixos-rebuild --flake .#${HOST} $@
     fi
     if [[ $HOST = "wsl" ]] ; then
         echo ""
@@ -27,10 +27,10 @@ if [[ $HOST = "edger" || $HOST = "alienware-13" || $HOST = "gpd-p2"  || $HOST = 
     fi
 elif [[ $HOST = "mbp" ]] ; then
     confirm "Rebuild Nix Darwin Host: ${GREEN}${HOST}${NO_COLOR}"
-    if [ "$#" -eq 0 ] ; then
-        darwin-rebuild --flake .#${HOST} switch
-    else
+    if [[ $# -ge 1 ]] ; then
         darwin-rebuild --flake .#${HOST} $@
+    else
+        darwin-rebuild --flake .#${HOST} switch
     fi
 else
     echo "Unsupported Host: ${RED}$HOST${NO_COLOR}"

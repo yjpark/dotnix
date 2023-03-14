@@ -6,4 +6,5 @@
     ./dconf.nix
     ./flatpak.nix
   ];
+  systemd.user.startServices = "sd-switch";
 }
