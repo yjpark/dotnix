@@ -9,3 +9,15 @@ sudo apt install nix-bin nix-setup-systemd
 
 nix-channel --add https://nixos.org/channels/nixpkgs-unstable nixpkgs
 nix-channel --update
+
+
+echo "need to add these to /etc/systemd/system/multi-user.target.wants/nix-daemon.service
+echo ""
+echo "LimitNOFILE=65536"
+echo "LimitNOFILESoft=65536"
+echo ""
+echo "then restart the nix-daemon service via:"
+echo ""
+echo "sudo systemctl daemon-reload"
+echo "sudo systemctl restart nix-daemon"
+

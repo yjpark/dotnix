@@ -2,7 +2,7 @@
   environment.systemPackages = with pkgs; [
     gradle
     kotlin
-    jdk
+    jdk17
   ];
 }
 
