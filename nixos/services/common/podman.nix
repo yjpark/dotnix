@@ -15,6 +15,7 @@
   virtualisation.containers.registries.insecure = [
     "localhost:5000"
     "localhost:29003"
+    "dev.ilx.yjpark.org"
   ];
 
   environment.systemPackages = with pkgs; [
