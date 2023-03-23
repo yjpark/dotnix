@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+nix print-dev-env --substituters https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store/
