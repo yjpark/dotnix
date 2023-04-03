@@ -41,4 +41,6 @@ if test -d ~/.cargo/bin
     set -x PATH ~/.cargo/bin $PATH
 end
 
-
+if test -d ~/.krew/bin
+    set -x PATH ~/.krew/bin $PATH
+end
