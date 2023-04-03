@@ -2,6 +2,7 @@
   home.packages = with pkgs; [
     kubectl
     kubectx
+    krew
     linkerd
     pulumi-bin
     kubernetes-helm
