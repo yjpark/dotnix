@@ -2,4 +2,7 @@
   imports = [
     ../common
   ];
+  home.packages = with pkgs; [
+    home-manager
+  ];
 }
