@@ -27,6 +27,7 @@
     bandwhich           # show network usage by process
     dogdns              # dig alternative
     git-annex           # manage large files in git easily
+    git-crypt           # save secret files in git
     bup                 # dedup backup tool
     cachix              # nix binary cache
     minio-client        # mc
