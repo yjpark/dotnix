@@ -4,5 +4,6 @@
     ./region.nix
     ./nix
     ./hosts
+    ./nix-tricks.nix
   ];
 }
