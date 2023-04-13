@@ -125,5 +125,10 @@
         home = "yjpark/linux/server";
         extra = [];
       };
+      homeConfigurations."root@linux.session" = mkHome {
+        system = "x86_64-linux";
+        home = "root/linux/session";
+        extra = [];
+      };
     };
 }
