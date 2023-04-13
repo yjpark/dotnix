@@ -1,4 +1,4 @@
-FROM nixos/nix
+FROM nixos/nix:2.15.0
 
 LABEL maintainer="YJ Park <yjpark@gmail.com>"
 
@@ -20,6 +20,10 @@ RUN chmod 600 /root/.ssh/authorized_keys
 
 RUN mkdir -p /root/.config/
 RUN echo "linux.session" > /root/.config/dotnix.hostname
+
+RUN nix-env --set-flag priority 0 nix-2.15.0
+
+RUN home-manager --extra-experimental-features "nix-command flakes" --flake .#root@linux.session build
 
 RUN home-manager --extra-experimental-features "nix-command flakes" --flake .#root@linux.session switch
 
