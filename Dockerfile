@@ -7,9 +7,6 @@ RUN nix-channel --update
 RUN nix-env -iA nixpkgs.home-manager
 RUN which home-manager
 
-RUN nix-env -iA nixpkgs.fish
-RUN which fish
-
 RUN nix-env -iA nixpkgs.openssh
 RUN which sshd
 
