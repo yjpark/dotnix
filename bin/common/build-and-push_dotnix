@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+cd `dirname $0`
+source _console_utils.bash
+
+cd ../../
+
+podman build -t yjpark/dotnix:latest -f Dockerfile
+
+podman push yjpark/dotnix:latest
