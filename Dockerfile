@@ -22,15 +22,13 @@ WORKDIR /root/.nix
 
 # RUN home-manager --extra-experimental-features "nix-command flakes" --flake .#root@linux.session switch
 
-RUN which sshd
 COPY config/dotnix.sshd/sshd_config /etc/ssh/sshd_config
+RUN ssh-keygen -A
 
-RUN echo "#!/bin/sh" > /entrypoint.sh
-RUN echo "ssh-keygen -A" >> /entrypoint.sh
-RUN echo "exec /root/.nix-profile/bin/sshd -D -e \"$@\"" >> /entrypoint.sh
+# RUN nix-env -iA nixpkgs.shadow
+# RUN useradd sshd --no-create-home --system
 
-RUN chmod 755 /entrypoint.sh
+EXPOSE 22
 
-RUN cat /entrypoint.sh
-
-ENTRYPOINT ["/entrypoint.sh"]
+ENTRYPOINT ["/root/.nix-profile/bin/sshd"]
+CMD ["-D", "-e"]
