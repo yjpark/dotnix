@@ -25,6 +25,13 @@ COPY . /root/.nix
 WORKDIR /root/.nix
 RUN home-manager --extra-experimental-features "nix-command flakes" --flake .#root@linux.session build
 
+RUN nix-env --set-flag priority 0 man-db \
+    && nix-env --set-flag priority 0 git \
+    && nix-env --set-flag priority 0 wget \
+    && mkdir /nix/var/nix/gcroots/per-user/root
+
+RUN home-manager --extra-experimental-features "nix-command flakes" --flake .#root@linux.session switch
+
 EXPOSE 22
 
 ENTRYPOINT ["/root/.nix-profile/bin/dropbear"]
