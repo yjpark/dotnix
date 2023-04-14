@@ -1,0 +1,3 @@
+build-and-push-dropbear:
+    podman build -t yjpark/dropbear:latest -f dropbear.Dockerfile
+    podman push yjpark/dropbear:latest
