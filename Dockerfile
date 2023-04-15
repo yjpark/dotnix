@@ -19,7 +19,8 @@ RUN nix-env -q
 RUN nix-env -iA nixpkgs.dropbear
 
 RUN mkdir /etc/dropbear
-RUN echo "/nix/store/bap4d0lpcrhpwmpb8ayjcgkmvfj62lnq-bash-interactive-5.1-p16/bin/bash" > /etc/shells
+RUN echo "/root/.nix-profile/bin/fish" > /etc/shells \
+    && echo "/nix/store/bap4d0lpcrhpwmpb8ayjcgkmvfj62lnq-bash-interactive-5.1-p16/bin/bash" >> /etc/shells
 
 COPY . /root/.nix
 WORKDIR /root/.nix
