@@ -5,6 +5,7 @@
     ./secrets.nix
     ./ports.nix
     ./samba.nix
+    ./zerotierone.nix
     ../../nixos/boot
     ../../nixos/settings
     ../../nixos/services/normal
