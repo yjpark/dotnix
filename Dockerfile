@@ -1,32 +1,39 @@
-FROM nixos/nix
+FROM nixos/nix:2.15.0
 
 LABEL maintainer="YJ Park <yjpark@gmail.com>"
+
+COPY config/yjpark.ssh/authorized_keys /root/.ssh/authorized_keys
+RUN chmod 700 /root/.ssh/ \
+    && chmod 600 /root/.ssh/authorized_keys
+
+RUN mkdir -p /root/.config/
+RUN echo "linux.session" > /root/.config/dotnix.hostname
 
 RUN nix-channel --update
 
 RUN nix-env -iA nixpkgs.home-manager
 RUN which home-manager
 
-RUN nix-env -iA nixpkgs.openssh
-RUN which sshd
+RUN nix-env -q
+
+RUN nix-env -iA nixpkgs.dropbear
+
+RUN mkdir /etc/dropbear
+RUN echo "/root/.nix-profile/bin/fish" > /etc/shells \
+    && echo "/nix/store/bap4d0lpcrhpwmpb8ayjcgkmvfj62lnq-bash-interactive-5.1-p16/bin/bash" >> /etc/shells
 
 COPY . /root/.nix
 WORKDIR /root/.nix
+RUN home-manager --extra-experimental-features "nix-command flakes" --flake .#root@linux.session build
 
-RUN mkdir -p /root/.ssh/
-RUN chmod 700 /root/.ssh/
-COPY config/yjpark.ssh/authorized_keys /root/.ssh/authorized_keys
-RUN chmod 600 /root/.ssh/authorized_keys
-
-RUN mkdir -p /root/.config/
-RUN echo "linux.session" > /root/.config/dotnix.hostname
+RUN nix-env --set-flag priority 0 man-db \
+    && nix-env --set-flag priority 0 git \
+    && nix-env --set-flag priority 0 wget \
+    && mkdir /nix/var/nix/gcroots/per-user/root
 
 RUN home-manager --extra-experimental-features "nix-command flakes" --flake .#root@linux.session switch
 
-RUN echo "#!/bin/sh" > /entrypoint.sh
-RUN echo "ssh-keygen -A" > /entrypoint.sh
-RUN echo "exec /root/.nix-profile/bin/sshd -D -e \"$@\"" > /entrypoint.sh
+EXPOSE 22
 
-RUN cat /entrypoint.sh
-
-ENTRYPOINT ["/entrypoint.sh"]
+ENTRYPOINT ["/root/.nix-profile/bin/dropbear"]
+CMD ["-F", "-R", "-E"]

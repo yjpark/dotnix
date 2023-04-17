@@ -1,0 +1,31 @@
+Ciphers chacha20-poly1305@openssh.com,aes256-gcm@openssh.com,aes128-gcm@openssh.com,aes256-ctr,aes192-ctr,aes128-ctr
+GatewayPorts no
+KbdInteractiveAuthentication yes
+KexAlgorithms sntrup761x25519-sha512@openssh.com,curve25519-sha256,curve25519-sha256@libssh.org,diffie-hellman-group-exchange-sha256
+LogLevel INFO
+Macs hmac-sha2-512-etm@openssh.com,hmac-sha2-256-etm@openssh.com,umac-128-etm@openssh.com,hmac-sha2-512,hmac-sha2-256,umac-128@openssh.com
+PasswordAuthentication yes
+PermitRootLogin prohibit-password
+UseDns no
+X11Forwarding no
+UsePAM yes
+
+Banner none
+
+AddressFamily any
+Port 22
+
+
+
+
+XAuthLocation /nix/store/q14p06wc78pgwcrcdq09l3ckysqshfbv-xauth-1.1.2/bin/xauth
+
+Subsystem sftp /nix/store/ais883h23w529y3vs1p0w9sh2qjnk2iq-openssh-9.1p1/libexec/sftp-server 
+
+PrintMotd no # handled by pam_motd
+AuthorizedKeysFile %h/.ssh/authorized_keys %h/.ssh/authorized_keys2 /etc/ssh/authorized_keys.d/%u
+
+
+HostKey /etc/ssh/ssh_host_rsa_key
+HostKey /etc/ssh/ssh_host_ed25519_key
+

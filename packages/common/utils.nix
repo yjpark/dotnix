@@ -3,6 +3,7 @@
     tig
     git-extras
     inetutils
+    gnused
     wget
     axel
     curl
