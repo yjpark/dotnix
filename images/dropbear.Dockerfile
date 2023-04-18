@@ -21,7 +21,8 @@ RUN apt install -y age command-not-found wget inetutils-ping inetutils-telnet \
     && wget https://github.com/mozilla/sops/releases/download/v3.7.3/sops_3.7.3_amd64.deb \
     && dpkg -i sops_3.7.3_amd64.deb
 
-RUN apt install -y mysql-client mycli
+RUN apt install -y mysql-client mycli openssh-sftp-server net-tools neovim \
+    && RUN apt update
 
 EXPOSE 22
 
