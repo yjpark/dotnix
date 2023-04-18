@@ -14,6 +14,15 @@ RUN chmod 700 /home/yjpark/.ssh \
 
 RUN echo "yjpark  ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 
+COPY yjpark.gitconfig /home/yjpark/.gitconfig
+
+RUN apt install -y age command-not-found wget inetutils-ping inetutils-telnet \
+    && cd /tmp \
+    && wget https://github.com/mozilla/sops/releases/download/v3.7.3/sops_3.7.3_amd64.deb \
+    && dpkg -i sops_3.7.3_amd64.deb
+
+RUN apt install -y mysql-client mycli
+
 EXPOSE 22
 
 CMD ["/usr/sbin/dropbear", "-R", "-F"]
