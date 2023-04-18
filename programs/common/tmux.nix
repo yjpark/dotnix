@@ -10,7 +10,7 @@
     extraConfig = ''
       setw -g mouse on
       set -g status-left '#[fg=green]#H '
-      set -g status-right '#(tmux-mem --format "[#[fg=:color]:spark#[default]] #[fg=:color]:percent#[default]") #(tmux-cpu --format ":load [#[fg=:color]:spark#[default]] #[fg=:color]:percent#[default]") %H:%M'
+      set -g status-right '#(tmux-mem --format "[#[fg=:color]:spark#[default]] #[fg=:color]:percent#[default]") #(tmux-cpu --format ":load [#[fg=:color]:spark#[default]] #[fg=:color]:percent#[default]") #S'
     '';
   };
 }
