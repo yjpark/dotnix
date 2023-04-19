@@ -26,6 +26,8 @@
     top = "btm";
     tree = "exa -T";
     ta = "tmux attach";
+    tt = "tmux attach -t";
+    tl = "tmux list-sessions";
     tf = "tmux-fix-ssh-agent";
     cb = "clear-buffer";
     sp = "sync-pass";
