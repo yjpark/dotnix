@@ -130,5 +130,15 @@
         home = "root/linux/session";
         extra = [];
       };
+      homeConfigurations."yjpark@minimal" = mkHome {
+        system = "x86_64-linux";
+        home = "yjpark/minimal";
+        extra = [];
+      };
+      homeConfigurations."yjpark@minimal.darwin" = mkHome {
+        system = "x86_64-darwin";
+        home = "yjpark/minimal";
+        extra = [];
+      };
     };
 }
