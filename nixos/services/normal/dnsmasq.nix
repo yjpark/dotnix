@@ -2,7 +2,7 @@
   services.dnsmasq = {
     enable = true;
     resolveLocalQueries = true;
-    servers = [
+    settings.server = [
       "127.0.0.1#1053"
     ];
     extraConfig = ''

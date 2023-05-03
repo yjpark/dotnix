@@ -48,8 +48,6 @@
   # networking.interfaces.wlp36s0.useDHCP = lib.mkDefault true;
 
   hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
-  # high-resolution display
-  hardware.video.hidpi.enable = lib.mkDefault true;
 
   # https://nixos.wiki/wiki/AMD_GPU
   # Vulkan support

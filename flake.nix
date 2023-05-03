@@ -40,7 +40,7 @@
             nixpkgs.overlays = [
               inputs.nix-alien.overlay
               inputs.fenix.overlays.default
-              inputs.sops-nix.overlay
+              inputs.sops-nix.overlays.default
             ];
           })
           ./hosts/${host}
