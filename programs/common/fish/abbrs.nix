@@ -1,6 +1,7 @@
 { pkgs, ... }: {
   programs.fish.shellAbbrs = {
     g = "git";
+    gc = "gitmoji -c";
     e = "nvim";
     a = "rg --smart-case";
     f = "fd";
