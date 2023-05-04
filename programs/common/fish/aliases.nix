@@ -11,5 +11,6 @@
     set-proxy-mitm = "set -gx https_proxy 127.0.0.1:1111; set -gx http_proxy 127.0.0.1:1111; set -gx all_proxy http://127.0.0.1:1111";
     set-proxy-edger = "set -gx https_proxy 172.22.1.2:29002; set -gx http_proxy 172.22.1.2:29002; set -gx all_proxy http://172.22.1.2:29002; set -gx NIX_CURL_FLAGS -x http://172.22.1.2:29002";
     set-proxy-a13 = "set -gx https_proxy 172.22.1.6:29002; set -gx http_proxy 172.22.1.6:29002; set -gx all_proxy http://172.22.1.6:29002; set -gx NIX_CURL_FLAGS -x http://172.22.1.6:29002";
+    set-proxy-pc = "set -gx https_proxy 172.22.1.9:1102; set -gx http_proxy 172.22.1.9:1102; set -gx all_proxy http://172.22.1.9:1102; set -gx NIX_CURL_FLAGS -x http://172.22.1.9:1102";
   };
 }
