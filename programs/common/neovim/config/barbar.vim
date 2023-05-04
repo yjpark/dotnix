@@ -34,16 +34,9 @@ nnoremap <silent>    <A-p> <Cmd>BufferPin<CR>
 " Close buffer
 nnoremap <silent>    <A-c> <Cmd>BufferClose<CR>
 
-let bufferline = get(g:, 'bufferline', {})
-
-let bufferline.icons = 'both'
-let bufferline.icon_custom_colors = v:true
-
-let bufferline.icon_separator_active = ' '
-let bufferline.icon_separator_inactive = ' '
-
 highlight BufferCurrent ctermfg=Red ctermbg=Yellow
 highlight BufferCurrentIndex ctermfg=Red ctermbg=Yellow
 highlight BufferCurrentMod ctermfg=Red ctermbg=Yellow
 highlight BufferCurrentSign ctermfg=Red ctermbg=Yellow
 highlight BufferCurrentTarget ctermfg=Red ctermbg=Yellow
+
