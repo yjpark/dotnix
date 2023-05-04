@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+cd `dirname $0`
+
+npm config get proxy
+npm config get https-proxy

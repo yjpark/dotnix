@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+cd `dirname $0`
+
+npm config delete proxy
+npm config delete https-proxy
