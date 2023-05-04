@@ -31,5 +31,6 @@
     bup                 # dedup backup tool
     cachix              # nix binary cache
     minio-client        # mc
+    nodePackages.gitmoji-cli
   ];
 }

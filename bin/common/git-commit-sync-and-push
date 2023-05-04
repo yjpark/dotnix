@@ -12,7 +12,7 @@ BRANCH=`git rev-parse --abbrev-ref HEAD`
 
 if [[ "$BRANCH" =~ ^sync$ ]] ; then
     datestr=`date "+%Y-%m-%d %H:%M:%S"`
-    git commit -m "$datestr - $HOST"
+    git commit -m ":truck: $datestr - $HOST"
     git push
 else
     echo "Not sync Branch: $BRANCH"
