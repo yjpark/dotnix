@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+cd `dirname $0`
+source _console_utils.bash
+
+if [[ -f "$HOME/.config/dotnix.binary-caches" ]] ; then
+    BINARY_CACHES=`cat $HOME/.config/dotnix.binary-caches`
+    echo "Using binary caches: ${BINARY_CACHES}"
+else
+    echo "Not using binary caches"
+fi

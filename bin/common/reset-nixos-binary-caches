@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+cd `dirname $0`
+source _console_utils.bash
+
+if [[ -f "$HOME/.config/dotnix.binary-caches" ]] ; then
+    BINARY_CACHES=`cat $HOME/.config/dotnix.binary-caches`
+    echo "Stop using binary caches: ${BINARY_CACHES}"
+    rm ~/.config/dotnix.binary-caches
+else
+    ./show-nixos-binary-caches
+fi
+

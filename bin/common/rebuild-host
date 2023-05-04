@@ -14,7 +14,12 @@ if [[ $HOST = "edger" || $HOST = "alienware-13" || $HOST = "gpd-p2"  || $HOST = 
     else
         # sudo -E nixos-rebuild --option binary-caches https://cache.nixos.org/ --flake .#${HOST} switch
         # sudo -E nixos-rebuild --flake .#${HOST} switch
-        sudo nixos-rebuild --flake .#${HOST} switch
+        if [[ -f "$HOME/.config/dotnix.binary-caches" ]] ; then
+            BINARY_CACHES=`cat $HOME/.config/dotnix.binary-caches`
+            sudo nixos-rebuild --option binary-caches ${BINARY_CACHES} --flake .#${HOST} switch
+        else
+            sudo nixos-rebuild --flake .#${HOST} switch
+        fi
     fi
     if [[ $HOST = "wsl" ]] ; then
         echo ""
