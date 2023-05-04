@@ -33,4 +33,5 @@
     minio-client        # mc
     nodePackages.gitmoji-cli
   ];
+  home.file.".config/gitmoji-nodejs/config.json".source = ./gitmoji.config.json;
 }

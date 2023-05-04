@@ -1,0 +1,6 @@
+{
+  "autoAdd": false,
+  "emojiFormat": "code",
+  "scopePrompt": true,
+  "gitmojisUrl": "https://gitmoji.dev/api/gitmojis"
+}
