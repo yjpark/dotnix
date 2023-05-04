@@ -10,7 +10,7 @@ BRANCH=`git rev-parse --abbrev-ref HEAD`
 
 if [[ "$BRANCH" =~ ^wip-.*$ ]] ; then
     datestr=`date "+%Y-%m-%d %H:%M:%S"`
-    git commit -m ":contruction: [WIP] - $datestr - $HOST"
+    git commit -m "🚧 [WIP] - $datestr - $HOST"
     git push
 else
     echo "Not WIP Branch: $BRANCH"
