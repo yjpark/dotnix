@@ -2,6 +2,7 @@
   imports = [
     ./hardware-configuration.nix
     ./host.nix
+    ./mirrors.nix
     ../../nixos/boot
     ../../nixos/settings
     ../../nixos/services/normal
