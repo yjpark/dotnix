@@ -6,6 +6,6 @@ if [ -z $1 ] ; then
     exit 1
 fi
 
-cd ~/.gnupg
+cd
 
 rsync --progress --links -r $1:Applications ~/
