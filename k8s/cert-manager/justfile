@@ -1,6 +1,8 @@
 check-cert-manager:
     echo "https://cert-manager.io/docs/installation/verify/"
     cmctl check api --wait=2m
+apply-letsencrypt-staging:
+    kubectl apply -f letsencrypt-staging.yaml
 apply-letsencrypt-prod:
     kubectl apply -f letsencrypt-prod.yaml
 install-cert-manager:
