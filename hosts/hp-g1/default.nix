@@ -3,6 +3,7 @@
     ./hardware-configuration.nix
     ./host.nix
     ./mirrors.nix
+    ./xmodmap.nix
     ../../nixos/boot
     ../../nixos/settings
     ../../nixos/services/normal

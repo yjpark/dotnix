@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+cd `dirname $0`
+source _console_utils.bash
+
+# https://gist.github.com/zparnold/0e72d7d3563da2704b900e3b953a8229
+kubectl delete pods -A --field-selector=status.phase=Failed
