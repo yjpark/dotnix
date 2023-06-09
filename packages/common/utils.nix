@@ -32,6 +32,7 @@
     cachix              # nix binary cache
     minio-client        # mc
     nodePackages.gitmoji-cli
+    bfg-repo-cleaner    # big file cleaner for git
   ];
   home.file.".config/gitmoji-nodejs/config.json".source = ./gitmoji.config.json;
 }
