@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+cd `dirname $0`
+source _console_utils.bash
+
+sudo cat /etc/ssh/ssh_host_ed25519_key.pub | ssh-to-age
+

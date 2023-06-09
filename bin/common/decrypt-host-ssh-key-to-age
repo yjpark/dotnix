@@ -7,3 +7,5 @@ mkdir -p ~/.config/sops/age
 sudo cat /etc/ssh/ssh_host_ed25519_key | ssh-to-age -private-key > ~/.config/sops/age/keys.txt
 chmod 600 ~/.config/sops/age/keys.txt
 
+sudo cat /etc/ssh/ssh_host_ed25519_key.pub | ssh-to-age > ~/.config/sops/age/host.pub.txt
+
