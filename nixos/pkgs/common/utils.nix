@@ -24,6 +24,7 @@
     file
     openssl
     corkscrew   # tunnel ssh through http proxy
+    pwgen
   ];
 }
 
