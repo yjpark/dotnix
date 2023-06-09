@@ -17,5 +17,6 @@
     ./nushell.nix
     ./alacritty.nix
     ./zoxide.nix
+    ./helix.nix
   ];
 }

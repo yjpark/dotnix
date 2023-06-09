@@ -8,6 +8,7 @@
     ./vimproc.nix
     ./unite.nix
     ./ansiesc.nix
+    ./coc.nix
   ];
 
   programs.neovim = {
