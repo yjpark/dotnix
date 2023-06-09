@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+cd `dirname $0`
+source _console_utils.bash
+
+mkdir -p ~/.config/sops/age
+sudo cat /etc/ssh/ssh_host_ed25519_key | ssh-to-age -private-key > ~/.config/sops/age/keys.txt
+chmod 600 ~/.config/sops/age/keys.txt
+
