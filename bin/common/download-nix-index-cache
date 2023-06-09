@@ -8,10 +8,11 @@ DATETIME=$(date -u +%Y%m%d)_$(date -u +%H%M)
 
 filename="index-$(uname -m | sed 's/^arm64$/aarch64/')-$(uname | tr A-Z a-z)"
 mkdir -p ~/.cache/nix-index && cd ~/.cache/nix-index
-# -N will only download a new version if there is an update.
+
 axel https://github.com/Mic92/nix-index-database/releases/latest/download/$filename -o ${DATETIME}_$filename
 
-rm -v files
+[ ! -e files ] || rm -v files
+
 ln -s ${DATETIME}_$filename files
 ls -l *
 
