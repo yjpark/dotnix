@@ -27,8 +27,6 @@ if [[ $HOST = "edger" || $HOST = "alienware-13" || $HOST = "gpd-p2"  || $HOST = 
         echo "Writing dconf custom values"
         # the dconf settings been written, but seems not effective for some reason, apply them manually for now
         bin/linux/dconf-write-custom-values
-        echo "Restarting devilspie2"
-        bin/nixos/restart-devilspie2
     fi
 elif [[ $HOST = "mbp" ]] ; then
     confirm "Rebuild Nix Darwin Host: ${GREEN}${HOST}${NO_COLOR}"

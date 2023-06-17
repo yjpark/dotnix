@@ -2,6 +2,5 @@
   imports = [
     ./vscode
     ./firefox.nix
-    ./devilspie2.nix
   ];
 }
