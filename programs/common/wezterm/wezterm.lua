@@ -2,6 +2,7 @@ local wezterm = require 'wezterm'
 local act = wezterm.action
 
 return {
+  window_decorations = 'INTEGRATED_BUTTONS|RESIZE',
   font = wezterm.font 'FiraCode Nerd Font Mono',
   font_dirs = { '/run/current-system/sw/share/X11/fonts' },
   color_scheme = "Molokai",
