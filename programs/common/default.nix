@@ -4,7 +4,7 @@
     ./neovim
     ./starship.nix
     ./starship-patch.nix
-    # ./wezterm
+    ./wezterm
     ./exa.nix
     ./bat.nix
     ./bottom.nix

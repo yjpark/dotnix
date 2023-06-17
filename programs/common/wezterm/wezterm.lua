@@ -32,7 +32,7 @@ return {
     {
        key="v",
        mods="CTRL",
-       action="Paste",
+       action= act.PasteFrom 'Clipboard',
     },
     {
        key="v",
