@@ -4,7 +4,7 @@
     gnome.gnome-tweaks
     gnomeExtensions.unite
     gnomeExtensions.appindicator
-    gnomeExtensions.clipboard-indicator
+    gnomeExtensions.pano
     gnomeExtensions.hibernate-status-button
     gnomeExtensions.vitals
     gnomeExtensions.evpn-shell-assistant
