@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# https://github.com/wez/wezterm/issues/3334
+
+cd /tmp
+
+nohup env -u WAYLAND_DISPLAY wezterm &
+
