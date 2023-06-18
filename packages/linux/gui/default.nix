@@ -7,6 +7,7 @@
     synergy
     darktable
     obsidian
+    mattermost-desktop
   ];
 }
 
