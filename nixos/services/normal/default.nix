@@ -10,5 +10,6 @@
     ./xserver.nix
     ./flatpak.nix
     ./expressvpn.nix
+    ./input-remapper.nix
   ];
 }

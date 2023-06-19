@@ -8,6 +8,7 @@
     darktable
     obsidian
     mattermost-desktop
+    vulkan-tools
   ];
 }
 
