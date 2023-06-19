@@ -21,10 +21,10 @@ index 7d8cae12..0bd644c9 100644
              palettes: HashMap::default(),
          }
 diff --git a/src/print.rs b/src/print.rs
-index 027e4e8f..565bee63 100644
+index 027e4e8f..111965eb 100644
 --- a/src/print.rs
 +++ b/src/print.rs
-@@ -121,6 +121,20 @@ pub fn get_prompt(context: Context) -> String {
+@@ -121,6 +121,25 @@ pub fn get_prompt(context: Context) -> String {
          // continuation prompts normally do not include newlines, but they can
          writeln!(buf).unwrap();
      }
@@ -34,13 +34,18 @@ index 027e4e8f..565bee63 100644
 +        } else {
 +            "═"
 +        };
-+        let count = std::cmp::max(1, context.width / pattern.len());
-+        let line = std::iter::repeat(pattern).take(count).collect::<String>();
-+        if line.len() > context.width {
-+            write!(buf, "{}\n", line.split_at(context.width).0).unwrap();
-+        } else {
-+            write!(buf, "{}\n", line).unwrap();
++        let chars_count = pattern.chars().count();
++        let mut count = context.width;
++        while count >= chars_count {
++            write!(buf, "{}", pattern).unwrap();
++            count = count - chars_count;
 +        }
++        let mut chars = pattern.chars();
++        while count > 0 {
++            write!(buf, "{}", chars.next().unwrap()).unwrap();
++            count = count - 1;
++        }
++        writeln!(buf).unwrap();
 +    }
      write!(buf, "{}", AnsiStrings(&module_strings)).unwrap();
  
