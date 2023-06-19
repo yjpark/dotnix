@@ -1,0 +1,47 @@
+diff --git a/src/configs/starship_root.rs b/src/configs/starship_root.rs
+index 7d8cae12..0bd644c9 100644
+--- a/src/configs/starship_root.rs
++++ b/src/configs/starship_root.rs
+@@ -18,6 +18,8 @@ pub struct StarshipRootConfig {
+     pub scan_timeout: u64,
+     pub command_timeout: u64,
+     pub add_newline: bool,
++    pub add_separator: bool,
++    pub separator_pattern: String,
+     #[serde(skip_serializing_if = "Option::is_none")]
+     pub palette: Option<String>,
+     pub palettes: HashMap<String, Palette>,
+@@ -133,6 +135,8 @@ impl Default for StarshipRootConfig {
+             scan_timeout: 30,
+             command_timeout: 500,
+             add_newline: true,
++            add_separator: false,
++            separator_pattern: "═".to_string(),
+             palette: None,
+             palettes: HashMap::default(),
+         }
+diff --git a/src/print.rs b/src/print.rs
+index 027e4e8f..565bee63 100644
+--- a/src/print.rs
++++ b/src/print.rs
+@@ -121,6 +121,20 @@ pub fn get_prompt(context: Context) -> String {
+         // continuation prompts normally do not include newlines, but they can
+         writeln!(buf).unwrap();
+     }
++    if config.add_separator && context.width > 0 {
++        let pattern = if config.separator_pattern.len() > 0 {
++            &config.separator_pattern
++        } else {
++            "═"
++        };
++        let count = std::cmp::max(1, context.width / pattern.len());
++        let line = std::iter::repeat(pattern).take(count).collect::<String>();
++        if line.len() > context.width {
++            write!(buf, "{}\n", line.split_at(context.width).0).unwrap();
++        } else {
++            write!(buf, "{}\n", line).unwrap();
++        }
++    }
+     write!(buf, "{}", AnsiStrings(&module_strings)).unwrap();
+ 
+     if context.target == Target::Right {

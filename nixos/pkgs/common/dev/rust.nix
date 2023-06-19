@@ -10,6 +10,7 @@
     rust-analyzer-nightly
     wasm-bindgen-cli
     clang
+    dprint
   ];
 }
 
