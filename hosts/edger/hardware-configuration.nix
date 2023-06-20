@@ -50,8 +50,15 @@
   hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 
   # https://nixos.wiki/wiki/AMD_GPU
+  services.xserver.videoDrivers = [ "amdgpu" ];
   # Vulkan support
   hardware.opengl.driSupport = true;
   # For 32 bit applications
   hardware.opengl.driSupport32Bit = true;
+  hardware.opengl.extraPackages = with pkgs; [
+    amdvlk
+  ];
+  hardware.opengl.extraPackages32 = with pkgs; [
+    driversi686Linux.amdvlk
+  ];
 }
