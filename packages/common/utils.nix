@@ -31,8 +31,8 @@
     bup                 # dedup backup tool
     cachix              # nix binary cache
     minio-client        # mc
-    nodePackages.gitmoji-cli
     bfg-repo-cleaner    # big file cleaner for git
   ];
-  home.file.".config/gitmoji-nodejs/config.json".source = ./gitmoji.config.json;
+  # use https://github.com/yjpark/gitmoji-rs, will create nix package late
+  home.file.".config/gitmoji-rs/gitmojis.toml".source = ./gitmojis.toml;
 }

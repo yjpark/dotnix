@@ -2,7 +2,8 @@
   programs.fish.shellAbbrs = {
     g = "git";
     gu = "gitui";
-    gc = "gitmoji -c";
+    gm = "gitmoji";
+    gc = "gitmoji commit";
     e = "nvim";
     a = "rg --smart-case";
     f = "fd";
