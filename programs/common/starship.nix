@@ -7,16 +7,16 @@
       aws = {
         disabled = true;
       };
-      cmd_duration = {
-        format = "[$duration]($style)";
-      };
       time = {
         disabled = false;
         format = "[$time]($style)";
+        style = "gray";
       };
       cmd_duration = {
         min_time = 0;
+        format = "[$duration]($style)";
         show_milliseconds = true;
+        style = "yellow";
       };
       character = {
         success_symbol = "[➜](bold green)";
