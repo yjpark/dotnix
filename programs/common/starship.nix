@@ -3,8 +3,8 @@
     enable = true;
     settings = {
       add_newline = false;
-      add_separator = true;
       time.disabled = false;
+      format = "$fill\n$all";
       cmd_duration = {
         min_time = 1;
         show_milliseconds = true;
@@ -13,7 +13,10 @@
         success_symbol = "[➜](bold green)";
         error_symbol = "[✗](bold red)";
       };
-
+      fill = {
+        symbol = "═";
+        style = "gray";
+      };
     };
   };
 }
