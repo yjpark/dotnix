@@ -2,11 +2,20 @@
   programs.starship = {
     enable = true;
     settings = {
+      format = "$fill $time $fill $cmd_duration\n$all";
       add_newline = false;
-      time.disabled = false;
-      format = "$fill\n$all";
+      aws = {
+        disabled = true;
+      };
       cmd_duration = {
-        min_time = 1;
+        format = "[$duration]($style)";
+      };
+      time = {
+        disabled = false;
+        format = "[$time]($style)";
+      };
+      cmd_duration = {
+        min_time = 0;
         show_milliseconds = true;
       };
       character = {
