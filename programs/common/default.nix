@@ -12,6 +12,7 @@
     ./git.nix
     ./fzf.nix
     ./tmux.nix
+    ./skim.nix
     ./password-store.nix
     ./nushell.nix
     ./alacritty.nix
