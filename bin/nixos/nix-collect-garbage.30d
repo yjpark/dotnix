@@ -2,3 +2,4 @@
 # https://www.ersocon.net/articles/nixos-remove-old-generations~0332c9e7-5c49-4cd9-b706-559356e31390
 
 sudo nix-collect-garbage --delete-older-than 30d
+rebuild-host
