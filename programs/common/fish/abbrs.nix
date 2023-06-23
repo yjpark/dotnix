@@ -20,6 +20,7 @@
     m = "mvn";
     jl = "just -l";
     b = "joshuto-ueberzug";
+    x = "distrobox";
     du = "dua";
     vi = "nvim";
     vim = "nvim";

@@ -23,5 +23,6 @@
     podman-compose
     podman-tui
     docker-client
-  ]; 
+    distrobox
+  ];
 }
