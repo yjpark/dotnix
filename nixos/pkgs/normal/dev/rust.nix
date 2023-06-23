@@ -2,6 +2,8 @@
   let
     rustLibs = with pkgs; [
       pkg-config
+      glibc
+      openssl
       # for bevy apps
       gtk3
       xorg.libX11
