@@ -7,7 +7,7 @@
     ];
   };
   # Note: need to create the zfs mount manually
-  # sudo zfs create -o mountpoint=/var/lib/containerd/io.containerd.snapshotter.v1.zfs rpool/state/containerd
+  # bin/nixos/k3s-setup-zfs-mount
   virtualisation.containerd = {
     enable = true;
     settings =
