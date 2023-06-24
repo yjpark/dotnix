@@ -2,4 +2,4 @@
 
 cd `dirname $0`
 
-./switch-or-run "unity" "/home/yjpark/.nix/bin/linux/start-obsidian"
+./switch-or-run "unity" "~/.nix/bin/linux/start-unity-hub"

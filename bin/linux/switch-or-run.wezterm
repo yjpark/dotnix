@@ -2,4 +2,4 @@
 
 cd `dirname $0`
 
-./switch-or-run "org.wezfurlong.wezterm" "wezterm"
+./switch-or-run "org.wezfurlong.wezterm" "~/.nix/bin/linux/start-wezterm"
