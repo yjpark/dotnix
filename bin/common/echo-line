@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+cd `dirname $0`
+export STARSHIP_CONFIG=${PWD}/starship.line.toml
+
+if [ $# -ne 0 ] ; then
+    export LINE_TITLE="$@"
+fi
+
+starship prompt

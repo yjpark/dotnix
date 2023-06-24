@@ -1,0 +1,13 @@
+add_newline = false
+format = "$fill${env_var}$fill"
+
+[fill]
+style = "gray"
+symbol = "𝄖"
+
+[env_var]
+variable = "LINE_TITLE"
+default = "⋇ ⋇ ⋇"
+format = " [$env_value]($style) "
+style = "cyan"
+

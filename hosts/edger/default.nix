@@ -3,6 +3,7 @@
     ./hardware-configuration.nix
     ./host.nix
     ./secrets.nix
+    ./bin
     ../../nixos/boot
     ../../nixos/settings
     ../../nixos/services/normal

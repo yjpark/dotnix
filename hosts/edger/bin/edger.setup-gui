@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+cd `dirname $0`
+source _console_utils.bash
+
+echo-line "Write dconf values for desktop control"
+~/.nix/bin/linux/dconf-write-custom-values
+
+echo-line "Inject input remapper presets"
+sudo input-remapper-control --preset "Mouse Side Buttons" --device "Logitech MX Anywhere 3" --command start
+echo-line "List input remapper devices"
+sudo input-remapper-control --list-devices
