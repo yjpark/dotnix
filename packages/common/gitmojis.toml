@@ -1,7 +1,7 @@
 auto_add = false
 format = "UseEmoji"
 signed = false
-scope = true
+scope = false
 update_url = "https://gitmoji.dev/api/gitmojis"
 last_update = "+002023-06-22T15:36:16.408764051Z"
 
