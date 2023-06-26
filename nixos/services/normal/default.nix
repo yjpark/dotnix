@@ -11,5 +11,6 @@
     ./flatpak.nix
     ./expressvpn.nix
     ./input-remapper.nix
+    ./kanata.nix
   ];
 }
