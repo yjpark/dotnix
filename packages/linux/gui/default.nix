@@ -10,6 +10,7 @@
     obsidian
     mattermost-desktop
     vulkan-tools
+    ydotool
   ];
 }
 
