@@ -9,5 +9,6 @@
     github.vscode-pull-request-github
     github.copilot
     skellock.just
+    tamasfe.even-better-toml
   ];
 }
