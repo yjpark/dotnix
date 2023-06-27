@@ -1,34 +1,36 @@
 { config, pkgs, ... }: {
   services.espanso = {
     enable = true;
-    configs = {
-      default = {
-        show_notifications = false;
-      };
+    configs.default = {
+      show_notifications = false;
     };
-    matches = {
-      base = {
-        matches = [
-          {
-            trigger = ":now";
-            replace = "{{currentdate}} {{currenttime}}";
-          }
-        ];
-      };
-      global_vars = {
-        global_vars = [
-          {
-            name = "currentdate";
-            type = "date";
-            params = {format = "%d/%m/%Y";};
-          }
-          {
-            name = "currenttime";
-            type = "date";
-            params = {format = "%R";};
-          }
-        ];
-      };
+    matches.now = {
+      matches = [
+        {
+          trigger = ":now";
+          replace = "{{currentdate}} {{currenttime}}";
+        }
+        {
+          trigger = ":date";
+          replace = "{{currentdate}}";
+        }
+        {
+          trigger = ":time";
+          replace = "{{currenttime}}";
+        }
+      ];
+      global_vars = [
+        {
+          name = "currentdate";
+          type = "date";
+          params = {format = "%Y-%m-%d";};
+        }
+        {
+          name = "currenttime";
+          type = "date";
+          params = {format = "%R";};
+        }
+      ];
     };
   };
 }
