@@ -10,5 +10,6 @@
     github.copilot
     skellock.just
     tamasfe.even-better-toml
+    serayuzgur.crates
   ];
 }
