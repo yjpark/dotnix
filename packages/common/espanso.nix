@@ -3,6 +3,8 @@
     enable = true;
     configs.default = {
       show_notifications = false;
+      toggle_key = "RIGHT_ALT";
+      search_shortcut = "SHIFT+SPACE";
     };
     matches.now = {
       matches = [
