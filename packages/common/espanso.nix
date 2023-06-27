@@ -6,6 +6,11 @@
       toggle_key = "RIGHT_ALT";
       search_shortcut = "SHIFT+SPACE";
     };
+    configs.terminator = {
+      # this is NOT working, #detect# return empty for terminator, leave it here for future reference
+      filter_class = "terminator";
+      backend = "Inject";
+    };
     matches.now = {
       matches = [
         {
