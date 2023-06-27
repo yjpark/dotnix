@@ -7,6 +7,7 @@
     gnomeExtensions.pano
     gnomeExtensions.hibernate-status-button
     gnomeExtensions.vitals
+    gnomeExtensions.run-or-raise
     gnomeExtensions.undecorate
     gnomeExtensions.evpn-shell-assistant
   ];
