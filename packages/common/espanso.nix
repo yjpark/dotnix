@@ -4,7 +4,7 @@
     configs.default = {
       show_notifications = false;
       toggle_key = "RIGHT_ALT";
-      search_shortcut = "SHIFT+SPACE";
+      search_shortcut = "SHIFT+ALT+SPACE";
     };
     configs.terminator = {
       # this is NOT working, #detect# return empty for terminator, leave it here for future reference
