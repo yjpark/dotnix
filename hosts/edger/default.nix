@@ -3,7 +3,9 @@
     ./hardware-configuration.nix
     ./host.nix
     ./secrets.nix
-    ../../nixos/boot
+    #need to stick to kernel 6.1 for displaylink usage
+    #../../nixos/boot
+    ../../nixos/boot/efi.nix
     ../../nixos/settings
     ../../nixos/services/normal
     ../../nixos/services/dev

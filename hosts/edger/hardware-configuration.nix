@@ -50,11 +50,11 @@
   hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 
   # https://nixos.wiki/wiki/AMD_GPU
-  services.xserver.videoDrivers = [ "amdgpu" ];
+  # services.xserver.videoDrivers = [ "amdgpu" ];
   # https://nixos.wiki/wiki/Displaylink (for the usb-c monitor)
-  #     displaylink not working ATM
+  #     displaylink only works on kernel <= 6.1 ATM
   #     https://github.com/NixOS/nixpkgs/issues/225178
-  # services.xserver.videoDrivers = [ "amdgpu" "displaylink" ];
+  services.xserver.videoDrivers = [ "amdgpu" "displaylink" ];
   # Vulkan support
   hardware.opengl.driSupport = true;
   # For 32 bit applications
@@ -68,4 +68,7 @@
   environment.systemPackages = [
     pkgs.displaylink
   ];
+  # for displaylink usage
+  boot.supportedFilesystems = [ "zfs" ];
+  boot.kernelPackages = pkgs.linuxPackages_6_1;
 }
