@@ -1,0 +1,3 @@
+add-files:
+    # https://www.displaylink.com/downloads/ubuntu
+    nix-prefetch-url file://$PWD/displaylink-561.zip

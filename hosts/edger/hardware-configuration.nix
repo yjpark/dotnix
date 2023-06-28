@@ -8,7 +8,7 @@
     [ (modulesPath + "/installer/scan/not-detected.nix")
     ];
 
-  boot.initrd.availableKernelModules = [ "nvme" "xhci_pci" "ahci" "usbhid" "usb_storage" "sd_mod" "amdgpu" ];
+  boot.initrd.availableKernelModules = [ "nvme" "xhci_pci" "ahci" "usbhid" "usb_storage" "sd_mod" "amdgpu" "udl" ];
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-amd" ];
   # boot.kernelParams = [
@@ -51,6 +51,10 @@
 
   # https://nixos.wiki/wiki/AMD_GPU
   services.xserver.videoDrivers = [ "amdgpu" ];
+  # https://nixos.wiki/wiki/Displaylink (for the usb-c monitor)
+  #     displaylink not working ATM
+  #     https://github.com/NixOS/nixpkgs/issues/225178
+  # services.xserver.videoDrivers = [ "amdgpu" "displaylink" ];
   # Vulkan support
   hardware.opengl.driSupport = true;
   # For 32 bit applications
@@ -60,5 +64,8 @@
   ];
   hardware.opengl.extraPackages32 = with pkgs; [
     driversi686Linux.amdvlk
+  ];
+  environment.systemPackages = [
+    pkgs.displaylink
   ];
 }
