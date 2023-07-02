@@ -68,7 +68,4 @@
   environment.systemPackages = [
     pkgs.displaylink
   ];
-  # for displaylink usage
-  boot.supportedFilesystems = [ "zfs" ];
-  boot.kernelPackages = pkgs.linuxPackages_6_1;
 }
