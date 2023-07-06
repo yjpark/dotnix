@@ -27,6 +27,11 @@ if [ $status -eq 0 ]
     end
 end
 
+uname -a | grep amzn > /dev/null
+if [ $status -eq 0 ]
+    set -x PATH ~/.nix-profile/bin $PATH
+end
+
 uname | grep Linux > /dev/null
 if [ $status -eq 0 ]
     if test -d ~/.nix/bin/linux
