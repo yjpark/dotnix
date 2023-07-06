@@ -30,6 +30,7 @@ end
 uname -a | grep amzn > /dev/null
 if [ $status -eq 0 ]
     set -x PATH ~/.nix-profile/bin $PATH
+    set -x PATH /nix/var/nix/profiles/default/bin $PATH
 end
 
 uname | grep Linux > /dev/null
