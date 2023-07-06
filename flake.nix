@@ -64,6 +64,7 @@
         pkgs = inputs.nixpkgs.legacyPackages.${system};
         modules = [
           ./home/${home}
+          ./programs/home-manager.nix
         ] ++ extra;
       };
     in {
@@ -111,13 +112,10 @@
           inputs.nixos-wsl.nixosModules.wsl
         ];
       };
-      homeConfigurations."yjpark@mbp" = inputs.home-manager.lib.homeManagerConfiguration {
-        username = "yjpark";
-        homeDirectory = "/Users/yjpark";
+      homeConfigurations."yjpark@mbp" = mkHome {
         system = "x86_64-darwin";
-        configuration.imports = [
-          ./home/yjpark/darwin.nix
-        ];
+        home ="yjpark/darwin.nix";
+        extra = [];
       };
       homeConfigurations."yjpark@linux.server" = mkHome {
         system = "x86_64-linux";
