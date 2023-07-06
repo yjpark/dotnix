@@ -32,6 +32,9 @@
     cachix              # nix binary cache
     minio-client        # mc
     bfg-repo-cleaner    # big file cleaner for git
+    ripasso-cursive     # password manager
+    rage                # rust version of age
+    passage             # pass with age
   ];
   # use https://github.com/yjpark/gitmoji-rs, will create nix package late
   home.file.".config/gitmoji-rs/gitmojis.toml".source = ./gitmojis.toml;
