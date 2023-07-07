@@ -1,0 +1,36 @@
+
+[[keymaps]]
+command = "reveal_active_file_in_file_tree"
+key = "Alt+e"
+
+[[keymaps]]
+command = "toggle_terminal_focus"
+key = "Alt+t"
+
+[[keymaps]]
+command = "-toggle_terminal_focus"
+key = "Ctrl+`"
+
+[[keymaps]]
+command = "palette"
+key = "Alt+p"
+
+[[keymaps]]
+command = "-palette"
+key = "Ctrl+p"
+
+[[keymaps]]
+command = "palette.command"
+key = "Alt+,"
+
+[[keymaps]]
+command = "-palette.command"
+key = "F1"
+
+[[keymaps]]
+command = "toggle_search_focus"
+key = "Alt+."
+
+[[keymaps]]
+command = "-toggle_search_focus"
+key = "Ctrl+Shift+f"

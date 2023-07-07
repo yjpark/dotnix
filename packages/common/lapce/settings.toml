@@ -1,0 +1,11 @@
+
+[ui]
+font-size = 16
+font-family = "Liberation Mono"
+
+[editor]
+font-size = 16
+font-family = "FiraCode Nerd Font Mono"
+
+[terminal]
+font-family = "FiraCode Nerd Font Mono"
