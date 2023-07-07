@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+cd `dirname $0`
+source _console_utils.bash
+
+cd ~/.config/lapce-nightly
+
+echo-line "before unlock"
+ls -l *.toml
+
+echo-line "remove original config files"
+
+rm -v settings.toml
+rm -v keymaps.toml
+
+echo-line "symlink config files to .nix"
+
+ln -sv ~/.nix/packages/common/lapce/settings.toml .
+ln -sv ~/.nix/packages/common/lapce/keymaps.toml .
+
+echo-line "after unlock"
+ls -l *.toml

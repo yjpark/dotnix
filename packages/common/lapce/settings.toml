@@ -9,3 +9,6 @@ font-family = "FiraCode Nerd Font Mono"
 
 [terminal]
 font-family = "FiraCode Nerd Font Mono"
+
+[core]
+modal = true
