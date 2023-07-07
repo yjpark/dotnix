@@ -6,5 +6,6 @@
     humao.rest-client
     yzhang.markdown-all-in-one
     streetsidesoftware.code-spell-checker
+    redhat.vscode-yaml
   ];
 }
