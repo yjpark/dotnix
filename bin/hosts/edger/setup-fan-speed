@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+cd `dirname $0`
+source _console_utils.bash
+
+echo-line "Make the fan quiet by setting max speed"
+
+sudo echo 2 > /sys/class/drm/card0/device/hwmon/hwmon1/pwm1_enable
+sudo echo 100 > /sys/class/drm/card0/device/hwmon/hwmon1/pwm1_max
+sudo echo 255 > /sys/class/drm/card0/device/hwmon/hwmon1/pwm1_max
+
