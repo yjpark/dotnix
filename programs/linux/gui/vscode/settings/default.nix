@@ -7,5 +7,6 @@
   ];
     programs.vscode.userSettings = {
         "window.titleBarStyle" = "custom";
+        "http.proxy" = "socks5://proxy:29001";
     };
 }
