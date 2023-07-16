@@ -11,10 +11,6 @@
   boot.initrd.availableKernelModules = [ "nvme" "xhci_pci" "ahci" "usbhid" "usb_storage" "sd_mod" "amdgpu" "udl" ];
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-amd" ];
-  # boot.kernelParams = [
-  #   "acpi_enforce_resources=lax"
-  #   "amdgpu.dpm=1"
-  # ];
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =
@@ -50,10 +46,6 @@
   hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 
   # https://nixos.wiki/wiki/AMD_GPU
-  # services.xserver.videoDrivers = [ "amdgpu" ];
-  # https://nixos.wiki/wiki/Displaylink (for the usb-c monitor)
-  #     displaylink only works on kernel <= 6.1 ATM
-  #     https://github.com/NixOS/nixpkgs/issues/225178
   services.xserver.videoDrivers = [ "amdgpu" "displaylink" ];
   # Vulkan support
   hardware.opengl.driSupport = true;
