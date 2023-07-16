@@ -3,9 +3,20 @@
 cd `dirname $0`
 source _console_utils.bash
 
-echo-line "Make the fan quiet by setting max speed"
+echo-line "pwm1_enable"
+cat /sys/class/drm/card0/device/hwmon/hwmon?/pwm1_enable
 
-sudo echo 2 > /sys/class/drm/card0/device/hwmon/hwmon1/pwm1_enable
-sudo echo 100 > /sys/class/drm/card0/device/hwmon/hwmon1/pwm1_max
-sudo echo 255 > /sys/class/drm/card0/device/hwmon/hwmon1/pwm1_max
+echo-line "pwm1_max"
+cat /sys/class/drm/card0/device/hwmon/hwmon?/pwm1_max
+
+
+echo-line "pwm1_enable -> 2"
+sudo chmod 644 /sys/class/drm/card0/device/hwmon/hwmon?/pwm1*
+sudo su -c "echo 2 > /sys/class/drm/card0/device/hwmon/hwmon?/pwm1_enable"
+
+echo-line "pwm1_max -> 100"
+sudo su -c "echo 100 > /sys/class/drm/card0/device/hwmon/hwmon?/pwm1_max"
+
+echo-line "pwm1_max -> 255"
+sudo su -c "echo 255 > /sys/class/drm/card0/device/hwmon/hwmon?/pwm1_max"
 
