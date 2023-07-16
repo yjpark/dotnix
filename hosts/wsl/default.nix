@@ -11,7 +11,7 @@
     enable = true;
     # https://github.com/nix-community/NixOS-WSL/issues/179
     # need to disable nativeSystemd when building the installer
-    nativeSystemd = true;
+    # nativeSystemd = true;
     defaultUser = "yjpark";
     startMenuLaunchers = true;
     # use podman instead
