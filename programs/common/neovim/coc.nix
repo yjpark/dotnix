@@ -8,6 +8,7 @@
   };
   programs.neovim.plugins = with pkgs.vimPlugins; [
     coc-rust-analyzer
+    coc-flutter
   ];
   home.packages = with pkgs; [
     rust-analyzer

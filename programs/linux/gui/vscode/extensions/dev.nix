@@ -11,5 +11,6 @@
     skellock.just
     tamasfe.even-better-toml
     serayuzgur.crates
+    dart-code.flutter
   ];
 }

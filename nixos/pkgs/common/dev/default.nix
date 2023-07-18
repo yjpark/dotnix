@@ -4,6 +4,7 @@
     ./dotnet.nix
     ./python.nix
     ./java.nix
+    ./flutter.nix
     ./database.nix
   ];
 }
