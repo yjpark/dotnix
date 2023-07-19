@@ -26,6 +26,8 @@
     corkscrew   # tunnel ssh through http proxy
     pwgen
     devbox
+    gping       # graphical ping
+    kmon        # kernel manager and activity monitor
   ];
 }
 

@@ -5,6 +5,7 @@
     ./python.nix
     ./java.nix
     ./database.nix
+    ./android.nix
   ];
 }
 
