@@ -30,11 +30,6 @@
             "http://localhost:5000"
           ];
         };
-        plugins."io.containerd.grpc.v1.cri".registry.mirrors."localhost:29003" = {
-          endpoint = [
-            "http://localhost:29003"
-          ];
-        };
       };
   }; 
   networking.firewall.allowedTCPPorts = [
