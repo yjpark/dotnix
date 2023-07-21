@@ -1,4 +1,4 @@
 _list:
-    just -l
+    cd {{ justfile_directory() }} ; just -l
 templates +params:
     just --justfile ~/projects/edger-dev/templates/justfile {{ params }}
