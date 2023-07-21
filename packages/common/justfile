@@ -1,2 +1,4 @@
-!include ~/projects/edger-dev/templates/justfile
-
+_list:
+    just -l
+templates +params:
+    just --justfile ~/projects/edger-dev/templates/justfile {{ params }}

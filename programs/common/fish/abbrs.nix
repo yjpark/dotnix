@@ -18,7 +18,8 @@
     z = "zi";
     j = "just";
     jl = "just -l";
-    jj = "just --unstable --justfile ~/.config/justfile --working-directory .";
+    jj = "just --justfile ~/.config/justfile --working-directory .";
+    jt = "just --justfile ~/projects/edger-dev/templates/justfile";
     m = "mvn";
     b = "joshuto-ueberzug";
     x = "distrobox";
