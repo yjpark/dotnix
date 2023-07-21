@@ -4,7 +4,7 @@
     "..." = "cd ../..";
     "...." = "cd ../../..";
     template-list = "just --justfile ~/projects/edger-dev/templates/justfile -l";
-    template-run = "just --justfile ~/projects/edger-dev/templates/justfile";
+    template-run = "just --justfile ~/projects/edger-dev/templates/justfile -d .";
     reset-proxy = "set -ge https_proxy; set -ge http_proxy; set -ge all_proxy; set -ge NIX_CURL_FLAGS";
     show-proxy = "env | grep _proxy; env | grep NIX_CURL_FLAGS";
     set-proxy-trojan = "set -gx https_proxy http://127.0.0.1:1102; set -gx http_proxy http://127.0.0.1:1102; set -gx all_proxy http://127.0.0.1:1102; set -gx NIX_CURL_FLAGS -x http://127.0.0.1:1102";
