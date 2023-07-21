@@ -17,8 +17,9 @@
     s = "mosh";
     z = "zi";
     j = "just";
-    m = "mvn";
     jl = "just -l";
+    jj = "just --unstable --justfile ~/.config/justfile --working-directory .";
+    m = "mvn";
     b = "joshuto-ueberzug";
     x = "distrobox";
     du = "dua";
