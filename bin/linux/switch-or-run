@@ -9,4 +9,7 @@
 # -a <WIN> Activate the window <WIN> by switching to its desktop and raising it.
 # -x Include WM_CLASS in the window list or interpret <WIN> as the WM_CLASS name
 
+# This may not working for some apps (e.g. firefox) with wayland
+# switched to use raise-or-run gnome extension now
+
 wmctrl -x -a "$1" || "$2"

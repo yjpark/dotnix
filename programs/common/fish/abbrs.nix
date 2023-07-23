@@ -9,7 +9,10 @@
     f = "fd";
     n = "nix";
     nd = "nix develop --command fish";
+    cl = "clear-buffer";
     c = "cargo";
+    cb = "clear-buffer ; cargo build";
+    cr = "clear-buffer ; cargo run";
     d = "dotnet";
     k = "kubectl";
     kn = "kubens";
@@ -35,7 +38,6 @@
     tt = "tmux attach -t";
     tl = "tmux list-sessions";
     tf = "tmux-fix-ssh-agent";
-    cb = "clear-buffer";
     sp = "sync-pass";
     gwp = "git-commit-wip-and-push";
     gsp = "git-commit-sync-and-push";
