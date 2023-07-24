@@ -4,6 +4,7 @@
     ./minimap.nix
     ./terminal.nix
     ./vim.nix
+    ./rust-analyzer.nix
   ];
     programs.vscode.userSettings = {
         "window.titleBarStyle" = "custom";
