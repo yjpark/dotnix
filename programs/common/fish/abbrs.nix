@@ -13,9 +13,9 @@
     c = "cargo";
     cb = "clear-buffer ; cargo build";
     cr = "clear-buffer ; cargo run";
-    cw = "cargo watch"
-    cwb = "cargo watch -s 'clear-buffer ; cargo build'"
-    cwr = "cargo watch -s 'clear-buffer ; cargo run'"
+    cw = "cargo watch";
+    cwb = "cargo watch -s 'clear-buffer ; cargo build'";
+    cwr = "cargo watch -s 'clear-buffer ; cargo run'";
     d = "dotnet";
     k = "kubectl";
     kn = "kubens";
