@@ -37,6 +37,7 @@
     cat = "bat";
     top = "btm";
     tree = "exa -T";
+    dig = "dog";
     ta = "tmux attach";
     tt = "tmux attach -t";
     tl = "tmux list-sessions";
