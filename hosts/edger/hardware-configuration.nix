@@ -12,6 +12,9 @@
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-amd" ];
   boot.extraModulePackages = [ ];
+  boot.kernelParams = [
+    "acpi_enforce_resources=lax"
+  ];
 
   fileSystems."/" =
     { device = "rpool/tmp/root";
