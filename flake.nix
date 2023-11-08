@@ -42,7 +42,7 @@
         modules = [
           ({ pkgs, ... }: {
             nixpkgs.overlays = [
-              inputs.nix-alien.overlay
+              inputs.nix-alien.overlays.default
               inputs.fenix.overlays.default
               inputs.sops-nix.overlays.default
             ];
