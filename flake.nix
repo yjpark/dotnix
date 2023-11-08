@@ -29,6 +29,10 @@
       url = "github:Mic92/sops-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    vscode-server = {
+      url = "github:nix-community/nixos-vscode-server";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = inputs:
@@ -54,6 +58,7 @@
             home-manager.users.yjpark = import ./home/${home};
           }
           inputs.sops-nix.nixosModules.sops
+          inputs.vscode-server.nixosModules.default
         ] ++ extra;
       };
       mkHome =
