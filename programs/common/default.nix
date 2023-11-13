@@ -4,7 +4,7 @@
     ./neovim
     ./starship.nix
     ./wezterm
-    ./exa.nix
+    ./eza.nix
     ./bat.nix
     ./bottom.nix
     ./direnv.nix
