@@ -9,6 +9,7 @@
     ../../nixos/services/dev
     ../../nixos/pkgs
     ../../nixos/users
-    ../../nixos/services/normal/synergy/server.nix
+    ../../nixos/services/normal/nosleep.nix
+    # ../../nixos/services/normal/synergy/server.nix
   ];
 }
