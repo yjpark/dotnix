@@ -10,12 +10,17 @@ HOST=`hostname`
 if [[ $HOST = "edger" || $HOST = "alienware-13" || $HOST = "gpd-p2"  || $HOST = "hp-g1" || $HOST = "wsl" ]] ; then
     confirm "Rebuild NixOS Host: ${GREEN}${HOST}${NO_COLOR}"
     if [[ $# -ge 1 ]] ; then
-        sudo nixos-rebuild --flake .#${HOST} $@
-    else
-        # sudo -E nixos-rebuild --option binary-caches https://cache.nixos.org/ --flake .#${HOST} switch
-        # sudo -E nixos-rebuild --flake .#${HOST} switch
         if [[ -f "$HOME/.config/dotnix.binary-caches" ]] ; then
             BINARY_CACHES=`cat $HOME/.config/dotnix.binary-caches`
+            echo "Using binary caches: ${BINARY_CACHES}"
+            sudo nixos-rebuild --option binary-caches ${BINARY_CACHES} --flake .#${HOST} $@
+        else
+            sudo nixos-rebuild --flake .#${HOST} $@
+        fi
+    else
+        if [[ -f "$HOME/.config/dotnix.binary-caches" ]] ; then
+            BINARY_CACHES=`cat $HOME/.config/dotnix.binary-caches`
+            echo "Using binary caches: ${BINARY_CACHES}"
             sudo nixos-rebuild --option binary-caches ${BINARY_CACHES} --flake .#${HOST} switch
         else
             sudo nixos-rebuild --flake .#${HOST} switch
