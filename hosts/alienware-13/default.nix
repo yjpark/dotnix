@@ -3,6 +3,7 @@
     ./hardware-configuration.nix
     ./host.nix
     ./secrets.nix
+    ./mirrors.nix
     ./ports.nix
     ./samba.nix
     ../../nixos/boot
