@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+# osascript -e 'id of app "Microsoft Edge"'
+defaults write com.microsoft.edgemac AppleMenuBarVisibleInFullscreen -bool false
