@@ -3,7 +3,6 @@
     ./fish
     ./neovim
     ./starship.nix
-    ./wezterm
     ./eza.nix
     ./bat.nix
     ./bottom.nix

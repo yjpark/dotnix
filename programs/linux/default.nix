@@ -4,5 +4,6 @@
     ./gpg.nix
     ./xcape.nix
     ./terminator.nix
+    ./wezterm
   ];
 }
