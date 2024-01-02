@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+cd `dirname $0`
+source _console_utils.bash
+
+echo-line "Write dconf values for desktop control"
+~/.nix/bin/linux/dconf-write-custom-values
+
+echo-line "List input remapper devices"
+sudo input-remapper-control --list-devices
