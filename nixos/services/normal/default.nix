@@ -12,5 +12,6 @@
     ./expressvpn.nix
     ./input-remapper.nix
     ./kanata.nix
+    ./interception-tools.nix
   ];
 }

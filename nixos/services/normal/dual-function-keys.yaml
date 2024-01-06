@@ -1,0 +1,5 @@
+# https://gitlab.com/interception/linux/plugins/dual-function-keys/
+MAPPINGS:
+  - KEY: KEY_LEFTSHIFT
+    TAP: KEY_ESC
+    HOLD: KEY_LEFTSHIFT
