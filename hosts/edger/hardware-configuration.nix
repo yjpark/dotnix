@@ -63,4 +63,9 @@
   environment.systemPackages = [
     pkgs.displaylink
   ];
+
+  # For the thinkpad trackpoint II, middle button to scroll feature
+  # https://search.nixos.org/options?channel=unstable&show=services.xserver.libinput.mouse.scrollMethod&from=0&size=50&sort=relevance&type=packages&query=libinput.mouse
+  services.xserver.libinput.mouse.scrollMethod = "button";
+  services.xserver.libinput.mouse.scrollButton = 3;
 }
