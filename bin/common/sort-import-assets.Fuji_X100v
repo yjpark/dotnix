@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+BIN=`dirname $0`
+
+$BIN/_sort-import-assets Fuji_X100v
