@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+BIN=`dirname $0`
+source $BIN/_console_utils.bash
+
+# $1 FROM
+# $2 TO
+FROM=$1
+TO=$2
+
+# $3 FOLDER
+FOLDER=$3
+
+# NEW=`echo $FOLDER | sed 's/$FROM/$TO'`
+NEW=${FOLDER/$FROM/$TO}
+
+mv -v $FOLDER $NEW
