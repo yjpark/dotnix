@@ -9,5 +9,5 @@
       127.0.0.1   proxy
   '';
 
-  services.onedrive.enable = true;
+  # services.onedrive.enable = true;
 }
