@@ -4,9 +4,6 @@
   };
   services.gpg-agent = {
     enable = true;
-    pinentryFlavor = "curses";
+    pinentryPackage = pkgs.pinentry-curses;
   };
-  home.packages = with pkgs; [
-    pinentry.curses
-  ];
 }
