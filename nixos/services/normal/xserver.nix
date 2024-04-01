@@ -8,7 +8,7 @@
     layout = "us";
     variant = "dvorak";
     options = "ctrl:swapcaps";
-  }
+  };
 
   services.xserver.exportConfiguration = true;
 }
