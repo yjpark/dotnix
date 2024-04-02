@@ -12,7 +12,7 @@
     ../../nixos/services/dev
     ../../nixos/pkgs
     ../../nixos/users
-    # ../../nixos/services/normal/no-sleep.nix
+    ../../nixos/services/normal/no-sleep.nix
     ../../nixos/services/normal/router
   ];
 }

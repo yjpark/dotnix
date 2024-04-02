@@ -9,7 +9,6 @@
     ./nix-serve.nix
     ./xserver.nix
     ./flatpak.nix
-    ./expressvpn.nix
     ./input-remapper.nix
     ./kanata.nix
     ./interception-tools.nix

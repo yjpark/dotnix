@@ -5,6 +5,5 @@
     ./gnome.nix
     ./rustdesk.nix
     ./appimage.nix
-    ./expressvpn.nix
   ];
 }

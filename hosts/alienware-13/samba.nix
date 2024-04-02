@@ -1,15 +1,14 @@
 { config, pkgs, ... }:
 
 {
-  services.samba-wsdd.enable = true; # make shares visible for windows 10 clients
-  networking.firewall.allowedTCPPorts = [
-    5357 # wsdd
-  ];
-  networking.firewall.allowedUDPPorts = [
-    3702 # wsdd
-  ];
+  # make shares visible for windows 10 clients
+  services.samba-wsdd = {
+    enable = true;
+    openFirewall = true;
+  };
   services.samba = {
     enable = true;
+    openFirewall = true;
     securityType = "user";
     extraConfig = ''
       workgroup = WORKGROUP
@@ -32,8 +31,8 @@
         "guest ok" = "yes";
         "create mask" = "0644";
         "directory mask" = "0755";
-        "force user" = "username";
-        "force group" = "groupname";
+        "force user" = "yjpark";
+        "force group" = "users";
       };
     };
   };
