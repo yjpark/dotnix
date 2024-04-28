@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+cd `dirname $0`
+source _console_utils.bash
+
+cd /mnt/d/
+
+echo-line "Sync assets from D to E (DELETE orphan files)"
+rsync -rv --delete --progress --stats Assets /mnt/e/Backup/
