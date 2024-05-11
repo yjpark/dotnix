@@ -9,14 +9,14 @@ layout {
 
 		    hide_frame_for_single_pane "true"
 
-		    mode_normal "NOR"
-		    mode_locked "LOC"
-		    mode_tab "TAB"
-		    mode_pane "PAN"
-		    mode_scroll "SCR"
-		    mode_resize "RES"
-		    mode_session "SEO"
-		    mode_tmux "TMX"
+		    mode_normal "NORM"
+		    mode_locked "LOCK"
+		    mode_tab "TABS"
+		    mode_pane "PANE"
+		    mode_scroll "SCRL"
+		    mode_resize "RSZE"
+		    mode_session "SESN"
+		    mode_tmux "TMUX"
 
 		    tab_normal "#[bg=#222222,fg=#AAAAAA] {index}:{name} "
 		    tab_active "#[bg=#444444,fg=#FFFFFF,bold] {index}:{name} "
