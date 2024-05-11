@@ -2,7 +2,7 @@
   imports = [
     ../common
     ./ncdu.nix
-    ./devbox.nix
+    ./utils.nix
   ];
 }
 
