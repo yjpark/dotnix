@@ -21,7 +21,6 @@
     kn = "kubens";
     p = "podman";
     s = "mosh";
-    z = "zi";
     j = "just";
     jl = "just -l";
     jj = "just --justfile ~/.config/justfile --working-directory .";

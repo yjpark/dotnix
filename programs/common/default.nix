@@ -11,6 +11,7 @@
     ./git.nix
     ./fzf.nix
     ./tmux.nix
+    ./zellij.nix
     ./skim.nix
     ./password-store.nix
     ./nushell.nix
