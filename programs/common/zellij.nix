@@ -4,6 +4,7 @@
     settings = {
       default_layout = "compact";
       theme = "molokai-dark";
+      pane_frames = false;
       keybindings = ''
         normal clear-defaults=true {
             bind "Ctrl g" { SwitchToMode "locked"; }
