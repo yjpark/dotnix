@@ -26,6 +26,9 @@
     jj = "just --justfile ~/.config/justfile --working-directory .";
     jt = "just --justfile ~/projects/edger-dev/templates/justfile";
     i = "zellij";
+    ia = "zellij action";
+    it = "zellij attach";
+    il = "zellij list-sessions";
     b = "joshuto-ueberzug";
     x = "distrobox";
     du = "dua";
