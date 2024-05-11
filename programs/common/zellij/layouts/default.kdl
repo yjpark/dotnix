@@ -9,19 +9,19 @@ layout {
 
 		    hide_frame_for_single_pane "true"
 
-		    mode_normal " NOR "
-		    mode_locked " LOC "
-		    mode_tab " TAB "
-		    mode_pane " PAN "
-		    mode_scroll " SCR "
-		    mode_resize " RES "
-		    mode_session " SEO "
-		    mode_tmux " TMX "
+		    mode_normal "NOR"
+		    mode_locked "LOC"
+		    mode_tab "TAB"
+		    mode_pane "PAN"
+		    mode_scroll "SCR"
+		    mode_resize "RES"
+		    mode_session "SEO"
+		    mode_tmux "TMX"
 
-		    tab_normal "#[bg=#222222,fg=#AAAAAA]{index}:{name} "
-		    tab_active "#[bg=#444444,fg=#FFFFFF,bold]{index}:{name} "
+		    tab_normal "#[bg=#222222,fg=#AAAAAA] {index}:{name} "
+		    tab_active "#[bg=#444444,fg=#FFFFFF,bold] {index}:{name} "
 
-		    datetime "#[fg=#6C7086,bold] {format} "
+		    datetime "#[fg=#6C7086,bold] {format}"
 		    datetime_format "%H:%M"
 		    datetime_timezone "Asia/Shanghai"
             }
