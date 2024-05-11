@@ -25,7 +25,7 @@
     jl = "just -l";
     jj = "just --justfile ~/.config/justfile --working-directory .";
     jt = "just --justfile ~/projects/edger-dev/templates/justfile";
-    m = "mvn";
+    i = "zellij";
     b = "joshuto-ueberzug";
     x = "distrobox";
     du = "dua";
