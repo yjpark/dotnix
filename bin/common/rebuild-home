@@ -15,7 +15,7 @@ if [[ -f "$HOME/.config/dotnix.hostname" ]] ; then
     else
         home-manager --extra-experimental-features "nix-command flakes" --flake .#${USER}@${HOST} switch
     fi
-elif [[ $HOST = "mbp" ]] ; then
+elif [[ $HOST = "mbp"|| $HOST = "yjpark-mbp.local" ]] ; then
     if [[ $USER = "yjpark" ]] ; then
         confirm "Rebuild Nix Home: ${GREEN}${USER}@${HOST}${NO_COLOR}"
         if [[ $# -ge 1 ]] ; then
