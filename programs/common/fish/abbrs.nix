@@ -16,10 +16,11 @@
     cw = "cargo watch";
     cwb = "cargo watch -s 'clear-buffer ; cargo build'";
     cwr = "cargo watch -s 'clear-buffer ; cargo run'";
-    d = "dotnet";
+    d = "podman";
     k = "kubectl";
     kn = "kubens";
-    p = "podman";
+    p = "pueue";
+    ps = "procs";
     s = "mosh";
     j = "just";
     jl = "just -l";
@@ -34,7 +35,6 @@
     du = "dua";
     vi = "nvim";
     vim = "nvim";
-    ps = "procs";
     bw = "sudo bandwhich";
     cat = "bat";
     top = "btm";
