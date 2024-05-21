@@ -122,6 +122,11 @@
         home ="yjpark/darwin.nix";
         extra = [];
       };
+      homeConfigurations."yjpark@yjpark-mbp.local" = mkHome {
+        system = "x86_64-darwin";
+        home ="yjpark/darwin.nix";
+        extra = [];
+      };
       homeConfigurations."yjpark@linux.server" = mkHome {
         system = "x86_64-linux";
         home = "yjpark/linux/server";
