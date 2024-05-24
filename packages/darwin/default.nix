@@ -2,6 +2,7 @@
   imports = [
     ../common
     ./ncdu.nix
+    ./utils.nix
   ];
 }
 

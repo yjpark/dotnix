@@ -27,14 +27,15 @@
     tokei               # source line calculater
     bandwhich           # show network usage by process
     dogdns              # dig alternative
-    git-annex           # manage large files in git easily
-    bup                 # dedup backup tool
+    # git-annex           # manage large files in git easily
+    # bup                 # dedup backup tool
     cachix              # nix binary cache
     minio-client        # mc
     bfg-repo-cleaner    # big file cleaner for git
     ripasso-cursive     # password manager
     rage                # rust version of age
     passage             # pass with age
+    pueue		# process manager
   ];
   # use https://github.com/yjpark/gitmoji-rs, will create nix package late
   home.file.".config/gitmoji-rs/gitmojis.toml".source = ./gitmojis.toml;
