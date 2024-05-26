@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+# https://discourse.nixos.org/t/home-manager-and-garbage-collection/41715
+
+nix-collect-garbage --delete-older-than 10d
+
+sudo nix-collect-garbage --delete-older-than 10d
+
