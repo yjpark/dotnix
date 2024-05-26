@@ -20,7 +20,6 @@
     k = "kubectl";
     kn = "kubens";
     p = "pueue";
-    ps = "procs";
     s = "mosh";
     j = "just";
     jl = "just -l";
