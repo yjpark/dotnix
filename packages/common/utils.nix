@@ -36,6 +36,7 @@
     rage                # rust version of age
     passage             # pass with age
     pueue		# process manager
+    simple-http-server
   ];
   # use https://github.com/yjpark/gitmoji-rs, will create nix package late
   home.file.".config/gitmoji-rs/gitmojis.toml".source = ./gitmojis.toml;
