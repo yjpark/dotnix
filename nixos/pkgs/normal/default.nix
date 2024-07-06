@@ -1,6 +1,5 @@
 { config, pkgs, ... }: {
   imports = [
-    ./dev
     ./utils.nix
     ./gnome.nix
     ./rustdesk.nix

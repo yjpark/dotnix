@@ -11,7 +11,7 @@ set wrap
 " set smartindent     "Automatically inserts indentation in some cases
 " set cindent         "Like smartindent, but stricter and more customisable
 
-behave xterm
+" behave xterm
 
 " The ttymouse is for vim in screen's mouse support
 " set ttymouse=xterm2

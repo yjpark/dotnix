@@ -21,10 +21,6 @@
       url = "github:thiagokokada/nix-alien/master";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    fenix = {
-      url = "github:nix-community/fenix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     sops-nix = {
       url = "github:Mic92/sops-nix";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -47,7 +43,6 @@
           ({ pkgs, ... }: {
             nixpkgs.overlays = [
               inputs.nix-alien.overlays.default
-              inputs.fenix.overlays.default
               inputs.sops-nix.overlays.default
             ];
           })

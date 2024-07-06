@@ -1,6 +1,7 @@
 { config, pkgs, ... }: {
   programs.vscode.extensions = with pkgs.vscode-extensions; [
     vscodevim.vim
+    ms-vscode-remote.remote-ssh
     eamodio.gitlens
     shardulm94.trailing-spaces
     humao.rest-client
