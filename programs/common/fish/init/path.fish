@@ -16,6 +16,11 @@ if [ $status -eq 0 ]
     end
 end
 
+uname -v | grep Darwin > /dev/null
+if [ $status -eq 0 ]
+    set -x PATH ~/.nix-profile/bin $PATH
+end
+
 uname -v | grep Ubuntu > /dev/null
 if [ $status -eq 0 ]
     set -x PATH ~/.nix-profile/bin $PATH

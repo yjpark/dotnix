@@ -33,13 +33,6 @@ if [[ $HOST = "edger" || $HOST = "alienware-13" || $HOST = "gpd-p2"  || $HOST = 
         # the dconf settings been written, but seems not effective for some reason, apply them manually for now
         bin/linux/dconf-write-custom-values
     fi
-elif [[ $HOST = "mbp" ]] ; then
-    confirm "Rebuild Nix Darwin Host: ${GREEN}${HOST}${NO_COLOR}"
-    if [[ $# -ge 1 ]] ; then
-        darwin-rebuild --flake .#${HOST} $@
-    else
-        darwin-rebuild --flake .#${HOST} switch
-    fi
 else
     echo "Unsupported Host: ${RED}$HOST${NO_COLOR}"
     exit 2
