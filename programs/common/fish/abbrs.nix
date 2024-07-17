@@ -16,10 +16,10 @@
     cw = "cargo watch";
     cwb = "cargo watch -s 'clear-buffer ; cargo build'";
     cwr = "cargo watch -s 'clear-buffer ; cargo run'";
-    d = "podman";
+    d = "dotnet";
     k = "kubectl";
     kn = "kubens";
-    p = "pueue";
+    p = "podman";
     s = "mosh";
     j = "just";
     jl = "just -l";

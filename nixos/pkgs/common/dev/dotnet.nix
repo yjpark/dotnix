@@ -1,6 +1,6 @@
 { config, pkgs, ... }: {
   environment.systemPackages = with pkgs; [
-    dotnet-sdk
+    dotnet-sdk_8
   ];
 }
 
