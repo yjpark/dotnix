@@ -52,6 +52,10 @@ if test -d ~/.cargo/bin
     set -x PATH ~/.cargo/bin $PATH
 end
 
+if test -d ~/.dotnet/tools
+    set -x PATH ~/.dotnet/tools $PATH
+end
+
 if test -d ~/.krew/bin
     set -x PATH ~/.krew/bin $PATH
 end
