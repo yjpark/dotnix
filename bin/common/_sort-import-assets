@@ -37,6 +37,10 @@ for x in *.mov; do
   move Video $x
 done
 
+for x in *.MP4; do
+  move Video $x
+done
+
 for x in *.mp4; do
   move Video $x
 done
