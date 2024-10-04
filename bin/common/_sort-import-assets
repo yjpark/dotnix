@@ -45,6 +45,10 @@ for x in *.mp4; do
   move Video $x
 done
 
+for x in *.360; do
+  move Video $x
+done
+
 for x in *.wav; do
   move Audio $x
 done
