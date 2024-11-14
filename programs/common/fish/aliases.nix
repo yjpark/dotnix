@@ -17,5 +17,7 @@
     set-proxy-edger_lan = "set -gx https_proxy http://10.0.1.2:31102; set -gx http_proxy http://10.0.1.2:31102; set -gx all_proxy http://10.0.1.2:31102; set -gx NIX_CURL_FLAGS -x http://10.0.1.2:31102";
     set-proxy-p2_lan = "set -gx https_proxy http://10.0.1.5:31102; set -gx http_proxy http://10.0.1.5:31102; set -gx all_proxy http://10.0.1.5:31102; set -gx NIX_CURL_FLAGS -x http://10.0.1.5:31102";
     set-proxy-a13_lan = "set -gx https_proxy http://10.0.1.6:31102; set -gx http_proxy http://10.0.1.6:31102; set -gx all_proxy http://10.0.1.6:31102; set -gx NIX_CURL_FLAGS -x http://10.0.1.6:31102";
+    set-proxy-g1 = "set -gx https_proxy http://172.22.1.8:31102; set -gx http_proxy http://172.22.1.8:31102; set -gx all_proxy http://172.22.1.8:31102; set -gx NIX_CURL_FLAGS -x http://172.22.1.8:31102";
+    set-proxy-g1_lan = "set -gx https_proxy http://10.0.1.8:31102; set -gx http_proxy http://10.0.1.8:31102; set -gx all_proxy http://10.0.1.8:31102; set -gx NIX_CURL_FLAGS -x http://10.0.1.8:31102";
   };
 }
