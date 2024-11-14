@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
   {
-    i18n.inputMethod = {
-    enabled = "ibus";
-    ibus.engines = with pkgs.ibus-engines; [ libpinyin table ];
+    i18n.inputMethod.ibus = {
+      enabled = true;
+      engines = with pkgs.ibus-engines; [ libpinyin table ];
   };
 }

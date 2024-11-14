@@ -8,7 +8,7 @@
     iotop
     dstat
     tree
-    lzma
+    xz
     mosh
     wirelesstools
     inotify-tools
