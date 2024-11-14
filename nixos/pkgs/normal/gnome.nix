@@ -1,7 +1,7 @@
 { config, pkgs, ... }: {
   environment.systemPackages = with pkgs; [
     dconf
-    gnome.gnome-tweaks
+    pkgs.gnome-tweaks
     gnomeExtensions.unite
     gnomeExtensions.appindicator
     gnomeExtensions.pano
