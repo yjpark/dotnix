@@ -37,6 +37,8 @@
     passage             # pass with age
     pueue		# process manager
     simple-http-server
+    nix-search
+    devenv
   ];
   # use https://github.com/yjpark/gitmoji-rs, will create nix package late
   home.file.".config/gitmoji-rs/gitmojis.toml".source = ./gitmojis.toml;
