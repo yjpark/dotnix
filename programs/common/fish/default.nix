@@ -14,4 +14,5 @@
       (builtins.readFile ./init/ssh-agent.fish)
     ];
   };
+  home.file.".config/fish/completions/wash.fish".source = ./completions/wash.fish;
 }
