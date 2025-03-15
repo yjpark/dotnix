@@ -1,6 +1,7 @@
 { pkgs, ... }: {
   programs.zellij = {
     enable = true;
+    enableFishIntegration = false;
     #settings = {
     #  theme = "molokai-dark";
     #  pane_frames = false;

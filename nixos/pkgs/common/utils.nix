@@ -6,7 +6,7 @@
     htop
     iftop
     iotop
-    dstat
+    dool
     tree
     xz
     mosh

@@ -4,6 +4,7 @@
     ./host.nix
     ./mirrors.nix
     ./xmodmap.nix
+    ../../nixos/versions/22.05.nix
     ../../nixos/boot
     ../../nixos/settings
     ../../nixos/services/normal
