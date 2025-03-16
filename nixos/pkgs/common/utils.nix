@@ -28,6 +28,7 @@
     devbox
     gping       # graphical ping
     kmon        # kernel manager and activity monitor
+    # quickwit
   ];
 }
 
