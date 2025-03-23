@@ -8,6 +8,10 @@
       # url."git@github.com:".insteadOf = "https://github.com/";
       push.default = "current";
       pull.rebase = "false";
+      diff.tool = "difftastic";
+      pager.difftoo = true;
+      difftool.prompt = false;
+      difftool."difftastic".cmd = ''difft "$MERGED" "$LOCAL" "abcdef1" "100644" "$REMOTE" "abcdef2" "100644"'';
     };
     aliases = {
       st = "status";
