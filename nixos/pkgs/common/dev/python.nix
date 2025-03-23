@@ -1,6 +1,8 @@
 { config, pkgs, ... }: {
   environment.systemPackages = with pkgs; [
-    python310Packages.bpython
+    marimo
+    uv
+    python312Packages.bpython
   ];
 }
 
