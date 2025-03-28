@@ -1,6 +1,7 @@
 { config, pkgs, ... }: {
   environment.systemPackages = with pkgs; [
-    python310Packages.bpython
+    marimo
+    python312Packages.bpython
   ];
 }
 
