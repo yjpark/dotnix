@@ -6,6 +6,7 @@
     extraConfig = {
       init.defaultBranch = "main";
       # url."git@github.com:".insteadOf = "https://github.com/";
+      remote.pushDefault = "yjpark";
       push.default = "current";
       pull.rebase = "false";
       diff.tool = "difftastic";
