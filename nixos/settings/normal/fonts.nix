@@ -6,7 +6,7 @@
       noto-fonts
       noto-fonts-cjk-sans
       noto-fonts-emoji
-      (nerdfonts.override { fonts = [ "FiraCode" "CascadiaCode" ]; })
+      #(nerdfonts.override { fonts = [ "FiraCode" "CascadiaCode" ]; })
     ];
   };
 }
