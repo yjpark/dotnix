@@ -6,9 +6,9 @@
     htop
     iftop
     iotop
-    dstat
+    dool
     tree
-    lzma
+    xz
     mosh
     wirelesstools
     inotify-tools
@@ -28,6 +28,7 @@
     devbox
     gping       # graphical ping
     kmon        # kernel manager and activity monitor
+    # quickwit
   ];
 }
 

@@ -112,6 +112,14 @@
           inputs.nixos-wsl.nixosModules.wsl
         ];
       };
+      nixosConfigurations."dev-edger-dev" = mkHost {
+        system = "aarch64-linux";
+        host = "dev.edger.dev";
+        home = "yjpark/linux/server";
+        extra = [
+          inputs.nixos-wsl.nixosModules.wsl
+        ];
+      };
       homeConfigurations."yjpark@mbp" = mkHome {
         system = "x86_64-darwin";
         home ="yjpark/darwin.nix";

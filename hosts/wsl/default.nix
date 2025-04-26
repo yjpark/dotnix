@@ -2,6 +2,7 @@
   imports = [
     ./host.nix
     ./mirrors.nix
+    ../../nixos/versions/22.05.nix
     ../../nixos/settings/wsl
     ../../nixos/services/wsl
     ../../nixos/pkgs/wsl

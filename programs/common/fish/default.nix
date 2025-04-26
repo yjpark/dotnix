@@ -12,6 +12,8 @@
       (builtins.readFile ./init/misc.fish)
       (builtins.readFile ./init/path.fish)
       (builtins.readFile ./init/ssh-agent.fish)
+      (builtins.readFile ../zellij/auto-update-tabname.fish)
     ];
   };
+  home.file.".config/fish/completions/wash.fish".source = ./completions/wash.fish;
 }
