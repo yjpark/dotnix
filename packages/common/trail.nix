@@ -2,7 +2,7 @@
   home.packages = with pkgs; [
     xplr
     jql                 # JSON tool
-    lapce               # editor
+    # lapce               # editor
     yt-dlp              # YouTube downloader
   ];
   home.file.".config/lapce-nightly/settings.toml".source = ./lapce/settings.toml;
