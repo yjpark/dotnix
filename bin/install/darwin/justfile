@@ -1,0 +1,11 @@
+show-nix-services:
+    sudo launchctl list | grep -i nix
+
+unload-nix-daemon:
+    sudo launchctl unload org.nixos.nix-daemon.plist
+
+load-nix-daemon-proxy:
+    sudo launchctl load org.nixos.nix-daemon.proxy.plist
+
+sync-nix-daemon-proxy:
+    sudo cp -v org.nixos.nix-daemon.proxy.plist /Library/LaunchDaemons/
