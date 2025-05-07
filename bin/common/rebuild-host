@@ -7,7 +7,7 @@ cd ../..
 
 HOST=`hostname`
 
-if [[ $HOST = "edger" || $HOST = "alienware-13" || $HOST = "gpd-p2"  || $HOST = "hp-g1" || $HOST = "wsl" || $HOST = "dev-edger-dev" ]] ; then
+if [[ $HOST = "edger" || $HOST = "pc" || $HOST = "alienware-13" || $HOST = "gpd-p2"  || $HOST = "hp-g1" || $HOST = "wsl" || $HOST = "dev-edger-dev" ]] ; then
     confirm "Rebuild NixOS Host: ${GREEN}${HOST}${NO_COLOR}"
     if [[ $# -ge 1 ]] ; then
         if [[ -f "$HOME/.config/dotnix.binary-caches" ]] ; then

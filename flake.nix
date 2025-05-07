@@ -104,6 +104,15 @@
           inputs.nixos-hardware.nixosModules.common-pc-laptop-ssd
         ];
       };
+      nixosConfigurations.pc = mkHost {
+        system = "x86_64-linux";
+        host = "pc";
+        home = "yjpark/linux/normal";
+        extra = [
+          inputs.nixos-hardware.nixosModules.common-cpu-intel
+          inputs.nixos-hardware.nixosModules.common-pc-ssd
+        ];
+      };
       nixosConfigurations.wsl = mkHost {
         system = "x86_64-linux";
         host = "wsl";
