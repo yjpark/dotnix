@@ -10,7 +10,7 @@
     ../../nixos/boot
     ../../nixos/settings
     ../../nixos/services/normal
-    ../../nixos/services/dev
+    #../../nixos/services/dev
     ../../nixos/pkgs
     ../../nixos/users
     ../../nixos/services/normal/no-sleep.nix
