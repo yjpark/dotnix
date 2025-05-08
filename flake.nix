@@ -29,6 +29,9 @@
       url = "github:nix-community/nixos-vscode-server";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    niri = {
+      url = "github:sodiboo/niri-flake";
+    };
   };
 
   outputs = inputs:
@@ -44,6 +47,7 @@
             nixpkgs.overlays = [
               inputs.nix-alien.overlays.default
               inputs.sops-nix.overlays.default
+              inputs.niri.overlays.niri
             ];
           })
           ./hosts/${host}
@@ -54,6 +58,7 @@
           }
           inputs.sops-nix.nixosModules.sops
           inputs.vscode-server.nixosModules.default
+          inputs.niri.nixosModules.niri
         ] ++ extra;
       };
       mkHome =
