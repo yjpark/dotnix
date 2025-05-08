@@ -3,7 +3,7 @@
     ./utils.nix
     ./just.nix
     ./k8s.nix
-    ./music.nix
+    #./music.nix
     ./trail.nix
   ];
 }

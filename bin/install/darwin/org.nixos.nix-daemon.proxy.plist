@@ -7,9 +7,9 @@
       <key>OBJC_DISABLE_INITIALIZE_FORK_SAFETY</key>
       <string>YES</string>
       <key>http_proxy</key>
-      <string>http://127.0.0.1:1102</string>
+      <string>http://127.0.0.1:31102</string>
       <key>https_proxy</key>
-      <string>http://127.0.0.1:1102</string>
+      <string>http://127.0.0.1:31102</string>
     </dict>
     <key>Label</key>
     <string>org.nixos.nix-daemon</string>
