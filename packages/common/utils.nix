@@ -40,6 +40,7 @@
     nix-search
     devenv
     dust
+    dysk
   ];
   # use https://github.com/yjpark/gitmoji-rs, will create nix package late
   home.file.".config/gitmoji-rs/gitmojis.toml".source = ./gitmojis.toml;
