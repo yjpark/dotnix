@@ -2,7 +2,7 @@
   imports = [
     ../common
     ../../../../packages/linux/gui
-    ../../../../packages/linux/music
+    #../../../../packages/linux/music
     ../../../../programs/linux/gui
     ./dconf.nix
     ./flatpak.nix

@@ -4,14 +4,12 @@
   <dict>
     <key>EnvironmentVariables</key>
     <dict>
-      <key>NIX_SSL_CERT_FILE</key>
-      <string>/nix/var/nix/profiles/default/etc/ssl/certs/ca-bundle.crt</string>
       <key>OBJC_DISABLE_INITIALIZE_FORK_SAFETY</key>
       <string>YES</string>
       <key>http_proxy</key>
-      <string>http://127.0.0.1:1102</string>
+      <string>http://127.0.0.1:31102</string>
       <key>https_proxy</key>
-      <string>http://127.0.0.1:1102</string>
+      <string>http://127.0.0.1:31102</string>
     </dict>
     <key>Label</key>
     <string>org.nixos.nix-daemon</string>
@@ -32,7 +30,7 @@
     <key>SoftResourceLimits</key>
     <dict>
       <key>NumberOfFiles</key>
-      <integer>4096</integer>
+      <integer>1048576</integer>
     </dict>
   </dict>
 </plist>

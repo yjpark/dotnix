@@ -2,7 +2,7 @@
 
 cd `dirname $0`
 
-export NIX_CURL_FLAGS="-x http://127.0.0.1:1102"
+export NIX_CURL_FLAGS="-x http://10.0.1.6:31102"
 export NIX_REMOTE=""
 
 nix-channel --add https://github.com/nix-community/home-manager/archive/master.tar.gz home-manager

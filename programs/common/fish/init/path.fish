@@ -16,6 +16,11 @@ if [ $status -eq 0 ]
     end
 end
 
+uname -v | grep Darwin > /dev/null
+if [ $status -eq 0 ]
+    set -x PATH ~/.nix-profile/bin $PATH
+end
+
 uname -v | grep Ubuntu > /dev/null
 if [ $status -eq 0 ]
     set -x PATH ~/.nix-profile/bin $PATH
@@ -45,6 +50,10 @@ end
 
 if test -d ~/.cargo/bin
     set -x PATH ~/.cargo/bin $PATH
+end
+
+if test -d ~/.dotnet/tools
+    set -x PATH ~/.dotnet/tools $PATH
 end
 
 if test -d ~/.krew/bin

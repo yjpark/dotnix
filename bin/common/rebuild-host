@@ -7,7 +7,7 @@ cd ../..
 
 HOST=`hostname`
 
-if [[ $HOST = "edger" || $HOST = "alienware-13" || $HOST = "gpd-p2"  || $HOST = "hp-g1" || $HOST = "wsl" ]] ; then
+if [[ $HOST = "edger" || $HOST = "pc" || $HOST = "alienware-13" || $HOST = "gpd-p2"  || $HOST = "hp-g1" || $HOST = "wsl" || $HOST = "dev-edger-dev" ]] ; then
     confirm "Rebuild NixOS Host: ${GREEN}${HOST}${NO_COLOR}"
     if [[ $# -ge 1 ]] ; then
         if [[ -f "$HOME/.config/dotnix.binary-caches" ]] ; then
@@ -32,13 +32,6 @@ if [[ $HOST = "edger" || $HOST = "alienware-13" || $HOST = "gpd-p2"  || $HOST = 
         echo "Writing dconf custom values"
         # the dconf settings been written, but seems not effective for some reason, apply them manually for now
         bin/linux/dconf-write-custom-values
-    fi
-elif [[ $HOST = "mbp" ]] ; then
-    confirm "Rebuild Nix Darwin Host: ${GREEN}${HOST}${NO_COLOR}"
-    if [[ $# -ge 1 ]] ; then
-        darwin-rebuild --flake .#${HOST} $@
-    else
-        darwin-rebuild --flake .#${HOST} switch
     fi
 else
     echo "Unsupported Host: ${RED}$HOST${NO_COLOR}"

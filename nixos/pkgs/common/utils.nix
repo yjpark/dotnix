@@ -1,14 +1,13 @@
 { config, pkgs, ... }: {
   environment.systemPackages = with pkgs; [
-    neovim
     git
     binutils
     htop
     iftop
     iotop
-    dstat
+    dool
     tree
-    lzma
+    xz
     mosh
     wirelesstools
     inotify-tools
@@ -28,6 +27,7 @@
     devbox
     gping       # graphical ping
     kmon        # kernel manager and activity monitor
+    # quickwit
   ];
 }
 

@@ -29,6 +29,9 @@
       url = "github:nix-community/nixos-vscode-server";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    niri = {
+      url = "github:sodiboo/niri-flake";
+    };
   };
 
   outputs = inputs:
@@ -44,6 +47,7 @@
             nixpkgs.overlays = [
               inputs.nix-alien.overlays.default
               inputs.sops-nix.overlays.default
+              inputs.niri.overlays.niri
             ];
           })
           ./hosts/${host}
@@ -54,6 +58,7 @@
           }
           inputs.sops-nix.nixosModules.sops
           inputs.vscode-server.nixosModules.default
+          inputs.niri.nixosModules.niri
         ] ++ extra;
       };
       mkHome =
@@ -104,10 +109,27 @@
           inputs.nixos-hardware.nixosModules.common-pc-laptop-ssd
         ];
       };
+      nixosConfigurations.pc = mkHost {
+        system = "x86_64-linux";
+        host = "pc";
+        home = "yjpark/linux/normal";
+        extra = [
+          inputs.nixos-hardware.nixosModules.common-cpu-intel
+          inputs.nixos-hardware.nixosModules.common-pc-ssd
+        ];
+      };
       nixosConfigurations.wsl = mkHost {
         system = "x86_64-linux";
         host = "wsl";
         home = "yjpark/linux/wsl";
+        extra = [
+          inputs.nixos-wsl.nixosModules.wsl
+        ];
+      };
+      nixosConfigurations."dev-edger-dev" = mkHost {
+        system = "aarch64-linux";
+        host = "dev.edger.dev";
+        home = "yjpark/linux/server";
         extra = [
           inputs.nixos-wsl.nixosModules.wsl
         ];
