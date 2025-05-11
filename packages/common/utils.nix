@@ -8,7 +8,6 @@
     axel
     curl
     mmv               # rename multiple files
-    comma             # run software without installing it (need nix-index)
     mosh              # ssh over UDP
     ripgrep           # rg
     silver-searcher   # ag
