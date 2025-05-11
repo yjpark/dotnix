@@ -8,5 +8,6 @@
     k9s
     kubeshark
     kubespy
+    kubevela
   ];
 }
