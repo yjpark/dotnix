@@ -8,7 +8,7 @@
     oculante
     darktable
     obsidian
-    mattermost-desktop
+    #mattermost-desktop
     vulkan-tools
     ydotool
     gnome-randr
