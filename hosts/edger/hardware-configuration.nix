@@ -51,9 +51,9 @@
   # https://nixos.wiki/wiki/AMD_GPU
   services.xserver.videoDrivers = [ "amdgpu" "displaylink" "modesetting" ];
   # Vulkan support
-  hardware.opengl.driSupport = true;
+  # hardware.opengl.driSupport = true;
   # For 32 bit applications
-  hardware.opengl.driSupport32Bit = true;
+  # hardware.opengl.driSupport32Bit = true;
   hardware.opengl.extraPackages = with pkgs; [
     amdvlk
   ];
