@@ -1,6 +1,6 @@
 { config, pkgs, ... }: {
   # When keep running with lid closed, might got warning in systemd-logind
-  services.logind.lidSwitch = "ignore";
+  services.logind.lidSwitch = "lock";
   services.logind.extraConfig = ''
   '';
 
