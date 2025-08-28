@@ -30,6 +30,6 @@
     };
   };
   programs.gitui = {
-    enable = true;
+    #enable = true;
   };
 }

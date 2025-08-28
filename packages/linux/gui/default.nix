@@ -6,7 +6,7 @@
     qimgv
     synergy
     oculante
-    darktable
+    #darktable
     obsidian
     #mattermost-desktop
     vulkan-tools

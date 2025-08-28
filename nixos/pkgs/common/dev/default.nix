@@ -2,7 +2,7 @@
   imports = [
     ./rust.nix
     ./dotnet.nix
-    ./python.nix
+    #./python.nix
     ./java.nix
     ./database.nix
     ./android.nix
