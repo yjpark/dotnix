@@ -10,6 +10,7 @@
     gnomeExtensions.run-or-raise
     gnomeExtensions.undecorate
   ];
+  services.gnome.gcr-ssh-agent.enable = false;
 }
 
 

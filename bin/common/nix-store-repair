@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+# https://discourse.nixos.org/t/path-is-not-in-the-nix-store-during-nixos-rebuild-switch/62719/3
+
+sudo nix-store --verify --check-contents --repair

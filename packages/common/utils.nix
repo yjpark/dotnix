@@ -8,7 +8,6 @@
     axel
     curl
     mmv               # rename multiple files
-    comma             # run software without installing it (need nix-index)
     mosh              # ssh over UDP
     ripgrep           # rg
     silver-searcher   # ag
@@ -40,6 +39,7 @@
     nix-search
     devenv
     dust
+    dysk
   ];
   # use https://github.com/yjpark/gitmoji-rs, will create nix package late
   home.file.".config/gitmoji-rs/gitmojis.toml".source = ./gitmojis.toml;

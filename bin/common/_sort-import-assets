@@ -25,6 +25,10 @@ for x in *.jpg; do
   move Photo $x
 done
 
+for x in *.HEIC; do
+  move Photo $x
+done
+
 for x in *.heic; do
   move Photo $x
 done

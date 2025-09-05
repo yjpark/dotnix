@@ -5,5 +5,6 @@
     check-ssh-agent = builtins.readFile ./check-ssh-agent.fish;
     sync-pass = builtins.readFile ./sync-pass.fish;
     tmux-fix-ssh-agent = builtins.readFile ./tmux-fix-ssh-agent.fish;
+    set-proxy = builtins.readFile ./set-proxy.fish;
   };
 }

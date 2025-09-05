@@ -45,4 +45,10 @@
 
   powerManagement.cpuFreqGovernor = lib.mkDefault "powersave";
   hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
+
+  services.xserver.videoDrivers = [ "displaylink" "modesetting" ];
+  environment.systemPackages = [
+    pkgs.displaylink
+  ];
+
 }

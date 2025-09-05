@@ -2,7 +2,7 @@
   environment.systemPackages = with pkgs; [
     rustup
     clang
-    dprint
+    #dprint
   ];
 }
 

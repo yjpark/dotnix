@@ -1,14 +1,14 @@
 { config, pkgs, ... }: {
   home.packages = with pkgs; [
-    microsoft-edge
+    #microsoft-edge
     google-chrome
     vlc
     qimgv
     synergy
     oculante
-    darktable
+    #darktable
     obsidian
-    mattermost-desktop
+    #mattermost-desktop
     vulkan-tools
     ydotool
     gnome-randr

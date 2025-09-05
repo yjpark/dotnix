@@ -6,6 +6,8 @@
   programs.nix-ld.enable = true;
   environment.systemPackages = with pkgs; [
     nix-index
+    comma             # run software without installing it (need nix-index)
+    nix-search-cli
     # Need to have nix-alien's overlay
     nix-alien
     nix-index-update
