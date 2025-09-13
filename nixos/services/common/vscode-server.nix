@@ -1,7 +1,7 @@
 { config, pkgs, ... }: {
 
   services.vscode-server.enable = true;
-  # services.vscode-server.enableFHS = true;
+  services.vscode-server.enableFHS = true;
 
   # https://github.com/nix-community/nixos-vscode-server
   # need to have wget installed for vscode to download the binary

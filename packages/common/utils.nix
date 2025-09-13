@@ -40,6 +40,7 @@
     devenv
     dust
     dysk
+    pv                # add progress bar for console apps
   ];
   # use https://github.com/yjpark/gitmoji-rs, will create nix package late
   home.file.".config/gitmoji-rs/gitmojis.toml".source = ./gitmojis.toml;
