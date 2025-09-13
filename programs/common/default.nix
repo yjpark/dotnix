@@ -2,6 +2,7 @@
   imports = [
     ./fish
     ./neovim
+    ./zed
     ./starship.nix
     ./eza.nix
     ./bat.nix
