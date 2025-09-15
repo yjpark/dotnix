@@ -137,9 +137,6 @@
 
         "rust-analyzer" = {
           # Quote the LSP name
-          binary = {  # run `which rust-analyzer`
-            path = "/nix/store/3i6z4bh7ffyj99drw554nsmnspyizky6-rust-default-1.87.0-nightly-2025-02-18/bin/rust-analyzer";
-          };
           settings = {
             diagnostics = {
               enable = true;
