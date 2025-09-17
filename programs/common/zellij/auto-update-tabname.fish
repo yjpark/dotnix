@@ -18,3 +18,6 @@ function zellij_update_tabname_cmd --on-event fish_preexec
     set title (string split ' ' $argv)[1]
     zellij_update_tabname $title
 end
+
+zellij_update_tabname
+
