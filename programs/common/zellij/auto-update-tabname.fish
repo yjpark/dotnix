@@ -6,15 +6,15 @@ function zellij_update_tabname
         else
             set current_dir (basename $current_dir)
         end
-        nohup zellij action rename-tab $current_dir >/dev/null 2>&1
+        nohup zellij action rename-tab "$current_dir`$argv" >/dev/null 2>&1
     end
 end
 
-# auto update tabe name on directory change
-#
-function __auto_zellij_update_tabname --on-variable PWD --description "Update zellij tab name on directory change"
+function zellij_update_tabname_pwd --on-variable PWD
     zellij_update_tabname
 end
 
-zellij_update_tabname
-
+function zellij_update_tabname_cmd --on-event fish_preexec
+    set title (string split ' ' $argv)[1]
+    zellij_update_tabname $title
+end

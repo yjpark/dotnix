@@ -2,7 +2,7 @@
   imports = [
     ./utils.nix
     ./gnome.nix
-    #./rustdesk.nix
+    ./rustdesk.nix
     ./appimage.nix
   ];
 }

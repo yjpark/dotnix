@@ -12,5 +12,6 @@
     ./input-remapper.nix
     ./kanata.nix
     ./interception-tools.nix
+    ./rustdesk.nix
   ];
 }
