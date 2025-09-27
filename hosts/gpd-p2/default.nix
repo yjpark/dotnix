@@ -11,5 +11,6 @@
     ../../nixos/pkgs
     ../../nixos/users
     ../../nixos/services/normal/no-sleep.nix
+    ../../nixos/services/dev/k3s.zfs.nix
   ];
 }

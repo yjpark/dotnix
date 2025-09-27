@@ -13,5 +13,6 @@
     ../../nixos/users
     ../../nixos/services/normal/no-sleep.nix
     ../../nixos/services/normal/synergy/server.nix
+    ../../nixos/services/dev/k3s.zfs.nix
   ];
 }

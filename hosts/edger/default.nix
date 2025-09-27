@@ -10,6 +10,7 @@
     ../../nixos/services/dev
     ../../nixos/pkgs
     ../../nixos/users
+    ../../nixos/services/dev/k3s.ext4.nix
     # ../../nixos/services/normal/no-sleep.nix
     # ../../nixos/services/normal/synergy/server.nix
   ];
