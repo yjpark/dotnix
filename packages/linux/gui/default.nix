@@ -1,6 +1,6 @@
 { config, pkgs, ... }: {
   home.packages = with pkgs; [
-    #microsoft-edge
+    microsoft-edge
     google-chrome
     vlc
     qimgv
