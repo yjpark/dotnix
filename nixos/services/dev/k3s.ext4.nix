@@ -6,8 +6,6 @@
       "--container-runtime-endpoint unix:///run/containerd/containerd.sock"
     ];
   };
-  # Note: need to create the zfs mount manually
-  # bin/nixos/k3s-setup-zfs-mount
   virtualisation.containerd = {
     enable = true;
     settings =
