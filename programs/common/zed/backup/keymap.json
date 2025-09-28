@@ -196,5 +196,17 @@
     "bindings": {
       "alt-p": "file_finder::Toggle"
     }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "alt-shift-a alt-,": "editor::GoToPreviousHunk"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "alt-,": "command_palette::Toggle"
+    }
   }
 ]
