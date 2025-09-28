@@ -41,6 +41,7 @@
     dust
     dysk
     pv                # add progress bar for console apps
+    nix-tree          # show content of nix-store
   ];
   # use https://github.com/yjpark/gitmoji-rs, will create nix package late
   home.file.".config/gitmoji-rs/gitmojis.toml".source = ./gitmojis.toml;
