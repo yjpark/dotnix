@@ -11,7 +11,7 @@
     ./flatpak.nix
     ./input-remapper.nix
     ./kanata.nix
-    ./interception-tools.nix
+    #./interception-tools.nix
     ./rustdesk.nix
   ];
 }

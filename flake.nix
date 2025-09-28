@@ -29,8 +29,14 @@
       url = "github:nix-community/nixos-vscode-server";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    niri = {
-      url = "github:sodiboo/niri-flake";
+    quickshell = {
+      url = "github:outfoxxed/quickshell";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    noctalia = {
+      url = "github:noctalia-dev/noctalia-shell";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.quickshell.follows = "quickshell";  # Use same quickshell version
     };
   };
 
@@ -47,7 +53,6 @@
             nixpkgs.overlays = [
               inputs.nix-alien.overlays.default
               inputs.sops-nix.overlays.default
-              inputs.niri.overlays.niri
             ];
           })
           ./hosts/${host}
@@ -58,7 +63,7 @@
           }
           inputs.sops-nix.nixosModules.sops
           inputs.vscode-server.nixosModules.default
-          inputs.niri.nixosModules.niri
+          inputs.noctalia.nixosModules.default
         ] ++ extra;
       };
       mkHome =

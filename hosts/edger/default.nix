@@ -10,6 +10,9 @@
     ../../nixos/services/dev
     ../../nixos/pkgs
     ../../nixos/users
+    ../../nixos/services/normal/niri.nix
+    ../../nixos/services/normal/noctalia.nix
+    ../../nixos/services/normal/cosmic.nix
     ../../nixos/services/dev/k3s.ext4.nix
     # ../../nixos/services/normal/no-sleep.nix
     # ../../nixos/services/normal/synergy/server.nix
