@@ -1,0 +1,147 @@
+{
+  "icon_theme": {
+    "mode": "system",
+    "light": "Zed (Default)",
+    "dark": "Zed (Default)"
+  },
+  "auto_install_extensions": {
+    "just": true,
+    "nix": true,
+    "basher": true,
+    "dracula": true,
+    "lua": true,
+    "toml": true
+  },
+  "agent": {
+    "default_model": {
+      "model": "claude-3-5-sonnet-latest",
+      "provider": "zed.dev"
+    },
+    "enabled": false
+  },
+  "auto_update": false,
+  "buffer_font_size": 14,
+  "collaboration_panel": {
+    "dock": "left"
+  },
+  "file_types": {
+    "JSON": [
+      "json",
+      "jsonc",
+      "*.code-snippets"
+    ]
+  },
+  "indent_guides": {
+    "coloring": "indent_aware",
+    "enabled": true
+  },
+  "inlay_hints": {
+    "enabled": true
+  },
+  "lsp": {
+    "rust-analyzer": {
+      "settings": {
+        "cargo": {
+          "buildScripts": {
+            "enable": true
+          },
+          "features": "all"
+        },
+        "check": {
+          "command": "clippy",
+          "features": "all"
+        },
+        "checkOnSave": true,
+        "diagnostics": {
+          "enable": true,
+          "styleLints": {
+            "enable": true
+          }
+        },
+        "files": {
+          "excludeDirs": [
+            ".cargo",
+            ".direnv",
+            ".git",
+            "node_modules",
+            "target"
+          ]
+        },
+        "inlayHints": {
+          "bindingModeHints": {
+            "enable": true
+          },
+          "closureReturnTypeHints": {
+            "enable": "always"
+          },
+          "closureStyle": "rust_analyzer",
+          "discriminantHints": {
+            "enable": "always"
+          },
+          "expressionAdjustmentHints": {
+            "enable": "always"
+          },
+          "implicitDrops": {
+            "enable": true
+          },
+          "lifetimeElisionHints": {
+            "enable": "always"
+          },
+          "rangeExclusiveHints": {
+            "enable": true
+          }
+        },
+        "procMacro": {
+          "enable": true
+        },
+        "rustc": {
+          "source": "discover"
+        }
+      }
+    }
+  },
+  "notification_panel": {
+    "dock": "left"
+  },
+  "outline_panel": {
+    "dock": "right"
+  },
+  "relative_line_numbers": true,
+  "tab_bar": {
+    "show": true
+  },
+  "tabs": {
+    "show_diagnostics": "errors"
+  },
+  "terminal": {
+    "alternate_scroll": "off",
+    "blinking": "off",
+    "button": false,
+    "copy_on_select": false,
+    "detect_venv": {
+      "on": {
+        "activate_script": "default",
+        "directories": [
+          ".env",
+          "env",
+          ".venv",
+          "venv"
+        ]
+      }
+    },
+    "dock": "bottom",
+    "env": {
+      "EDITOR": "zed --wait",
+      "TERM": "ghostty"
+    },
+    "font_family": "FiraCode Nerd Font Mono",
+    "font_features": null,
+    "line_height": "comfortable",
+    "option_as_meta": false,
+    "shell": "system",
+    "working_directory": "current_project_directory"
+  },
+  "theme": "Dracula Solid",
+  "ui_font_size": 24,
+  "vim_mode": true
+}
