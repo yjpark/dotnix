@@ -46,7 +46,6 @@
       "ctrl-k": "workspace::ActivatePaneUp",
       "ctrl-l": "workspace::ActivatePaneRight",
       "ctrl-q": "pane::CloseActiveItem",
-      "ctrl-s": "workspace::Save",
       "g D": "editor::GoToDefinitionSplit",
       "g I": "editor::GoToImplementationSplit",
       "g T": "editor::GoToTypeDefinitionSplit",
@@ -207,6 +206,12 @@
     "context": "Editor",
     "bindings": {
       "alt-,": "command_palette::Toggle"
+    }
+  },
+  {
+    "context": "((Editor && !VimWaiting) && !menu)",
+    "bindings": {
+      "ctrl-s": "workspace::Save"
     }
   }
 ]

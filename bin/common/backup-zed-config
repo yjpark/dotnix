@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+cd `dirname $0`
+
+cp -v ~/.config/zed/settings.json ../../programs/common/zed/backup/
+cp -v ~/.config/zed/keymap.json ../../programs/common/zed/backup/
